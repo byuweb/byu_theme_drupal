@@ -369,27 +369,6 @@
     <?php endif; ?>
   </byu-footer>
 
-
-
-
-
-
-  <!--.l-footer-->
-  <footer class="l-footer panel row" role="contentinfo">
-    <?php if (!empty($page['footer'])): ?>
-      <div class="footer large-12 columns">
-        <?php print render($page['footer']); ?>
-      </div>
-    <?php endif; ?>
-
-    <?php if ($site_name) :?>
-      <div class="copyright large-12 columns">
-        &copy; <?php print date('Y') . ' ' . check_plain($site_name) . ' ' . t('All rights reserved.'); ?>
-      </div>
-    <?php endif; ?>
-  </footer>
-  <!--/.footer-->
-
   <?php if ($messages && $zurb_foundation_messages_modal): print $messages; endif; ?>
 </div>
 <!--/.page -->
