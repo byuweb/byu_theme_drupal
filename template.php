@@ -4,7 +4,7 @@
  * Implements template_preprocess_html().
  *
  */
-function byu2017_preprocess_html(&$variables) {
+function byu2017_d7_preprocess_html(&$variables) {
     drupal_add_js('http://cdn.byu.edu/2017-core-components/unstable/bootstrap.js', 'external');
 //    drupal_add_js('http://cdn.byu.edu/2017-core-components/unstable/bootstrap.js', array(
 //        'type' => 'external',
