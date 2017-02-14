@@ -5,15 +5,37 @@ Please refer also to the community documentation:
 
 BUILD A THEME WITH ZURB FOUNDATION
 ----------------------------------
+This BYU Theme is a sub-theme of Zurb Foundation. Please download the current Zurb Foundation 7.x-4.x version.
 
-The base Foundation theme is designed to be easily extended by its sub-themes.
+
+The base Zurb Foundation theme is designed to be easily extended by its sub-themes.
 You shouldn't modify any of the CSS or PHP files in the zurb_foundation/ folder;
-but instead you should create a sub-theme of zurb_foundation which is located in
-a folder outside of the root zurb_foundation/ folder. The examples below assume
-zurb_foundation and your sub-theme will be installed in sites/all/themes/,
-but any valid theme directory is acceptable. Read the
-sites/default/default.settings.php for more info.
+if you intend to modify this theme, you should make your changes inside the BYU2017_D7 theme.
 
+Styling Changes:
+Under scss you will see custom.scss. At the end of that file is where you should make your changes.
+
+Javascript Changes:
+Similarly, you will also find a js/script.js file that you may also customize.
+
+HELP & SUPPORT
+------------------------------------------
+This theme was created by the BYU Web Community.
+For questions involving adopting and using this theme, consult the BYU-Web slack group. See the
+#Byu-theme-help channel for questions and support.
+
+Want to get involved? Join the #engineering-group channel and ask how you can help. You can also
+browse our projects on https://github.com/byuweb
+
+In particular, see the web components that are the building blocks of the BYU components
+in THIS theme: https://github.com/byuweb/2017-components
+
+Drupal 7 Modules created by the BYU Web Community:
+https://github.com/byuweb/calendar_widget/releases/tag/drupal7_module
+
+
+Notes from Zurb Foundation:
+------------------------------------------
 This theme does not support IE7. If you need it downgrade to Foundation 2 see
 http://foundation.zurb.com/docs/faq.php or use the script in the starter
 template.php THEMENAME_preprocess_html function.

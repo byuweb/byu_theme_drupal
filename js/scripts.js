@@ -1,8 +1,9 @@
 (function ($, Drupal) {
 
-  Drupal.behaviors.STARTER = {
+  Drupal.behaviors.byu2017_d7 = {
     attach: function(context, settings) {
-      // Get your Yeti started.
+      // Make your changes here
+
     }
   };
 
