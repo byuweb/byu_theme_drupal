@@ -28,6 +28,15 @@ function byu2017_d7_preprocess_html(&$variables) {
 //function STARTER_preprocess_page(&$variables) {
 //}
 
+function byu2017_d7_page_alter() {
+    $attributes = array( // Set up an array of attributes inside the tag
+        'href' => '//cloud.typography.com/75214/6517752/css/fonts.css',
+        'rel' => 'stylesheet',
+        'type' => 'text/css',
+    );
+    drupal_add_html_head_link($attributes);
+}
+
 /**
  * Implements template_preprocess_node
  *
