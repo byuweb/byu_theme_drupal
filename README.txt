@@ -13,7 +13,15 @@ You shouldn't modify any of the CSS or PHP files in the zurb_foundation/ folder;
 if you intend to modify this theme, you should make your changes inside the BYU2017_D7 theme.
 
 Styling Changes:
+----------------------------------------
 Under scss you will see custom.scss. At the end of that file is where you should make your changes.
+NOTE: If you are using scss, as we rcommend, you need to download and install the module SASSY to
+precompile your scss into css.
+https://www.drupal.org/project/sassy
+
+You will also need the PHPSass library:
+Please download the PHPSass library from 
+https://github.com/richthegeek/phpsass/zipball/master and extract it into sites/all/libraries/phpsass
 
 Javascript Changes:
 Similarly, you will also find a js/script.js file that you may also customize.

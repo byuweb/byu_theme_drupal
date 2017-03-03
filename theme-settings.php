@@ -7,6 +7,6 @@
  * @param $form_state
  *   The form state.
  */
-function byu2017_form_system_theme_settings_alter(&$form, &$form_state) {
+function byu2017_d7_form_system_theme_settings_alter(&$form, &$form_state) {
 
 }
