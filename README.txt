@@ -20,7 +20,7 @@ precompile your scss into css.
 https://www.drupal.org/project/sassy
 
 You will also need the PHPSass library:
-Please download the PHPSass library from 
+Please download the PHPSass library from
 https://github.com/richthegeek/phpsass/zipball/master and extract it into sites/all/libraries/phpsass
 
 Javascript Changes:
