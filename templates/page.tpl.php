@@ -16,6 +16,35 @@
 <!--         --><?php //endif; ?>
        <?php endif; ?>
 
+    <!-- actions -->
+    <?php if (!empty($page['header_actions'])): ?>
+      <?php
+      // get array of blocks
+      $blocks = $page['header_actions'];
+      $i = 0;
+      $len = count($blocks);
+      foreach($blocks as $block) {
+        if($i == 0){
+          // if we need to do anything differently for the first one
+        } else if ($i == $len - 1) {
+          // is the last, skip
+          break;
+        }
+        if(is_array($block)) {
+          if ($block['#markup'] !== null) {  // print the block's body content
+            $content = $block['#markup'];
+            print '<div slot="actions">';
+            print $content;
+            print '</div>';
+          }
+          $i++;
+        } else { // isn't an array, is the final string at the end of lists of blocks
+          $i++;
+          break;
+        }
+      }
+      ?>
+    <?php endif; ?>
 
 
 <!--    </span>-->

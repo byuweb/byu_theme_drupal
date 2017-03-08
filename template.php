@@ -6,7 +6,7 @@
  */
 function byu2017_d7_preprocess_html(&$variables) {
     drupal_add_css('//cloud.typography.com/75214/6517752/css/fonts.css', array('type' => 'external'));
-    drupal_add_js('//cdn.byu.edu/2017-core-components/unstable/components.js', 'external');
+    drupal_add_js('//cdn.byu.edu/2017-core-components/latest/components.js', 'external');
 //    drupal_add_js('http://cdn.byu.edu/2017-core-components/unstable/bootstrap.js', array(
 //        'type' => 'external',
 //        'scope' => 'header',

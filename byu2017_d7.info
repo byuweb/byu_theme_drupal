@@ -80,6 +80,7 @@ scripts[] = js/foundation.min.js
 ;   <?php print render($page['header']); ?>
 
 regions[header]              = Header
+regions[header_actions]      = Header Actions
 regions[help]                = Help
 regions[highlighted]         = Highlighted
 regions[featured]            = Featured
