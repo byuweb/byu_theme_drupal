@@ -75,15 +75,29 @@
 
 // colors here for now
 $navy: #002e5d;
-
+$royal: #003DA5;
 
 
 a {
   color: $navy;
 }
+a:hover{
+  color: $royal;
+}
 byu-header a,
 #site-name {
   color: #fff;
+}
+
+// headings
+h1 {
+  font-size: $h1-font-size; // 36px; //em-calc(44);
+}
+h2 {
+  font-size: $h2-font-size; // 29px; //em-calc(37);
+}
+h3 {
+  font-size: $h3-font-size; // 24px;
 }
 
 /* ------------- Your custom site changes here:   ----------- */
