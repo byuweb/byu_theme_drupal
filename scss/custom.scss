@@ -73,7 +73,18 @@
 // import Hoeffler fonts according to byu styling
 @import "https://cloud.typography.com/75214/6517752/css/fonts.css";
 
+// colors here for now
+$navy: #002e5d;
 
+
+
+a {
+  color: $navy;
+}
+byu-header a,
+#site-name {
+  color: #fff;
+}
 
 /* ------------- Your custom site changes here:   ----------- */
 
