@@ -68,7 +68,12 @@
       <?php endif; ?>
 
     </byu-menu>
-    <byu-user-login><a href="/user">Sign In</a></byu-user-login>
+    <byu-user-info>
+      <a slot="login" href="/user">Sign In</a>
+      <!-- if you are using CAS, use the CAS sign out link instead: -->
+<!--      <a slot="logout" href="/caslogout">Sign Out</a>-->
+      <a slot="logout" href="/user/logout">Sign Out</a>
+    </byu-user-info>
     <byu-search slot="search">
       <?php
 
@@ -207,6 +212,7 @@
 
         <?php print render($page['content']); ?>
       </div>
+      <!--/.main region -->
       <!--/.main region -->
 
 
