@@ -46,6 +46,22 @@
       ?>
     <?php endif; ?>
 
+    <byu-user-info>
+      <a slot="login" href="/user">Sign In</a>
+      <!-- if you are using CAS, use the CAS sign out link instead: -->
+      <!--      <a slot="logout" href="/caslogout">Sign Out</a>-->
+      <a slot="logout" href="/user/logout">Sign Out</a>
+      <?php if($logged_in): ?>
+        <span slot="user-name">Cosmo2017</span>
+      <?php endif; ?>
+    </byu-user-info>
+    <byu-search slot="search">
+      <?php
+
+      $search = drupal_get_form('search_block_form');
+      print render($search);
+      ?>
+    </byu-search>
 
 <!--    </span>-->
     <?php if ($alt_main_menu): ?>
@@ -68,19 +84,7 @@
       <?php endif; ?>
 
     </byu-menu>
-    <byu-user-info>
-      <a slot="login" href="/user">Sign In</a>
-      <!-- if you are using CAS, use the CAS sign out link instead: -->
-<!--      <a slot="logout" href="/caslogout">Sign Out</a>-->
-      <a slot="logout" href="/user/logout">Sign Out</a>
-    </byu-user-info>
-    <byu-search slot="search">
-      <?php
 
-      $search = drupal_get_form('search_block_form');
-      print render($search);
-      ?>
-    </byu-search>
   </byu-header>
   <!--.l-header region -->
   <header role="banner" class="l-header">
