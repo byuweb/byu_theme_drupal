@@ -55,7 +55,7 @@
         <span slot="user-name">Cosmo2017</span>
       <?php endif; ?>
     </byu-user-info>
-    
+
     <byu-search slot="search">
       <?php
 
