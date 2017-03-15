@@ -52,7 +52,12 @@
       <!--      <a slot="logout" href="/caslogout">Sign Out</a>-->
       <a slot="logout" href="/user/logout">Sign Out</a>
       <?php if($logged_in): ?>
-        <span slot="user-name">Cosmo2017</span>
+        <span slot="user-name">
+          <?php if ($user->uid) {
+            print $user->name;
+          }
+          ?>
+        </span>
       <?php endif; ?>
     </byu-user-info>
 
