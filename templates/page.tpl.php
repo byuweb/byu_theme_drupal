@@ -46,7 +46,7 @@
       ?>
     <?php endif; ?>
 
-    <byu-user-info>
+    <byu-user-info slot="user">
       <a slot="login" href="/user">Sign In</a>
       <!-- if you are using CAS, use the CAS sign out link instead: -->
       <!--      <a slot="logout" href="/caslogout">Sign Out</a>-->
