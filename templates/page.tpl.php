@@ -54,7 +54,10 @@
       <?php if($logged_in): ?>
         <span slot="user-name">
           <?php if ($user->uid) {
+            // if you don't want a my account link
             print $user->name;
+            // if you want a my account link, using the default user page
+           // print '<a href="../user">' . $user->name . '</a>';
           }
           ?>
         </span>
@@ -63,7 +66,6 @@
 
     <byu-search slot="search">
       <?php
-
       $search = drupal_get_form('search_block_form');
       print render($search);
       ?>

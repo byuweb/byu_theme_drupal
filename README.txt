@@ -14,6 +14,32 @@ if you intend to modify this theme, you should make your changes inside the BYU2
 
 Styling Changes:
 ----------------------------------------
+
+A. IF you will be styling extensively or adding templates to the theme, you should follow instructions online to sub-theme
+this byu theme. Please note that this BYU theme is a child theme of Zurb. Your child theme should be a child of the BYU
+theme, not Zurb foundation.
+
+https://www.drupal.org/docs/7/theming/creating-a-sub-theme
+
+B. If you will be making minimal css changes, follow these instructions.
+
+Do NOT make custom changes in byu_default.scss
+If you do they will be overridden when you update the theme.
+
+1. Create a custom.scss file in this scss directory.
+2. Edit byu2017_d7.info and find the lines where scss/byu_default.scss is included. You will see a commented out line
+that will tell the theme to look for your custom.scss file.
+3. Add your css
+4. Clear your caches.
+
+/* ---- It is good practice to have sections in your styling, like this:  --- */
+
+/* ------- Front ------ */
+
+/* -- front feature custom -- */
+
+/* ------- Misc. ------ */
+
 Under scss you will see custom.scss. At the end of that file is where you should make your changes.
 NOTE: If you are using scss, as we rcommend, you need to download and install the module SASSY to
 precompile your scss into css.
