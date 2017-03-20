@@ -50,7 +50,8 @@ Please download the PHPSass library from
 https://github.com/richthegeek/phpsass/zipball/master and extract it into sites/all/libraries/phpsass
 
 Javascript Changes:
-Similarly, you will also find a js/script.js file that you may also customize.
+Similarly, you should create a custom.js file under js. Or choose to subtheme.
+You will also have to uncomment the line for declaring the js file in byu2017_d7.info
 
 HELP & SUPPORT
 ------------------------------------------
