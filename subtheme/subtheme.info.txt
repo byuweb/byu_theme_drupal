@@ -1,4 +1,4 @@
-name = BYU 2017 Theme
+name = Sub Theme [rename]
 description = BYU Custom sub-theme based on the the Zurb Foundation base theme.
 screenshot = images/screenshot.png
 

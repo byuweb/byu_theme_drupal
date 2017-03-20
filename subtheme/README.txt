@@ -5,7 +5,16 @@ Please refer also to the community documentation:
 
 BUILD A THEME WITH ZURB FOUNDATION
 ----------------------------------
-This BYU Theme is a sub-theme of Zurb Foundation. Please download the current Zurb Foundation 7.x-4.x version.
+This theme is a STARTER subtheme for the BYU Theme, which is a sub-theme of Zurb Foundation.
+Please download the current Zurb Foundation 7.x-4.x version.
+
+GETTING STARTED WITH THIS SUB THEME
+-----------------------------------
+1. Copy the subtheme folder out of the BYU theme folders under sites/all/themes.
+2. Rename your 'subtheme' folder.
+3. Rename all instances of 'subtheme' in subtheme.info.txt, template.php, theme-settings.php
+4. Remove the '.txt' from subtheme.info.txt so Drupal will recognize this as a theme.
+5. Make sure Zurb Foundation, BYU Theme and your sub theme are all ENABLED. Set your sub theme to be default.
 
 
 The base Zurb Foundation theme is designed to be easily extended by its sub-themes.
