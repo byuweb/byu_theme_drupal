@@ -11,7 +11,7 @@
 
          <!--           </div>-->
          <!--         --><?php //else: /* Use h1 when the content title is empty */ ?>
-             <a slot="title" id="site-name" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><span><?php print $site_name; ?></span></a>
+             <a slot="site-title" id="site-name" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><span><?php print $site_name; ?></span></a>
 
 <!--         --><?php //endif; ?>
        <?php endif; ?>
