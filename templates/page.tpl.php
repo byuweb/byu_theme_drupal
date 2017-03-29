@@ -99,9 +99,11 @@
   <!-- Full Width Hero Space -->
   <?php if (!empty($page['hero'])): ?>
       <div id="hero">
-        <?php print $page['hero']; ?>
+       <?php print render($page['hero']); ?>
       </div>
   <?php endif; ?>
+
+
   <!--.l-header region -->
   <header role="banner" class="l-header">
 
