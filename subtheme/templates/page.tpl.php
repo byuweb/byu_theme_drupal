@@ -16,6 +16,7 @@
 <!--         --><?php //endif; ?>
        <?php endif; ?>
 
+    
     <!-- actions -->
     <?php if (!empty($page['header_actions'])): ?>
       <?php
