@@ -94,6 +94,17 @@
     </byu-menu>
 
   </byu-header>
+  
+
+
+  <?php if (!empty($page['hero'])): ?>
+    <!-- Full Width Hero Space -->
+      <div id="hero">
+       <?php print render($page['hero']); ?>
+      </div>
+  <?php endif; ?>
+
+
   <!--.l-header region -->
   <header role="banner" class="l-header">
 
