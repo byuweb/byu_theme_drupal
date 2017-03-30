@@ -5,15 +5,15 @@
  *
  */
 function byu2017_d7_preprocess_html(&$variables) {
-    drupal_add_css('//cloud.typography.com/75214/6517752/css/fonts.css', array('type' => 'external'));
-    drupal_add_js('//cdn.byu.edu/2017-core-components/latest/components.js', 'external');
-//    drupal_add_js('http://cdn.byu.edu/2017-core-components/unstable/bootstrap.js', array(
-//        'type' => 'external',
-//        'scope' => 'header',
-//        'group' => JS_THEME,
-//        'every_page' => TRUE,
-//        'weight' => -1,
-//    ));
+    /* --- BYU Fonts -- You must choose ONE font package to include. ---- */
+    // This is the Light Font Package - Vitesse and Gotham only.
+    drupal_add_css('//cloud.typography.com/75214/7683772/css/fonts.css', array('type' => 'external'));
+    // Full Font Package - Vitesse, Gotham, Sentinel, and several others.
+//    drupal_add_css('//cloud.typography.com/75214/6517752/css/fonts.css', array('type' => 'external'));
+
+    // To include the components and their styling:
+    drupal_add_css('//cdn.byu.edu/2017-core-components/latest/2017-core-components.css', array('type' => 'external'));
+    drupal_add_js('//cdn.byu.edu/2017-core-components/latest/2017-core-components.min.js', 'external');
 
 //  // Add conditional CSS for IE. To use uncomment below and add IE css file
 //  drupal_add_css(path_to_theme() . '/css/ie.css', array('weight' => CSS_THEME, 'browsers' => array('!IE' => FALSE), 'preprocess' => FALSE));
