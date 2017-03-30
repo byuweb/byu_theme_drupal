@@ -107,10 +107,12 @@ h3 {
 // regions
 
 #hero {
-  img {
-    width: 100% !important;
-    height: auto !important;
-  }
+
+// if you want your images to stretch full width, you may want to copy this to your custom.scss file
+//  img {
+//    width: 100% !important;
+//    height: auto !important;
+//  }
 }
 #page-container {
   padding: 20px 0px;
