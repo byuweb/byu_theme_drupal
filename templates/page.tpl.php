@@ -96,8 +96,9 @@
   </byu-header>
   
 
-  <!-- Full Width Hero Space -->
+
   <?php if (!empty($page['hero'])): ?>
+    <!-- Full Width Hero Space -->
       <div id="hero">
        <?php print render($page['hero']); ?>
       </div>

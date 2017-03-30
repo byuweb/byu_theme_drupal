@@ -105,6 +105,13 @@ h3 {
 }
 
 // regions
+
+#hero {
+  img {
+    width: 100% !important;
+    height: auto !important;
+  }
+}
 #page-container {
   padding: 20px 0px;
 }
