@@ -12,6 +12,7 @@ The base Zurb Foundation theme is designed to be easily extended by its sub-them
 You shouldn't modify any of the CSS or PHP files in the zurb_foundation/ folder;
 if you intend to modify this theme, you should make your changes inside the BYU2017_D7 theme.
 
+
 Styling Changes:
 ----------------------------------------
 
@@ -53,6 +54,24 @@ https://github.com/richthegeek/phpsass/zipball/master and extract it into sites/
 Javascript Changes:
 Similarly, you should create a custom.js file under js. Or choose to subtheme.
 You will also have to uncomment the line for declaring the js file in byu2017_d7.info
+
+
+
+Full-Width Option (rather than constrained-width content pages)
+------------------------------------
+1. Make sure you have sub-themed the BYU theme
+2. In your subtheme, go into scss folder and edit the _variables.scss file.
+   Search for "$row-width". It will be a commented out line.
+   Enable that line and set it to 100% :
+     $row-width: 100%;
+
+3. Create your custom.scss if you haven't already and add:
+
+    main.row {
+        max-width: 100%;
+    }
+
+
 
 HELP & SUPPORT
 ------------------------------------------
