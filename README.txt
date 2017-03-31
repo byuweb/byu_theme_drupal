@@ -19,7 +19,7 @@ A. IF you will be styling extensively or adding templates to the theme, you shou
 this byu theme. Please note that this BYU theme is a child theme of Zurb. Your child theme should be a child of the BYU
 theme, not Zurb foundation.
 
-With Zurb: https://www.drupal.org/node/1948282
+
 General: https://www.drupal.org/docs/7/theming/creating-a-sub-theme
 
 B. If you will be making minimal css changes, follow these instructions.
