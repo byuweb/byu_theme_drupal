@@ -88,10 +88,15 @@ byu-header a,
 #site-name {
   color: #fff;
 }
+#site-name {
+  p,span,div {
+    font-family: "Vitesse A", "Vitesse B", Georgia, serif;
+  }
+}
 
 // headings
 h1,h2,/*h3, */h4,h5,h6 {
-  font-family: $header-font-family;
+  font-family: "Vitesse A", "Vitesse B", Georgia, serif;y;
 }
 h1 {
   font-size: $h1-font-size; // 36px; //em-calc(44);
