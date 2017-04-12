@@ -97,6 +97,11 @@ byu-header a,
 #site-name {
   color: #fff;
 }
+byu-header a:hover,
+#site-name a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
 #site-name {
   p,span,div {
     font-family: "Vitesse A", "Vitesse B", serif;
