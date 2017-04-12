@@ -16,7 +16,7 @@
 <!--         --><?php //endif; ?>
        <?php endif; ?>
 
-    <!-- actions -->
+    <!-- header actions -->
     <?php if (!empty($page['header_actions'])): ?>
       <?php
       // get array of blocks

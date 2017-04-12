@@ -84,15 +84,61 @@ a {
 a:hover{
   color: $royal;
 }
+
+/* - BYU Components stylineg --- */
+
+//a {
+//  color: $navy;
+//}
+//a:hover{
+//  color: $royal;
+//}
 byu-header a,
 #site-name {
   color: #fff;
 }
 #site-name {
   p,span,div {
-    font-family: "Vitesse A", "Vitesse B", Georgia, serif;
+    font-family: "Vitesse A", "Vitesse B", serif;
   }
 }
+[slot="actions"] div,
+[slot="actions"] p {
+  /* color: pink; */
+  padding-bottom: 0;
+  margin: 0 15px;
+}
+
+/* -------- search --------- */
+/* -- from instructions on byu-search component for SIMPLE search -- */
+byu-search .element-invisible {
+  display: none;
+}
+
+byu-search .form-submit {
+  display: none;
+}
+
+byu-search .form-item .custom-search-box {
+  padding: 5px 10px;
+  border: none;
+  box-sizing: border-box;
+  height: 30px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+byu-search.mobile-view .form-item .custom-search-box {
+  padding: 5px 10px 5px 16px;
+  width: 100%;
+  height: 35px;
+  border: none;
+  border-bottom: 1px solid #c5c5c5;
+}
+
+
+
+/* ------------ */
 
 // headings
 h1,h2,/*h3, */h4,h5,h6 {
