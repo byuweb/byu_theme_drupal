@@ -55,9 +55,7 @@
 
           <?php if ($user->uid) {
             // if you don't want a my account link
-          <span slot="user-name">
-            print $user->name;
-          </span>
+          print '<span slot="user-name">' . $user->name . '</span>';
             // if you want a my account link, using the default user page
            // print '<a slot="user-name" href="../user">' . $user->name . '</a>';
           }
