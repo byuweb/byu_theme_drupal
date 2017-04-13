@@ -94,9 +94,9 @@ a:hover{
 //  color: $royal;
 //}
 
-byu-header.mobile-view) a#actions,
+byu-header:not([mobile-view]) a#actions,
 //byu-header:not(.mobile-view) a:not(#actions), // don't apply white to mobile-view actions
-byu-header:not(.mobile-view) a, // don't apply white to mobile-view actions
+byu-header:not([mobile-view]) a, // don't apply white to mobile-view actions
 #site-name {
   color: #fff;
 }
