@@ -101,7 +101,7 @@ byu-header:not(.mobile-view) a, // don't apply white to mobile-view actions
   color: #fff;
 }
 
-byu-header:not(.mobile-view) a:not(#actions):hover,
+byu-header:not(.mobile-view) a:hover,
 #site-name a:not(#actions):hover {
   color: #fff;
   text-decoration: underline;
