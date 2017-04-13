@@ -93,12 +93,16 @@ a:hover{
 //a:hover{
 //  color: $royal;
 //}
-byu-header a,
+
+byu-header.mobile-view) a#actions,
+//byu-header:not(.mobile-view) a:not(#actions), // don't apply white to mobile-view actions
+byu-header:not(.mobile-view) a, // don't apply white to mobile-view actions
 #site-name {
   color: #fff;
 }
-byu-header a:hover,
-#site-name a:hover {
+
+byu-header:not(.mobile-view) a:not(#actions):hover,
+#site-name a:not(#actions):hover {
   color: #fff;
   text-decoration: underline;
 }
