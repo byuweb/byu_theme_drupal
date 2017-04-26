@@ -12,8 +12,8 @@ function byu2017_d7_preprocess_html(&$variables) {
 //    drupal_add_css('//cloud.typography.com/75214/6517752/css/fonts.css', array('type' => 'external'));
 
     // To include the components and their styling:
-    drupal_add_css('//cdn.byu.edu/2017-core-components/latest/2017-core-components.min.css', array('type' => 'external'));
-    drupal_add_js('//cdn.byu.edu/2017-core-components/latest/2017-core-components.min.js', 'external');
+  drupal_add_css('//cdn.byu.edu/byu-theme-components/latest/byu-theme-components.min.css', array('type' => 'external'));
+  drupal_add_js('//cdn.byu.edu/byu-theme-components/latest/byu-theme-components.min.js', 'external');
 
 //  // Add conditional CSS for IE. To use uncomment below and add IE css file
 //  drupal_add_css(path_to_theme() . '/css/ie.css', array('weight' => CSS_THEME, 'browsers' => array('!IE' => FALSE), 'preprocess' => FALSE));
