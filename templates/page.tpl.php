@@ -68,6 +68,7 @@
       <?php
       $search = drupal_get_form('search_block_form');
       print render($search);
+
       ?>
     </byu-search>
 
@@ -113,8 +114,8 @@
       <?php if ($top_bar_classes): ?>
       <div class="<?php print $top_bar_classes; ?>">
       <?php endif; ?>
-<!--        <nav class="top-bar"--><?php //print $top_bar_options; ?><!-->
-<!---->
+
+
 <!--          <ul class="title-area">-->
 <!--            <li class="name"><h1>--><?php //print $linked_site_name; ?><!--</h1></li>-->
 <!--            <li class="toggle-topbar menu-icon"><a href="#"><span>--><?php //print $top_bar_menu_text; ?><!--</span></a></li>-->
@@ -236,9 +237,6 @@
         <?php print render($page['content']); ?>
       </div>
       <!--/.main region -->
-      <!--/.main region -->
-
-
 
       <?php if (!empty($page['sidebar_first'])): ?>
         <div id="sidebar-first-container">
@@ -272,33 +270,6 @@
     </section>
     <!--/.triptych -->
   <?php endif; ?>
-
-<!--  --><?php //if (!empty($page['footer_firstcolumn']) || !empty($page['footer_secondcolumn']) || !empty($page['footer_thirdcolumn']) || !empty($page['footer_fourthcolumn'])): ?>
-<!--    <!--.footer-columns -->
-<!--    <section id="content-footer" class="row l-footer-columns">-->
-<!--      --><?php //if (!empty($page['footer_firstcolumn'])): ?>
-<!--        <div class="footer-first large-3 columns">-->
-<!--          --><?php //print render($page['footer_firstcolumn']); ?>
-<!--        </div>-->
-<!--      --><?php //endif; ?>
-<!--      --><?php //if (!empty($page['footer_secondcolumn'])): ?>
-<!--        <div class="footer-second large-3 columns">-->
-<!--          --><?php //print render($page['footer_secondcolumn']); ?>
-<!--        </div>-->
-<!--      --><?php //endif; ?>
-<!--      --><?php //if (!empty($page['footer_thirdcolumn'])): ?>
-<!--        <div class="footer-third large-3 columns">-->
-<!--          --><?php //print render($page['footer_thirdcolumn']); ?>
-<!--        </div>-->
-<!--      --><?php //endif; ?>
-<!--      --><?php //if (!empty($page['footer_fourthcolumn'])): ?>
-<!--        <div class="footer-fourth large-3 columns">-->
-<!--          --><?php //print render($page['footer_fourthcolumn']); ?>
-<!--        </div>-->
-<!--      --><?php //endif; ?>
-<!--    </section>-->
-<!--    <!--/.footer-columns-->
-<!--  --><?php //endif; ?>
 
   <byu-footer>
     <?php if (!empty($page['footer_firstcolumn']) || !empty($page['footer_secondcolumn']) || !empty($page['footer_thirdcolumn']) || !empty($page['footer_fourthcolumn'])): ?>
