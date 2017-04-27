@@ -130,6 +130,11 @@ byu-header a:hover,
   margin: 0 15px;
 }
 
+/* -- override we need for byu footer component */
+.secondary-footer [class*="column"]+[class*="column"]:last-child{
+  float: none!important;
+}
+
 /* -------- search --------- */
 /* -- from instructions on byu-search component for SIMPLE search -- */
 byu-search .element-invisible {
