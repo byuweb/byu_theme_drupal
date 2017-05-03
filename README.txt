@@ -13,15 +13,23 @@ You shouldn't modify any of the CSS or PHP files in the zurb_foundation/ folder;
 if you intend to modify this theme, you should make your changes inside the BYU2017_D7 theme.
 
 
-Styling Changes:
+Styling Changes & Sub Theming:
 ----------------------------------------
 
-A. IF you will be styling extensively or adding templates to the theme, you should follow instructions online to sub-theme
-this byu theme. Please note that this BYU theme is a child theme of Zurb. Your child theme should be a child of the BYU
-theme, not Zurb foundation.
+A. IF you will be styling extensively or adding templates to the theme, you should use a sub theme.
+Inside this theme is a folder 'subtheme'.
+1. Copy the subtheme folder outside of the byu2017_d7 folder into sites/all/themes.
+2. Change the "subtheme.info.txt" file to be "subtheme.info".
+3. Rename every instance of "subtheme" to the new name of your theme.
+    i.e. the folder name, info file, and information inside the info file.
 
+4. You can also further customize your theme by copying any template, js or scss file from the parent theme (byu2017_d7) into this
+theme in it's appropriate place. 
+    i.e. if you copy page.tpl.php from byu2017_d7/templates/page.tpl.php into sites/all/themes/subtheme/templates/page.tpl.php then 
+    your changes made there will be reflected. It will use this page template instead of the one in byu2017_d7.
 
-General: https://www.drupal.org/docs/7/theming/creating-a-sub-theme
+For more questions about sub theming, you can read the instructions online here:
+https://www.drupal.org/docs/7/theming/creating-a-sub-theme
 
 B. If you will be making minimal css changes, follow these instructions.
 
