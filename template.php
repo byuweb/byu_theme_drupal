@@ -15,6 +15,15 @@ function byu2017_d7_preprocess_html(&$variables) {
   drupal_add_css('//cdn.byu.edu/byu-theme-components/latest/byu-theme-components.min.css', array('type' => 'external'));
   drupal_add_js('//cdn.byu.edu/byu-theme-components/latest/byu-theme-components.min.js', 'external');
 
+    //To test on specific branch:
+//  drupal_add_css('//cdn.byu.edu/byu-card/experimental/styling/byu-card.min.css', array('type' => 'external'));
+//    drupal_add_css('//cdn.byu.edu/byu-theme-components/experimental/branch-name/byu-theme-components.min.css', array('type' => 'external'));
+//    drupal_add_js('//cdn.byu.edu/byu-theme-components/experimental/branch-name/byu-theme-components.min.js', 'external');
+
+    //To view the CDN code for updates:
+//    https://cdn.byu.edu/byu-theme-components/experimental/branch-name/components.js
+//    https://cdn.byu.edu/byu-theme-components/latest/components.js
+
 //  // Add conditional CSS for IE. To use uncomment below and add IE css file
 //  drupal_add_css(path_to_theme() . '/css/ie.css', array('weight' => CSS_THEME, 'browsers' => array('!IE' => FALSE), 'preprocess' => FALSE));
 //
@@ -142,7 +151,7 @@ function byu2017_d7_preprocess_html(&$variables) {
  * Example of using foundation sexy buttons on comment form
  */
 //function STARTER_form_comment_form_alter(&$form, &$form_state) {
-  // Sexy preview buttons
+// Sexy preview buttons
 //  $classes = (is_array($form['actions']['preview']['#attributes']['class']))
 //    ? $form['actions']['preview']['#attributes']['class']
 //    : array();
@@ -158,8 +167,8 @@ function byu2017_d7_preprocess_html(&$variables) {
 // }
 
 /**
-* Implements template_preprocess_views_views_fields().
-*/
+ * Implements template_preprocess_views_views_fields().
+ */
 /* Delete me to enable
 function THEMENAME_preprocess_views_view_fields(&$variables) {
  if ($variables['view']->name == 'nodequeue_1') {
