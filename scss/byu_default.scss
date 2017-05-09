@@ -69,14 +69,12 @@ parametrics. Optional file. */
 @import "ie"; */
 
 /* ------- Default BYU styling --------- */
-/* import BYU Styles */
-@import "https://raw.githubusercontent.com/byuweb/2017-styles/master/2017-styles.scss";
-/* import Hoeffler fonts according to byu styling */
-@import "https://cloud.typography.com/75214/6517752/css/fonts.css";
+
 
 /* colors here for now */
 $navy: #002e5d;
 $royal: #003da5;
+$medgray: #666;
 
 
 a {
@@ -106,6 +104,16 @@ byu-header #site-name a:hover {
   text-decoration: none;
 }
 
+[slot="site-title"],
+#site-name {
+  p,span,div, a {
+    font-family: "Vitesse A", "Vitesse B", serif;
+  }
+}
+.subtitle.italic {
+  font-style: italic;
+}
+//[slot="actions"] a,
 byu-header[mobile-view] [slot="actions"] a {
   color: $navy;
   font-weight: 500;
@@ -116,11 +124,13 @@ byu-header[mobile-view] [slot="actions"] p {
   margin: 0;
 }
 
+
 [slot="actions"] div,
 [slot="actions"] p {
   padding-bottom: 0;
   margin: 0 15px;
 }
+
 
 /* -- override we need for byu footer component */
 .secondary-footer [class*="column"]+[class*="column"]:last-child{
@@ -154,10 +164,44 @@ byu-search[mobile-view] .form-text {
 
 /* ------------ */
 
-/* headings */
-h1,h2,/*h3*/,h4,h5,h6 {
-  font-family: "Vitesse A", "Vitesse B", Georgia, serif !important;
+
+// headings
+
+.h1-vitesse h1,
+.h2-vitesse h2,
+.h3-vitesse h3,
+.h4-vitesse h4,
+.h5-vitesse h5 {
+  font-family: "Vitesse A", "Vitesse B", Georgia, serif;
 }
+
+.h1-gotham h1,
+.h2-gotham h2,
+.h3-gotham h3,
+.h4-gotham h4,
+.h5-gotham h5 {
+  font-family: "Gotham A", "Gotham B", Arial, sans-serif;
+}
+
+.h1-sentinel h1,
+.h2-sentinel h2,
+.h3-sentinel h3,
+.h4-sentinel h4,
+.h5-sentinel h5 {
+  font-family: "Sentinel A", "Sentinel B", "Vitesse A", "Vitesse B", Helvetica, serif;
+
+}
+
+.h1-navy h1, .h2-navy h2, .h3-navy h3, .h4-navy h4, .h5-navy h5 {
+  color: $navy;
+}
+.h1-gray h1, .h2-gray h2, .h3-gray h3, .h4-gray h4, .h5-gray h5 {
+  color: $medgray;
+}
+.h1-black h1, .h2-black h2, .h3-black h3, .h4-black h4, .h5-black h5 {
+  color: #000;
+}
+
 h1 {
   font-size: $h1-font-size; // 36px; //em-calc(44);
 }
@@ -169,15 +213,27 @@ h3 {
   color: $navy;
 }
 
-/* regions */
-
-#hero {
-  /* if you want your images to stretch full width, you may want to copy this to your custom.scss file
-    img {
-      width: 100% !important;
-      height: auto !important;
-    } */
+byu-menu.transparent {
+  z-index: 100;
 }
+// regions
+#full-width-hero.hero_full_width_image_behind_menu {
+  margin-top: -36px;
+}
+header#constrained-width-hero.hero_custom_width_behind_menu {
+  margin-top: -36px;
+}
+
+.full-width-images > section img {
+  width: 100%;
+  height: auto !important;
+}
+
+.page > .row.full-width,
+main.row.full-width {
+  max-width: 100%;
+}
+
 
 #page-container {
   padding: 20px 0;
