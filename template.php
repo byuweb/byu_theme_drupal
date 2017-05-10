@@ -30,38 +30,49 @@ function byu2017_d7_preprocess_html(&$variables) {
 //
 //  // Need legacy support for IE downgrade to Foundation 2 or use JS file below
 //  // drupal_add_js('http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE7.js', 'external');
-
-    if (!empty(theme_get_setting('font_package'))){
+    
+    $font_package = theme_get_setting('font_package');
+    if (!empty($font_package)){
         $variables['classes_array'][] = trim(theme_get_setting('font_package'));
     }
-    if (!empty(theme_get_setting('font_one'))){
+    $font_one = theme_get_setting('font_one');
+    if (!empty($font_one)){
         $variables['classes_array'][] = trim(theme_get_setting('font_one'));
     }
-    if (!empty(theme_get_setting('font_two'))){
+    $font_two = theme_get_setting('font_two');
+    if (!empty($font_two)){
         $variables['classes_array'][] = trim(theme_get_setting('font_two'));
     }
-    if (!empty(theme_get_setting('font_three'))){
+    $font_three = theme_get_setting('font_three');
+    if (!empty($font_three)){
         $variables['classes_array'][] = trim(theme_get_setting('font_three'));
     }
-    if (!empty(theme_get_setting('font_four'))){
+    $font_four = theme_get_setting('font_four');
+    if (!empty($font_four)){
         $variables['classes_array'][] = trim(theme_get_setting('font_four'));
     }
-    if (!empty(theme_get_setting('font_five'))){
+    $font_five = theme_get_setting('font_five');
+    if (!empty($font_five)){
         $variables['classes_array'][] = trim(theme_get_setting('font_five'));
     }
-    if (!empty(theme_get_setting('font_one_color'))){
+    $font_one_color = theme_get_setting('font_one_color');
+    if (!empty($font_one_color)){
         $variables['classes_array'][] = trim(theme_get_setting('font_one_color'));
     }
-    if (!empty(theme_get_setting('font_two_color'))){
+    $font_two_color = theme_get_setting('font_two_color');
+    if (!empty($font_two_color)){
         $variables['classes_array'][] = trim(theme_get_setting('font_two_color'));
     }
-    if (!empty(theme_get_setting('font_three_color'))){
+    $font_three_color = theme_get_setting('font_three_color');
+    if (!empty($font_three_color)){
         $variables['classes_array'][] = trim(theme_get_setting('font_three_color'));
     }
-    if (!empty(theme_get_setting('font_four_color'))){
+    $font_four_color = theme_get_setting('font_four_color');
+    if (!empty($font_four_color)){
         $variables['classes_array'][] = trim(theme_get_setting('font_four_color'));
     }
-    if (!empty(theme_get_setting('font_five_color'))){
+    $font_five_color = theme_get_setting('font_five_color');
+    if (!empty($font_five_color)){
         $variables['classes_array'][] = trim(theme_get_setting('font_five_color'));
     }
     // Populate the body classes.
