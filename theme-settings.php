@@ -139,6 +139,18 @@ function byu2017_d7_form_system_theme_settings_alter(&$form, &$form_state) {
         ),
         '#default_value' => theme_get_setting('font_five_color'),
     );
+    $form['zurb_foundation']['fonts']['p_font'] = array(
+        '#type' => 'select',
+        '#title' => t('Paragraph Font'),
+        '#options' => array(
+            'p-default' => t('Default'),
+            'p-gotham' => t('Gotham (san serif)'),
+            'p-libreb' => t('Libre Baskerville (serif)'),
+        ),
+        '#default_value' => theme_get_setting('p_font'),
+    );
+
+
 
     // Header
     $form['zurb_foundation']['header'] = array(

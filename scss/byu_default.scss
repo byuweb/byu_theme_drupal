@@ -104,6 +104,18 @@ byu-header #site-name a:hover {
   text-decoration: none;
 }
 
+.p-gotham {
+  p,span,div,a {
+    font-family: "Gotham A", "Gotham B", Arial, sans-serif;
+  }
+}
+.p-libreb {
+  p,span,div,a {
+    font-family: "Libre Baskerville", Georgia, serif;
+  }
+}
+
+
 [slot="site-title"],
 #site-name {
   p,span,div, a {

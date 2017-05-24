@@ -13,6 +13,11 @@ function byu2017_d7_preprocess_html(&$variables) {
         // This is the Light Font Package - Vitesse and Gotham only.
         drupal_add_css('//cloud.typography.com/75214/7683772/css/fonts.css', array('type' => 'external'));
     }
+    // if Libre Baskerville is needed
+    if (trim(theme_get_setting('p_font')) == 'p-libreb') {
+        drupal_add_css('https://fonts.googleapis.com/css?family=Libre Baskerville', array('type' => 'external'));
+    }
+
     // To include the components and their styling:
     $version = trim(theme_get_setting('version'));
     if(!is_null($version ) ) {
@@ -23,6 +28,9 @@ function byu2017_d7_preprocess_html(&$variables) {
         drupal_add_css('//cdn.byu.edu/byu-theme-components/latest/byu-theme-components.min.css', array('type' => 'external'));
         drupal_add_js('//cdn.byu.edu/byu-theme-components/latest/byu-theme-components.min.js', 'external');
     }
+    /* -- if you are developing and wish to try your branch, comment out the section above and enable these lines with your branch name: */
+    // drupal_add_css('//cdn.byu.edu/byu-theme-components/experimental/your-branch-name/byu-theme-components.min.css', array('type' => 'external'));
+    // drupal_add_js('//cdn.byu.edu/byu-theme-components/experimental/your-branch-name/byu-theme-components.min.js', 'external');
 
 
 //  // Add conditional CSS for IE. To use uncomment below and add IE css file
@@ -54,6 +62,10 @@ function byu2017_d7_preprocess_html(&$variables) {
     $font_five = theme_get_setting('font_five');
     if (!empty($font_five)){
         $variables['classes_array'][] = trim(theme_get_setting('font_five'));
+    }
+    $p_font = theme_get_setting('p_font');
+    if (!empty($p_font)){
+        $variables['classes_array'][] = trim(theme_get_setting('p_font'));
     }
     $font_one_color = theme_get_setting('font_one_color');
     if (!empty($font_one_color)){
