@@ -258,6 +258,11 @@ function byu2017_d7_preprocess_page(&$variables) {
 }
 
 
+function byu2017_d7_form_search_block_form_alter(&$form, &$form_state, $form_id) {
+    $placeholder_text = trim(theme_get_setting('placeholder_text'));
+    $form['search_block_form']['#default_value'] = t($placeholder_text); // Set a default value for the textfield
+}
+
 
 /**
  * Implements template_preprocess_node

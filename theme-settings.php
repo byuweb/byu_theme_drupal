@@ -302,6 +302,12 @@ function byu2017_d7_form_system_theme_settings_alter(&$form, &$form_state) {
         '#default_value' => theme_get_setting('search_use'),
 //        '#description'   => t("Choose to display a Sign In link."),
     );
+    $form['zurb_foundation']['header']['search']['placeholder_text'] = array(
+        '#type'          => 'textfield',
+        '#title'         => t('Search Placeholder'),
+        '#default_value' => theme_get_setting('placeholder_text'),
+        '#description'   => t("This text displays as a placeholder inside the default Drupal search form."),
+    );
 //    $form['zurb_foundation']['header']['user_info']['logout_url'] = array(
 //        '#type'          => 'textfield',
 //        '#title'         => t('Custom Search Url'),
