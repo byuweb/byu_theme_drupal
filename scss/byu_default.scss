@@ -172,7 +172,12 @@ byu-search[mobile-view] .form-text {
   border: none;
   border-bottom: 1px solid #c5c5c5;
 }
-
+byu-search img {
+  max-width: unset;
+}
+byu-search button#search-button {
+  padding: 0 0 0 6px;
+}
 
 /* ------------ */
 
