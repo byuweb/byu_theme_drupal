@@ -239,6 +239,15 @@ main.row.full-width {
   padding: 20px 0;
 }
 
+
+/* Remove box-shadow from menu button in Firefox, Edge, IE11 */
+
+.mobile-menu-button {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+
 /* ------------- Do NOT make custom changes here - if you do they will be overridden when you update the theme.
 1. Create a custom.scss file in this scss directory.
 2. Edit byu2017_d7.info and find the lines where scss/byu_default.scss is included. You will see a commented out line
