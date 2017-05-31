@@ -67,8 +67,8 @@ scripts[] = js/foundation.min.js
 ;scripts[] = js/foundation/foundation.topbar.js
 
 ; Theme scripts.
-; This file is empty, just uncomment this line and start editing!
-; scripts[] = js/scripts.js
+; This is for byu default styles. don't change.
+ scripts[] = js/scripts.js
 
 ; if you are customizing with javascript, uncomment this line:
 ; scripts[] = js/custom.js
