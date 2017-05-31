@@ -74,7 +74,7 @@
       </byu-user-info>
     <?php endif; ?>
     <?php if ($search_use == TRUE): ?>
-      <byu-search slot="search">
+      <byu-search slot="search" onsearch="d7Search">
         <?php
         $search = drupal_get_form('search_block_form');
         print render($search);
