@@ -1,12 +1,23 @@
-DOCUMENTATION
+GETTING STARTED
 ----------------------------------
-Please refer also to the community documentation:
-  http://drupal.org/node/1948260
+Please see our full documentation here: https://theme-dev.byu.edu/templates/drupal-components
+- Downloading: Theme, SCSS Modules (Prepro & Sassy), and Library (PHPSass)
+- Installing
+- Theme Settings: Over a dozen theme options including:
+    * What fonts to use and where
+    * What version of BYU Components to load
+    * Header options: Actions, Sign In, Search, etc.
+    * Full width vs. a custom page width
+    * Menu Styling
+    * Hero image options
+ See a walk through of the settings: https://theme-dev.byu.edu/drupal-components/theme-settings
+ 
+ Suggest new options on slack! BYUWeb team and #drupal-users channel
 
 BUILD A THEME WITH ZURB FOUNDATION
 ----------------------------------
 This BYU Theme is a sub-theme of Zurb Foundation. Please download the current Zurb Foundation 7.x-4.x version.
-
+https://drupal.org/project/zurb-foundation
 
 The base Zurb Foundation theme is designed to be easily extended by its sub-themes.
 You shouldn't modify any of the CSS or PHP files in the zurb_foundation/ folder;
