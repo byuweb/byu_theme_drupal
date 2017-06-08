@@ -26,7 +26,7 @@ function byu2017_d7_form_system_theme_settings_alter(&$form, &$form_state) {
 // Fonts
     $form['zurb_foundation']['fonts'] = array(
         '#type' => 'fieldset',
-        '#title' => t('BYU Font Settings'),
+        '#title' => t('BYU Fonts & Colors'),
     );
     $form['zurb_foundation']['fonts']['font_package'] = array(
         '#type' => 'select',
@@ -149,7 +149,15 @@ function byu2017_d7_form_system_theme_settings_alter(&$form, &$form_state) {
         ),
         '#default_value' => theme_get_setting('p_font'),
     );
-
+    $form['zurb_foundation']['fonts']['a_color'] = array(
+        '#type' => 'select',
+        '#title' => t('Link Color'),
+        '#options' => array(
+            'a-royal' => t('Royal'),
+            'a-navy' => t('Navy'),
+        ),
+        '#default_value' => theme_get_setting('a_color'),
+    );
 
 
     // Header

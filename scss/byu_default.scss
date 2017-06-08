@@ -102,13 +102,26 @@ $lightteal: #e5f7ef;
 $green: #66B200; // doesn't work with accessibility
 $lightgreen: #e0f0cc;
 
-
+/* -- link colors -- */
 a {
-  color: $royal;
+  color: $navy;
 }
 
 a:hover {
+  color: $royal;
+}
+
+.a-navy a {
   color: $navy;
+}
+.a-navy a:hover {
+  color: $royal;
+}
+.a-royal a {
+  color: $royal;
+}
+.a-royal a:hover {
+  color: $lightRoyal;
 }
 
 /* --- BYU Components styling --- */

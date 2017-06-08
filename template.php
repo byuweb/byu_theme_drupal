@@ -67,6 +67,10 @@ function byu2017_d7_preprocess_html(&$variables) {
     if (!empty($p_font)){
         $variables['classes_array'][] = trim(theme_get_setting('p_font'));
     }
+    $a_color = theme_get_setting('a_color');
+    if (!empty($a_color)){
+        $variables['classes_array'][] = trim(theme_get_setting('a_color'));
+    } 
     $font_one_color = theme_get_setting('font_one_color');
     if (!empty($font_one_color)){
         $variables['classes_array'][] = trim(theme_get_setting('font_one_color'));
