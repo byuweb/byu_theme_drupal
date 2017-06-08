@@ -153,8 +153,8 @@ function byu2017_d7_form_system_theme_settings_alter(&$form, &$form_state) {
         '#type' => 'select',
         '#title' => t('Link Color'),
         '#options' => array(
-            'a-royal' => t('Default'),
-            'a-navy' => t('Gotham (san serif)'),
+            'a-royal' => t('Royal'),
+            'a-navy' => t('Navey)'),
         ),
         '#default_value' => theme_get_setting('a_color'),
     );
