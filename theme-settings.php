@@ -154,7 +154,7 @@ function byu2017_d7_form_system_theme_settings_alter(&$form, &$form_state) {
         '#title' => t('Link Color'),
         '#options' => array(
             'a-royal' => t('Royal'),
-            'a-navy' => t('Navey)'),
+            'a-navy' => t('Navy'),
         ),
         '#default_value' => theme_get_setting('a_color'),
     );
