@@ -1,4 +1,4 @@
-#BYU Drupal 7 Theme
+# BYU Drupal 7 Theme
 
 Getting Started:
 --------------------
