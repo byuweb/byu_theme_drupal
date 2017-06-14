@@ -144,12 +144,12 @@ byu-header #site-name a:hover {
 }
 
 .p-gotham {
-  p,span,div,a {
+  p,span,div, p > a, div > a {
     font-family: "Gotham A", "Gotham B", Arial, sans-serif;
   }
 }
 .p-libreb {
-  p,span,div,a {
+  p,span,div, p > a, div > a {
     font-family: "Libre Baskerville", Georgia, serif;
   }
 }
