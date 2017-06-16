@@ -1,0 +1,28 @@
+uuid: 52d85c1c-915d-4e36-9769-2c4eab344579
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - block_class
+    - system
+  theme:
+    - byu_d8
+third_party_settings:
+  block_class:
+    classes: ''
+id: mainnavigation
+theme: byu_d8
+region: primary_menu
+weight: 0
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 1
+visibility: {  }

@@ -1,0 +1,24 @@
+uuid: 4edc155c-0af1-47e0-a4a8-d37047f3c676
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_class
+    - search
+  theme:
+    - byu_d8
+third_party_settings:
+  block_class:
+    classes: ''
+id: searchform
+theme: byu_d8
+region: search
+weight: -2
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Search form'
+  provider: search
+  label_display: visible
+visibility: {  }
