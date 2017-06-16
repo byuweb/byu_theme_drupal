@@ -1,18 +1,13 @@
-uuid: 52d85c1c-915d-4e36-9769-2c4eab344579
 langcode: en
 status: true
 dependencies:
   config:
     - system.menu.main
   module:
-    - block_class
     - system
   theme:
     - byu_d8
-third_party_settings:
-  block_class:
-    classes: ''
-id: mainnavigation
+id: byu_d8_main_menu
 theme: byu_d8
 region: primary_menu
 weight: 0

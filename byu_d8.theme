@@ -120,10 +120,10 @@ function byu_d8_preprocess_page(&$variables) {
 //    $search_block_output = getSearch();
 //    dpm($search_block_output);
 
-    $searchBlock = \Drupal\block\Entity\Block::load('searchform');
-    $variables['search_block'] = \Drupal::entityManager()
-        ->getViewBuilder('block')
-        ->view($searchBlock);
+   // $searchBlock = \Drupal\block\Entity\Block::load('searchform');
+    //$variables['search_block'] = \Drupal::entityManager()
+   //     ->getViewBuilder('block')
+   //     ->view($searchBlock);
 
 
     /* -- Load Theme settings ---- */
