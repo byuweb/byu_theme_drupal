@@ -1,11 +1,11 @@
 {% include directory ~ '/templates/includes/header.html.twig' %}
 <div id="wrapper">
 
-    <div role="main" class="main {%  if custom_width %} custom-width {% endif %}" style="width: {{ custom_width }}px
+    {% if page.slide_show %}
+        {{ page.slide_show }}
+    {% endif %}
 
-        {% if page.slide_show %}
-                {{ page.slide_show }}
-        {% endif %}
+    <div role="main" class="main {%  if custom_width %} custom-width " style="width: {{ custom_width }}px"{% endif %}>
 
         {% include directory ~ '/templates/includes/custom-breadcrumb.html.twig' %}
 

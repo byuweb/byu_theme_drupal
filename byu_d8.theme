@@ -151,6 +151,27 @@ function byu_d8_preprocess_page(&$variables) {
     $variables['menu_disable'] = theme_get_setting('menu_disable');
     $variables['transparent'] = theme_get_setting('transparent');
 
+    // hero
+    $hero_setting = theme_get_setting('hero_width');
+    if($hero_setting == '0') {
+        $variables['hero_width'] = 'full-width';
+    } else {
+        $variables['hero_width'] = 'custom-width';
+    }
+
+    $hero_image_setting = theme_get_setting('hero_image_width');
+    if($hero_image_setting == '0') {
+        $variables['hero_image_width'] = '';
+    } else {
+        $variables['hero_image_width'] = 'full-width-images';
+    }
+
+    $hero_image_setting = theme_get_setting('hero_image_width');
+    if($hero_image_setting == '0') {
+        $variables['hero_image_width'] = '';
+    } else {
+        $variables['hero_image_width'] = 'full-width-images';
+    }
 
 
 

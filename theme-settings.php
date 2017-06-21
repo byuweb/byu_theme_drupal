@@ -365,29 +365,39 @@ are placed at the bottom of the menu in mobile views. Please make sure your cont
         '#title' => t('Hero Settings'),
         '#open' => FALSE,
     );
+
+    $form['header_style']['hero']['hero_width'] = array(
+        '#type' => 'select',
+        '#title' => t('Hero Space Width'),
+        '#options' => array(
+            0 => t("Full Width (default)"),
+            1 => t('Custom Width'),
+        ),
+        '#description' => t('The custom page width setting is under BYU General Page. See the next section of settings.'),
+        '#default_value' => theme_get_setting('hero_width'),
+    );
     $form['header_style']['hero']['hero_show_behind_menu'] = array(
         '#type' => 'select',
         '#title' => t('How do you want the Hero space & Menu to be?'),
         '#description' => t('If enabled, the site name and main menu will appear in a bar along the top of the page. You will want to make sure that the menu background is set to transparent.'),
         '#options' => array(
-            0 => t("Show normally below the menu, not behind the menu (constrained OR full)"),
-            1 => t('Show Full Width Hero behind menu'),
-            2 => t('Not Using Full Width Hero - Show constrained width hero behind the menu.'),
+            0 => t("Show hero below the menu (default)"),
+            1 => t('Show hero behind menu'),
         ),
         '#default_value' => theme_get_setting('hero_show_behind_menu'),
     );
-    $form['header_style']['hero']['hero_full_image_width'] = array(
+    $form['header_style']['hero']['hero_image_width'] = array(
         '#type'          => 'checkbox',
-        '#title'         => t('Full width Header: Make images stretch full width'),
-        '#default_value' => theme_get_setting('hero_full_image_width'),
-        '#description'   => t("If you are using full width region..."),
+        '#title'         => t('Make images stretch full width'),
+        '#default_value' => theme_get_setting('hero_image_width'),
+        '#description'   => t("Whether you are using a full width or constrained width hero, use this setting to tell images to expand to the full width of the hero space."),
     );
-    $form['header_style']['hero']['hero_constrained_image_width'] = array(
-        '#type'          => 'checkbox',
-        '#title'         => t('Constrained width: Make images stretch to container width'),
-        '#default_value' => theme_get_setting('hero_constrained_image_width'),
-        '#description'   => t("If you are using constrained hero region..."),
-    );
+//    $form['header_style']['hero']['hero_constrained_image_width'] = array(
+//        '#type'          => 'checkbox',
+//        '#title'         => t('Constrained width: Make images stretch to container width'),
+//        '#default_value' => theme_get_setting('hero_constrained_image_width'),
+//        '#description'   => t("If you are using constrained hero region..."),
+//    );
 
 
     /* ---- General Page settings -- */
@@ -401,7 +411,7 @@ are placed at the bottom of the menu in mobile views. Please make sure your cont
         '#type'          => 'checkbox',
         '#title'         => t('Full Width instead of Constrained Width'),
         '#default_value' => theme_get_setting('full_width'),
-        '#description'   => t("Choose to have all pages extend full width. This applies to BYU Header, page content, and BYU Footer."),
+        '#description'   => t("Choose to have all pages extend full width. This applies to BYU Header, page content, and BYU Footer. The hero space has it's own setting for width, and this will not override that."),
     );
 //    $form['general_page']['custom_width'] = array(
 //        '#type' => 'select',
