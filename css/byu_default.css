@@ -180,11 +180,12 @@ h2 {
 h3 {
   font-size: 24px; }
 
-byu-menu.transparent {
+byu-menu {
   z-index: 100; }
 
-.hero_behind_menu {
-  margin-top: -36px; }
+.hero-behind-menu {
+  margin-top: -36px;
+  z-index: -1; }
 
 .full-width-images .block img {
   width: 100%;

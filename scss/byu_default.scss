@@ -249,12 +249,17 @@ byu-search {
     font-size: 24px;
   }
 
-  byu-menu.transparent {
+  //byu-menu.transparent {
+  //  z-index: 100;
+  //}
+
+  byu-menu {
     z-index: 100;
   }
 
-  .hero_behind_menu {
+  .hero-behind-menu {
     margin-top: -36px;
+    z-index: -1;
   }
 
   .full-width-images .block img {

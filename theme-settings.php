@@ -376,22 +376,25 @@ are placed at the bottom of the menu in mobile views. Please make sure your cont
         '#description' => t('The custom page width setting is under BYU General Page. See the next section of settings.'),
         '#default_value' => theme_get_setting('hero_width'),
     );
-    $form['header_style']['hero']['hero_show_behind_menu'] = array(
+
+    $form['header_style']['hero']['hero_vs_menu'] = array(
         '#type' => 'select',
         '#title' => t('How do you want the Hero space & Menu to be?'),
+        '#default_value' => theme_get_setting('hero_vs_menu'),
         '#description' => t('If enabled, the site name and main menu will appear in a bar along the top of the page. You will want to make sure that the menu background is set to transparent.'),
         '#options' => array(
             0 => t("Show hero below the menu (default)"),
             1 => t('Show hero behind menu'),
         ),
-        '#default_value' => theme_get_setting('hero_show_behind_menu'),
     );
+
     $form['header_style']['hero']['hero_image_width'] = array(
         '#type'          => 'checkbox',
         '#title'         => t('Make images stretch full width'),
         '#default_value' => theme_get_setting('hero_image_width'),
         '#description'   => t("Whether you are using a full width or constrained width hero, use this setting to tell images to expand to the full width of the hero space."),
     );
+
 //    $form['header_style']['hero']['hero_constrained_image_width'] = array(
 //        '#type'          => 'checkbox',
 //        '#title'         => t('Constrained width: Make images stretch to container width'),

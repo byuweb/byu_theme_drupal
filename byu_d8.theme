@@ -166,11 +166,11 @@ function byu_d8_preprocess_page(&$variables) {
         $variables['hero_image_width'] = 'full-width-images';
     }
 
-    $hero_image_setting = theme_get_setting('hero_image_width');
-    if($hero_image_setting == '0') {
-        $variables['hero_image_width'] = '';
+    $hero_behind_setting = theme_get_setting('hero_vs_menu');
+    if($hero_behind_setting == '0') {
+        $variables['hero_vs_menu'] = 'hero-below-menu';
     } else {
-        $variables['hero_image_width'] = 'full-width-images';
+        $variables['hero_vs_menu'] = 'hero-behind-menu';
     }
 
 
