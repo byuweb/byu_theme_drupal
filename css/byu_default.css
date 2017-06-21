@@ -4,49 +4,29 @@
 /* ------- Default BYU styling --------- */
 /* colors here for now */
 /* blues */
-/*$navy: #002E5D;*/
-/*$medblue: #869DB5;*/
-/*$lightBlue: #e0f0cc;*/
-/*$xlightblue: #C3DDF9;*/
-/*$brightBlue: #0057B8;*/
-/*$royal: #003DA5;*/
-/*$lightRoyal: #114BAD;*/
 /*// There are 6 grays right now..*/
-/*$xlightgray: #f2f2f2;*/
-/*$lightgray: #e5e5e5;*/
-/*$lightergray: #e6e6e6;*/
-/*//$medgray: #9b9b9b; // extra*/
-/*$gray: #c5c5c5;*/
-/*$medgray: #666;*/
-/*$darkgray: #6a6a6b; // least used gray*/
-/*$darkestgray: #141414;  // this should be used for body & default text.*/
 /* other colors */
-/*$red: #B3041A;*/
-/*$yellow: #FCC015;*/
-/*$lightyellow: #fef2d0;*/
-/*$teal: #84DCB4;*/
-/*$lightteal: #e5f7ef;*/
-/*$green: #66B200; // doesn't work with accessibility*/
-/*$lightgreen: #e0f0cc;*/
 a {
-  color: #002e5d; }
+  color: #003DA5; }
 
 a:hover {
-  color: #003da5; }
+  color: #002E5D; }
 
 /* --- BYU Components styling --- */
 byu-header a {
   color: unset; }
 
-byu-header #site-name {
+byu-header #site-title {
   color: #fff; }
 
 byu-header:not([mobile-view]) a {
   color: #fff; }
 
-byu-header #site-name a:hover {
-  color: #fff;
+byu-header:not([mobile-view]) a:hover, byu-header:not([mobile-view]) a:focus {
   text-decoration: none; }
+
+byu-header #site-title a:hover {
+  color: #fff; }
 
 .p-gotham p, .p-gotham span, .p-gotham div, .p-gotham a {
   font-family: "Gotham A", "Gotham B", Arial, sans-serif; }
@@ -55,17 +35,17 @@ byu-header #site-name a:hover {
   font-family: "Libre Baskerville", Georgia, serif; }
 
 [slot="site-title"] p, [slot="site-title"] span, [slot="site-title"] div, [slot="site-title"] a,
-#site-name p,
-#site-name span,
-#site-name div,
-#site-name a {
+#site-title p,
+#site-title span,
+#site-title div,
+#site-title a {
   font-family: "Vitesse A", "Vitesse B", serif; }
 
 .subtitle.italic {
   font-style: italic; }
 
 byu-header[mobile-view] [slot="actions"] a {
-  color: #002e5d;
+  color: #002E5D;
   font-weight: 500; }
 
 byu-header[mobile-view] [slot="actions"] p {
@@ -108,13 +88,13 @@ byu-search .form-submit {
   display: none; }
 
 byu-search .form-item, byu-search .form-actions {
-  margin: 0px;
+  margin: 0;
   max-height: 23px;
-  padding: 0px;
+  padding: 0;
   /* border-radius: 0px; */ }
 
 byu-search input[type=search] {
-  border-radius: 0px;
+  border-radius: 0;
   height: 30px; }
 
 /* -- needed to counter Foundation -- */
@@ -125,6 +105,16 @@ byu-search input[type=search] {
 .h4-vitesse h4,
 .h5-vitesse h5 {
   font-family: "Vitesse A", "Vitesse B", Georgia, serif; }
+  .h1-vitesse h1 span, .h1-vitesse h1 a,
+  .h2-vitesse h2 span,
+  .h2-vitesse h2 a,
+  .h3-vitesse h3 span,
+  .h3-vitesse h3 a,
+  .h4-vitesse h4 span,
+  .h4-vitesse h4 a,
+  .h5-vitesse h5 span,
+  .h5-vitesse h5 a {
+    font-family: "Vitesse A", "Vitesse B", Georgia, serif; }
 
 .h1-gotham h1,
 .h2-gotham h2,
@@ -132,6 +122,16 @@ byu-search input[type=search] {
 .h4-gotham h4,
 .h5-gotham h5 {
   font-family: "Gotham A", "Gotham B", Arial, sans-serif; }
+  .h1-gotham h1 span, .h1-gotham h1 a,
+  .h2-gotham h2 span,
+  .h2-gotham h2 a,
+  .h3-gotham h3 span,
+  .h3-gotham h3 a,
+  .h4-gotham h4 span,
+  .h4-gotham h4 a,
+  .h5-gotham h5 span,
+  .h5-gotham h5 a {
+    font-family: "Gotham A", "Gotham B", Arial, sans-serif; }
 
 .h1-sentinel h1,
 .h2-sentinel h2,
@@ -139,15 +139,37 @@ byu-search input[type=search] {
 .h4-sentinel h4,
 .h5-sentinel h5 {
   font-family: "Sentinel A", "Sentinel B", "Vitesse A", "Vitesse B", Helvetica, serif; }
+  .h1-sentinel h1 span, .h1-sentinel h1 a,
+  .h2-sentinel h2 span,
+  .h2-sentinel h2 a,
+  .h3-sentinel h3 span,
+  .h3-sentinel h3 a,
+  .h4-sentinel h4 span,
+  .h4-sentinel h4 a,
+  .h5-sentinel h5 span,
+  .h5-sentinel h5 a {
+    font-family: "Sentinel A", "Sentinel B", "Vitesse A", "Vitesse B", Helvetica, serif; }
 
 .h1-navy h1, .h2-navy h2, .h3-navy h3, .h4-navy h4, .h5-navy h5 {
-  color: #002e5d; }
+  color: #002E5D; }
+  .h1-navy h1 a, .h2-navy h2 a, .h3-navy h3 a, .h4-navy h4 a, .h5-navy h5 a {
+    color: #002E5D; }
+  .h1-navy h1 a:hover, .h2-navy h2 a:hover, .h3-navy h3 a:hover, .h4-navy h4 a:hover, .h5-navy h5 a:hover {
+    color: #003DA5; }
 
 .h1-gray h1, .h2-gray h2, .h3-gray h3, .h4-gray h4, .h5-gray h5 {
   color: #666; }
+  .h1-gray h1 a, .h2-gray h2 a, .h3-gray h3 a, .h4-gray h4 a, .h5-gray h5 a {
+    color: #666; }
+  .h1-gray h1 a:hover, .h2-gray h2 a:hover, .h3-gray h3 a:hover, .h4-gray h4 a:hover, .h5-gray h5 a:hover {
+    color: #6a6a6b; }
 
 .h1-black h1, .h2-black h2, .h3-black h3, .h4-black h4, .h5-black h5 {
   color: #000; }
+  .h1-black h1 a, .h2-black h2 a, .h3-black h3 a, .h4-black h4 a, .h5-black h5 a {
+    color: #000; }
+  .h1-black h1 a:hover, .h2-black h2 a:hover, .h3-black h3 a:hover, .h4-black h4 a:hover, .h5-black h5 a:hover {
+    color: #6a6a6b; }
 
 h1 {
   font-size: 36px; }
@@ -161,13 +183,10 @@ h3 {
 byu-menu.transparent {
   z-index: 100; }
 
-#full-width-hero.hero_full_width_image_behind_menu {
+.hero_behind_menu {
   margin-top: -36px; }
 
-header#constrained-width-hero.hero_custom_width_behind_menu {
-  margin-top: -36px; }
-
-.full-width-images > section img {
+.full-width-images .block img {
   width: 100%;
   height: auto !important; }
 
@@ -177,13 +196,17 @@ header#constrained-width-hero.hero_custom_width_behind_menu {
 .full-width-false div.main {
   max-width: 1200px; }
 
+.main-top.custom-width {
+  margin-left: auto;
+  margin-right: auto; }
+
 .main {
   padding: 30px;
   margin-left: auto;
   margin-right: auto; }
 
 .main.custom-width {
-  padding: 30px 0px; }
+  padding: 30px 0; }
 
 #page-container {
   padding: 20px 0; }
@@ -242,12 +265,12 @@ header#constrained-width-hero.hero_custom_width_behind_menu {
   column-count: 4; }
 
 .navy-button {
-  background: #002e5d;
+  background: #002E5D;
   color: #fff;
   padding: 12px 25px; }
 
 .medblue-button {
-  background: #002e5d;
+  background: #002E5D;
   /* change to medium blue */
   color: #fff;
   padding: 12px 25px; }

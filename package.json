@@ -1,10 +1,13 @@
 {
+  "name": "BYU Drupal8",
   "version": "1.0.0",
   "description": "Gulp test",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "author": "Katria Lesser",
+  "license": "BYU",
   "dependencies": {
     "bootstrap-sass": "^3.3.7",
     "gulp-autoprefixer": "^3.1.1",
