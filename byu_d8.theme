@@ -173,12 +173,18 @@ function byu_d8_preprocess_page(&$variables) {
         $variables['hero_vs_menu'] = 'hero-behind-menu';
     }
 
-
-
     // general page settings
     $variables['full_width'] = theme_get_setting('full_width');
     $variables['custom_width'] = theme_get_setting('custom_width');
 
+    $page_min_setting = theme_get_setting('min_page_height');
+    if($page_min_setting == 'none') {
+        $variables['min_page_height'] = 'no-min-height';
+    } elseif ($page_min_setting == '300') {
+        $variables['min_page_height'] = 'min-height-300';
+    } else {
+        $variables['min_page_height'] = 'min-height-500';
+    }
 
     $variables['footer_option'] = theme_get_setting('footer_option');
 //    $variables['footer_color_option'] = theme_get_setting('footer_color_option');

@@ -426,12 +426,14 @@ are placed at the bottom of the menu in mobile views. Please make sure your cont
 //            '1000' => '1000px',
 //        ),
 //    );
+
     $form['general_page']['custom_width'] = array(
         '#type'          => 'textfield',
         '#title'         => t('Custom Page Width'),
         '#default_value' => theme_get_setting('custom_width'),
         '#description'   => t("Enter the number of pixels you would like. i.e. '1200' fof 1200px. Defaults to 1000px."),
     );
+
     $form['general_page']['min_page_height'] = array(
         '#type' => 'select',
         '#title' => 'Custom Page Height',
@@ -442,26 +444,38 @@ are placed at the bottom of the menu in mobile views. Please make sure your cont
             '500' => '500px',
         ),
     );
+
 //        '#type'          => 'textfield',
 //        '#title'         => t('Minimum page Height'),
 //        '#default_value' => theme_get_setting('min_page_height'),
 //        '#description'   => t("Specify '500' if you want to set a min-height of 500px on your page content area. This is for pages with very minimal content, where you don't want the
 //        footer to come up too high. Use this if you'd rather have white space on extremely short-content pages."),
 //    );
+
     $form['general_page']['byu_styles'] = array(
         '#type' => 'fieldset',
         '#title' => t('Extra BYU Styles'),
         '#open' => FALSE,
     );
+
     $form['general_page']['byu_styles']['byu_styles_info'] = array(
         '#markup' => '<p>Enabling these styles doesn\'t necessarily mean the styles will immediately take effect. Most of these styles make byu classes available for use as you choose to apply them.</p>',
     );
+
     $form['general_page']['byu_styles']['byu_buttons'] = array(
         '#type'          => 'checkbox',
         '#title'         => t('BYU Button Styles'),
         '#default_value' => theme_get_setting('byu_buttons'),
 
     );
+
+    $form['general_page']['byu_styles']['byu_tables'] = array(
+        '#type'          => 'checkbox',
+        '#title'         => t('BYU Table Styles'),
+        '#default_value' => theme_get_setting('byu_tables'),
+
+    );
+
     $form['general_page']['your_css'] = array(
         '#type' => 'textarea',
         '#title' => 'Add Your Css',
@@ -572,7 +586,10 @@ are placed at the bottom of the menu in mobile views. Please make sure your cont
         '#description' => 'If you select any footer layout besides normal, do not place content in the Footer 4 region. It will not be used.',
     );
     $form['footer_style']['footer_regions'] = array(
-        '#markup' => '<p>To place content in the footer, go to the <a href="../admin/structure/block" target="_blank">blocks page</a> and place blocks into one of the footer regions. Footer 1, Footer 2, Footer 3, and Footer 4 correspond to the 4 footer columns.</p><p>The header for the footer column will be the block title of the first block in the region.</p>',
+        '#markup' => '<p>To place content in the footer:<br>1.Make sure you have the module <a 
+href="https://www.drupal.org/project/block_class">block class</a> downloaded and enabled. <br>2. Go to 
+the <a href="../admin/structure/block" target="_blank">blocks page</a> 
+and place blocks into one of the footer regions. Each time you place a block, add the class "byu-footer" to each block. Footer 1, Footer 2, Footer 3, and Footer 4 correspond to the 4 footer columns.</p><p>The header for the footer column will be the block title of the first block in the region.</p>',
     );
     // Footer Colour
 //    $form['footer_color'] = array(

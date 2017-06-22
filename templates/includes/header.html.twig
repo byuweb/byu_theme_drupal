@@ -57,11 +57,11 @@
                 {% else %}
                     <a slot="logout" href="../logout">Sign Out</a>
                 {% endif %}
-                {% if user.name.0.value %}
+                {% if user.account.name %}
                     {% if myaccount_use %}
-                        <a href="{{  myaccount_url }}" slot="user-name">{{ user.name.0.value }}</a>
+                        <a href="{{  myaccount_url }}" slot="user-name">{{ user.account.name  }}</a>
                     {% else %}
-                        <span slot="user-name">{{ user.name.0.value }}</span>
+                        <span slot="user-name">{{ user.account.name  }}</span>
                     {% endif %}
                 {% endif %}
 

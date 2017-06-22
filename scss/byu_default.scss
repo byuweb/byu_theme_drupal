@@ -122,6 +122,12 @@ byu-header[mobile-view] [slot="actions"] p {
   display: flex;
 }
 
+// user
+span[slot="user-name"] {
+  cursor: default;
+}
+
+
 /* -- override we need for byu footer component */
 .secondary-footer [class*="column"] + [class*="column"]:last-child {
   float: none !important;
@@ -270,6 +276,7 @@ byu-search {
   .full-width-true div.main {
     max-width: 100%;
   }
+
   .full-width-false div.main {
     max-width: 1200px;
   }
@@ -284,12 +291,27 @@ byu-search {
     margin-left: auto;
     margin-right: auto;
   }
+
   .main.custom-width {
     padding: 30px 0;
   }
+
   #page-container {
     padding: 20px 0;
   }
+
+  .no-min-height {
+    min-height: 0;
+  }
+
+  .min-height-300 {
+    min-height: 300px;
+  }
+
+  .min-height-500 {
+    min-height: 500px;
+  }
+
 
   /* Remove box-shadow from menu button in Firefox, Edge, IE11 */
   .mobile-menu-button {
