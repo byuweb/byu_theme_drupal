@@ -151,13 +151,40 @@ function byu_d8_preprocess_page(&$variables) {
     $variables['menu_disable'] = theme_get_setting('menu_disable');
     $variables['transparent'] = theme_get_setting('transparent');
 
+    // hero
+    $hero_setting = theme_get_setting('hero_width');
+    if($hero_setting == '0') {
+        $variables['hero_width'] = 'full-width';
+    } else {
+        $variables['hero_width'] = 'custom-width';
+    }
 
+    $hero_image_setting = theme_get_setting('hero_image_width');
+    if($hero_image_setting == '0') {
+        $variables['hero_image_width'] = '';
+    } else {
+        $variables['hero_image_width'] = 'full-width-images';
+    }
 
+    $hero_behind_setting = theme_get_setting('hero_vs_menu');
+    if($hero_behind_setting == '0') {
+        $variables['hero_vs_menu'] = 'hero-below-menu';
+    } else {
+        $variables['hero_vs_menu'] = 'hero-behind-menu';
+    }
 
     // general page settings
     $variables['full_width'] = theme_get_setting('full_width');
     $variables['custom_width'] = theme_get_setting('custom_width');
 
+    $page_min_setting = theme_get_setting('min_page_height');
+    if($page_min_setting == 'none') {
+        $variables['min_page_height'] = 'no-min-height';
+    } elseif ($page_min_setting == '300') {
+        $variables['min_page_height'] = 'min-height-300';
+    } else {
+        $variables['min_page_height'] = 'min-height-500';
+    }
 
     $variables['footer_option'] = theme_get_setting('footer_option');
 //    $variables['footer_color_option'] = theme_get_setting('footer_color_option');

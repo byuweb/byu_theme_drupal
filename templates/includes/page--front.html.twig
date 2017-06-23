@@ -1,10 +1,14 @@
 
 <div id="wrapper">
     {% include directory ~ '/templates/includes/header.html.twig' %}
-    <div role="main" class="main {%  if custom_width %} custom-width {% endif %}" style="width: {{ custom_width }}px">
+
+    <div class="main-top {{ hero_width }} {{ hero_image_width }} {{ hero_vs_menu }} {%  if hero_width == 'custom-width' %} {%  if custom_width %} " style="width: {{ custom_width }}px{% endif %} {% endif %}">
         {% if page.slide_show %}
             {{ page.slide_show }}
         {% endif %}
+    </div>
+
+    <div role="main" class="main {{ min_page_height }} {%  if custom_width %} custom-width " style="width: {{ custom_width }}px{% endif %}">
         {% if page_title %}
             <!--breadcrumbs-->
             {% if page.breadcrumb %}

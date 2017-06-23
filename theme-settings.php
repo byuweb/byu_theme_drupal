@@ -365,29 +365,42 @@ are placed at the bottom of the menu in mobile views. Please make sure your cont
         '#title' => t('Hero Settings'),
         '#open' => FALSE,
     );
-    $form['header_style']['hero']['hero_show_behind_menu'] = array(
+
+    $form['header_style']['hero']['hero_width'] = array(
+        '#type' => 'select',
+        '#title' => t('Hero Space Width'),
+        '#options' => array(
+            0 => t("Full Width (default)"),
+            1 => t('Custom Width'),
+        ),
+        '#description' => t('The custom page width setting is under BYU General Page. See the next section of settings.'),
+        '#default_value' => theme_get_setting('hero_width'),
+    );
+
+    $form['header_style']['hero']['hero_vs_menu'] = array(
         '#type' => 'select',
         '#title' => t('How do you want the Hero space & Menu to be?'),
+        '#default_value' => theme_get_setting('hero_vs_menu'),
         '#description' => t('If enabled, the site name and main menu will appear in a bar along the top of the page. You will want to make sure that the menu background is set to transparent.'),
         '#options' => array(
-            0 => t("Show normally below the menu, not behind the menu (constrained OR full)"),
-            1 => t('Show Full Width Hero behind menu'),
-            2 => t('Not Using Full Width Hero - Show constrained width hero behind the menu.'),
+            0 => t("Show hero below the menu (default)"),
+            1 => t('Show hero behind menu'),
         ),
-        '#default_value' => theme_get_setting('hero_show_behind_menu'),
     );
-    $form['header_style']['hero']['hero_full_image_width'] = array(
+
+    $form['header_style']['hero']['hero_image_width'] = array(
         '#type'          => 'checkbox',
-        '#title'         => t('Full width Header: Make images stretch full width'),
-        '#default_value' => theme_get_setting('hero_full_image_width'),
-        '#description'   => t("If you are using full width region..."),
+        '#title'         => t('Make images stretch full width'),
+        '#default_value' => theme_get_setting('hero_image_width'),
+        '#description'   => t("Whether you are using a full width or constrained width hero, use this setting to tell images to expand to the full width of the hero space."),
     );
-    $form['header_style']['hero']['hero_constrained_image_width'] = array(
-        '#type'          => 'checkbox',
-        '#title'         => t('Constrained width: Make images stretch to container width'),
-        '#default_value' => theme_get_setting('hero_constrained_image_width'),
-        '#description'   => t("If you are using constrained hero region..."),
-    );
+
+//    $form['header_style']['hero']['hero_constrained_image_width'] = array(
+//        '#type'          => 'checkbox',
+//        '#title'         => t('Constrained width: Make images stretch to container width'),
+//        '#default_value' => theme_get_setting('hero_constrained_image_width'),
+//        '#description'   => t("If you are using constrained hero region..."),
+//    );
 
 
     /* ---- General Page settings -- */
@@ -401,7 +414,7 @@ are placed at the bottom of the menu in mobile views. Please make sure your cont
         '#type'          => 'checkbox',
         '#title'         => t('Full Width instead of Constrained Width'),
         '#default_value' => theme_get_setting('full_width'),
-        '#description'   => t("Choose to have all pages extend full width. This applies to BYU Header, page content, and BYU Footer."),
+        '#description'   => t("Choose to have all pages extend full width. This applies to BYU Header, page content, and BYU Footer. The hero space has it's own setting for width, and this will not override that."),
     );
 //    $form['general_page']['custom_width'] = array(
 //        '#type' => 'select',
@@ -413,12 +426,14 @@ are placed at the bottom of the menu in mobile views. Please make sure your cont
 //            '1000' => '1000px',
 //        ),
 //    );
+
     $form['general_page']['custom_width'] = array(
         '#type'          => 'textfield',
         '#title'         => t('Custom Page Width'),
         '#default_value' => theme_get_setting('custom_width'),
         '#description'   => t("Enter the number of pixels you would like. i.e. '1200' fof 1200px. Defaults to 1000px."),
     );
+
     $form['general_page']['min_page_height'] = array(
         '#type' => 'select',
         '#title' => 'Custom Page Height',
@@ -429,26 +444,38 @@ are placed at the bottom of the menu in mobile views. Please make sure your cont
             '500' => '500px',
         ),
     );
+
 //        '#type'          => 'textfield',
 //        '#title'         => t('Minimum page Height'),
 //        '#default_value' => theme_get_setting('min_page_height'),
 //        '#description'   => t("Specify '500' if you want to set a min-height of 500px on your page content area. This is for pages with very minimal content, where you don't want the
 //        footer to come up too high. Use this if you'd rather have white space on extremely short-content pages."),
 //    );
+
     $form['general_page']['byu_styles'] = array(
         '#type' => 'fieldset',
         '#title' => t('Extra BYU Styles'),
         '#open' => FALSE,
     );
+
     $form['general_page']['byu_styles']['byu_styles_info'] = array(
         '#markup' => '<p>Enabling these styles doesn\'t necessarily mean the styles will immediately take effect. Most of these styles make byu classes available for use as you choose to apply them.</p>',
     );
+
     $form['general_page']['byu_styles']['byu_buttons'] = array(
         '#type'          => 'checkbox',
         '#title'         => t('BYU Button Styles'),
         '#default_value' => theme_get_setting('byu_buttons'),
 
     );
+
+    $form['general_page']['byu_styles']['byu_tables'] = array(
+        '#type'          => 'checkbox',
+        '#title'         => t('BYU Table Styles'),
+        '#default_value' => theme_get_setting('byu_tables'),
+
+    );
+
     $form['general_page']['your_css'] = array(
         '#type' => 'textarea',
         '#title' => 'Add Your Css',
@@ -559,7 +586,10 @@ are placed at the bottom of the menu in mobile views. Please make sure your cont
         '#description' => 'If you select any footer layout besides normal, do not place content in the Footer 4 region. It will not be used.',
     );
     $form['footer_style']['footer_regions'] = array(
-        '#markup' => '<p>To place content in the footer, go to the <a href="../admin/structure/block" target="_blank">blocks page</a> and place blocks into one of the footer regions. Footer 1, Footer 2, Footer 3, and Footer 4 correspond to the 4 footer columns.</p><p>The header for the footer column will be the block title of the first block in the region.</p>',
+        '#markup' => '<p>To place content in the footer:<br>1.Make sure you have the module <a 
+href="https://www.drupal.org/project/block_class">block class</a> downloaded and enabled. <br>2. Go to 
+the <a href="../admin/structure/block" target="_blank">blocks page</a> 
+and place blocks into one of the footer regions. Each time you place a block, add the class "byu-footer" to each block. Footer 1, Footer 2, Footer 3, and Footer 4 correspond to the 4 footer columns.</p><p>The header for the footer column will be the block title of the first block in the region.</p>',
     );
     // Footer Colour
 //    $form['footer_color'] = array(

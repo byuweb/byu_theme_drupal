@@ -6,45 +6,45 @@
 /* ------- Default BYU styling --------- */
 /* colors here for now */
 /* blues */
-/*$navy: #002E5D;*/
-/*$medblue: #869DB5;*/
-/*$lightBlue: #e0f0cc;*/
-/*$xlightblue: #C3DDF9;*/
-/*$brightBlue: #0057B8;*/
+$navy: #002E5D;
+$medblue: #869DB5;
+$lightBlue: #e0f0cc;
+$xlightblue: #C3DDF9;
+$brightBlue: #0057B8;
 
-/*$royal: #003DA5;*/
-/*$lightRoyal: #114BAD;*/
+$royal: #003DA5;
+$lightRoyal: #114BAD;
 
 /*// There are 6 grays right now..*/
-/*$xlightgray: #f2f2f2;*/
-/*$lightgray: #e5e5e5;*/
-/*$lightergray: #e6e6e6;*/
-/*//$medgray: #9b9b9b; // extra*/
-/*$gray: #c5c5c5;*/
-/*$medgray: #666;*/
-/*$darkgray: #6a6a6b; // least used gray*/
-/*$darkestgray: #141414;  // this should be used for body & default text.*/
+$xlightgray: #f2f2f2;
+$lightgray: #e5e5e5;
+$lightergray: #e6e6e6;
+//$medgray: #9b9b9b; // extra
+$gray: #c5c5c5;
+$medgray: #666;
+$darkgray: #6a6a6b; // least used gray
+$darkestgray: #141414;  // this should be used for body & default text.
 
 
 /* other colors */
-/*$red: #B3041A;*/
+$red: #B3041A;
 
-/*$yellow: #FCC015;*/
-/*$lightyellow: #fef2d0;*/
+$yellow: #FCC015;
+$lightyellow: #fef2d0;
 
-/*$teal: #84DCB4;*/
-/*$lightteal: #e5f7ef;*/
+$teal: #84DCB4;
+$lightteal: #e5f7ef;
 
-/*$green: #66B200; // doesn't work with accessibility*/
-/*$lightgreen: #e0f0cc;*/
+$green: #66B200; // doesn't work with accessibility
+$lightgreen: #e0f0cc;
 
 
 a {
-  color: #002e5d;
+  color: $royal;
 }
 
 a:hover {
-  color: #003da5;
+  color: $navy;
 }
 
 /* --- BYU Components styling --- */
@@ -52,17 +52,19 @@ byu-header a {
   color: unset;
 }
 
-byu-header #site-name {
+byu-header #site-title {
   color: #fff;
 }
 
 byu-header:not([mobile-view]) a {
   color: #fff;
 }
-
-byu-header #site-name a:hover {
-  color: #fff;
+byu-header:not([mobile-view]) a:hover, byu-header:not([mobile-view]) a:focus {
   text-decoration: none;
+}
+
+byu-header #site-title a:hover {
+  color: #fff;
 }
 
 .p-gotham p, .p-gotham span, .p-gotham div, .p-gotham a {
@@ -74,10 +76,10 @@ byu-header #site-name a:hover {
 }
 
 [slot="site-title"] p, [slot="site-title"] span, [slot="site-title"] div, [slot="site-title"] a,
-#site-name p,
-#site-name span,
-#site-name div,
-#site-name a {
+#site-title p,
+#site-title span,
+#site-title div,
+#site-title a {
   font-family: "Vitesse A", "Vitesse B", serif;
 }
 
@@ -86,7 +88,7 @@ byu-header #site-name a:hover {
 }
 
 byu-header[mobile-view] [slot="actions"] a {
-  color: #002e5d;
+  color: $navy;
   font-weight: 500;
 }
 
@@ -104,7 +106,7 @@ byu-header[mobile-view] [slot="actions"] p {
   text-decoration: none;
 }
 [slot="actions"].royal {
-  background: #003DA5;
+  background: $royal;
   /*width: 110px;*/
   padding: 2px;
   display: flex;
@@ -119,6 +121,12 @@ byu-header[mobile-view] [slot="actions"] p {
 .region.region-header-actions {
   display: flex;
 }
+
+// user
+span[slot="user-name"] {
+  cursor: default;
+}
+
 
 /* -- override we need for byu footer component */
 .secondary-footer [class*="column"] + [class*="column"]:last-child {
@@ -137,13 +145,13 @@ byu-search {
   }
 
   .form-item, .form-actions {
-    margin: 0px;
+    margin: 0;
     max-height: 23px;
-    padding: 0px;
+    padding: 0;
     /* border-radius: 0px; */
   }
   input[type=search] {
-    border-radius: 0px;
+    border-radius: 0;
     height: 30px;
   }
 }
@@ -178,6 +186,9 @@ byu-search {
   .h4-vitesse h4,
   .h5-vitesse h5 {
     font-family: "Vitesse A", "Vitesse B", Georgia, serif;
+    span, a {
+      font-family: "Vitesse A", "Vitesse B", Georgia, serif;
+    }
   }
 
   .h1-gotham h1,
@@ -186,6 +197,9 @@ byu-search {
   .h4-gotham h4,
   .h5-gotham h5 {
     font-family: "Gotham A", "Gotham B", Arial, sans-serif;
+    span, a {
+      font-family: "Gotham A", "Gotham B", Arial, sans-serif;
+    }
   }
 
   .h1-sentinel h1,
@@ -194,18 +208,39 @@ byu-search {
   .h4-sentinel h4,
   .h5-sentinel h5 {
     font-family: "Sentinel A", "Sentinel B", "Vitesse A", "Vitesse B", Helvetica, serif;
+    span, a {
+      font-family: "Sentinel A", "Sentinel B", "Vitesse A", "Vitesse B", Helvetica, serif;
+    }
   }
 
   .h1-navy h1, .h2-navy h2, .h3-navy h3, .h4-navy h4, .h5-navy h5 {
-    color: #002e5d;
+    color: $navy;
+    a {
+      color: $navy;
+    }
+    a:hover {
+      color: $royal;
+    }
   }
 
   .h1-gray h1, .h2-gray h2, .h3-gray h3, .h4-gray h4, .h5-gray h5 {
-    color: #666;
+    color: $medgray;
+    a {
+      color: $medgray;
+    }
+    a:hover {
+      color: $darkgray;
+    }
   }
 
   .h1-black h1, .h2-black h2, .h3-black h3, .h4-black h4, .h5-black h5 {
     color: #000;
+    a {
+      color: #000;
+    }
+    a:hover {
+      color: $darkgray;
+    }
   }
 
   h1 {
@@ -220,19 +255,20 @@ byu-search {
     font-size: 24px;
   }
 
-  byu-menu.transparent {
+  //byu-menu.transparent {
+  //  z-index: 100;
+  //}
+
+  byu-menu {
     z-index: 100;
   }
 
-  #full-width-hero.hero_full_width_image_behind_menu {
+  .hero-behind-menu {
     margin-top: -36px;
+    z-index: -1;
   }
 
-  header#constrained-width-hero.hero_custom_width_behind_menu {
-    margin-top: -36px;
-  }
-
-  .full-width-images > section img {
+  .full-width-images .block img {
     width: 100%;
     height: auto !important;
   }
@@ -240,21 +276,44 @@ byu-search {
   .full-width-true div.main {
     max-width: 100%;
   }
+
   .full-width-false div.main {
     max-width: 1200px;
+  }
+
+  .main-top.custom-width {
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .main {
     padding: 30px;
     margin-left: auto;
     margin-right: auto;
+
+    &.no-min-height {
+      min-height: 0;
+    }
+
+    &.min-height-300 {
+      min-height: 300px;
+    }
+
+    &.min-height-500 {
+      min-height: 500px;
+    }
   }
+
   .main.custom-width {
-    padding: 30px 0px;
+    padding: 30px 0;
   }
+
   #page-container {
     padding: 20px 0;
   }
+
+
+
 
   /* Remove box-shadow from menu button in Firefox, Edge, IE11 */
   .mobile-menu-button {
@@ -318,12 +377,12 @@ byu-search {
   }
 
   .navy-button {
-    background: #002e5d;
+    background: $navy;
     color: #fff;
     padding: 12px 25px;
   }
   .medblue-button {
-    background: #002e5d; /* change to medium blue */
+    background: $navy; /* change to medium blue */
     color: #fff;
     padding: 12px 25px;
   }
