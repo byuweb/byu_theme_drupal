@@ -14,7 +14,10 @@ INSTALLATION
 2. Git clone (or download) the byu_d8 theme, and enable it. 
   Current bug: sometimes when you try to enable, it will say `The website encountered an unexpected error.` If you hit back and try to enable it again, it usually works with another try.
 
-3. Go to Appearance > Settings > BYU_D8. You will see settings similar to the byu2017_d7 theme.
+3. There is a strong dependency for the BYU footer: Download the module Block Class https://www.drupal.org/project/block_class
+And enable it.
+
+4. Go to Appearance > Settings > BYU_D8. You will see settings similar to the byu2017_d7 theme.
 
 These sections each have several options.
 BYU FONTS
