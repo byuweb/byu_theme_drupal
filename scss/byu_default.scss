@@ -105,17 +105,11 @@ byu-header[mobile-view] [slot="actions"] p {
 [slot="actions"] a:hover {
   text-decoration: none;
 }
-[slot="actions"].royal {
-  background: $royal;
-  /*width: 110px;*/
+
+[slot="actions"].royal div.block {
+  margin: 0 10px;
   padding: 2px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-[slot="actions"].royal p,
-[slot="actions"].royal div {
-  margin: 0 5px;
+  background: $royal;
 }
 
 .region.region-header-actions {

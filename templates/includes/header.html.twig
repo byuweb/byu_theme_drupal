@@ -32,7 +32,8 @@
         {% endif %}
 
         {% if menu_disable == FALSE %}
-            <byu-menu slot="nav" class="{%  if transparent == TRUE %} transparent {% endif %}">
+            {#<byu-menu slot="nav" class="{%  if transparent == TRUE %} transparent {% endif %}">#}
+            <byu-menu slot="nav" class="{%  if (transparent == TRUE) or (hero_vs_menu == 'hero-behind-menu') %} transparent {% endif %}">
                 {% if page.primary_menu %}
                     {{ page.primary_menu }}
                 {% endif %}
