@@ -1,5 +1,5 @@
 # byu_d8
-Drupal 8 Theme using Boostrap &amp; Components
+Drupal 8 Theme using Bootstrap &amp; Components
 
 
 THIS IS NOT A FINAL RELEASE. THIS THEME IS STILL IN BETA MODE.
