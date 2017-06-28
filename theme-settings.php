@@ -6,6 +6,7 @@ use Drupal\Core\Form;
 
 function byu_d8_form_system_theme_settings_alter(&$form, Drupal\Core\Form\FormStateInterface $form_state) {
 
+
     // ----------- GENERAL -----------
     $form['options']['general'] = array(
         '#type' => 'fieldset',
@@ -466,19 +467,23 @@ are placed at the bottom of the menu in mobile views. Please make sure your cont
         '#type'          => 'checkbox',
         '#title'         => t('BYU Button Styles'),
         '#default_value' => theme_get_setting('byu_buttons'),
-
     );
 
     $form['general_page']['byu_styles']['byu_tables'] = array(
         '#type'          => 'checkbox',
         '#title'         => t('BYU Table Styles'),
         '#default_value' => theme_get_setting('byu_tables'),
+    );
 
+    $form['general_page']['byu_styles']['byu_box_shadows'] = array(
+        '#type'          => 'checkbox',
+        '#title'         => t('BYU Box Shadow Styles'),
+        '#default_value' => theme_get_setting('byu_box_shadows'),
     );
 
     $form['general_page']['your_css'] = array(
         '#type' => 'textarea',
-        '#title' => 'Add Your Css',
+        '#title' => 'Add Your CSS',
         '#default_value' => theme_get_setting('your_css'),
     );
 

@@ -72,3 +72,36 @@ sourcesans:
   css:
     theme:
       'https://fonts.googleapis.com/css?family=Source+Sans+Pro': { type: external }
+
+byu-buttons:
+  remote: https://github.com/byuweb/byu-theme-style-helpers/
+  version: 1.x.x
+  license:
+    name: BYUButtons
+    url: https://github.com/byuweb/byu-theme-style-helpers/blob/master/LICENSE
+    gpl-compatible: false
+  css:
+    theme:
+      https://cdn.byu.edu/byu-theme-style-helpers/latest/buttons.css: { type: external, minified: false }
+
+byu-tables:
+  remote: https://github.com/byuweb/byu-theme-style-helpers/
+  version: 1.x.x
+  license:
+    name: BYUTables
+    url: https://github.com/byuweb/byu-theme-style-helpers/blob/master/LICENSE
+    gpl-compatible: false
+  css:
+    theme:
+      https://cdn.byu.edu/byu-theme-style-helpers/latest/tables.css: { type: external, minified: false }
+
+byu-box-shadows:
+  remote: https://github.com/byuweb/byu-theme-style-helpers/
+  version: 1.x.x
+  license:
+    name: BYUBoxShadows
+    url: https://github.com/byuweb/byu-theme-style-helpers/blob/master/LICENSE
+    gpl-compatible: false
+  css:
+    theme:
+      https://cdn.byu.edu/byu-theme-style-helpers/latest/box-shadows.css: { type: external, minified: false }
