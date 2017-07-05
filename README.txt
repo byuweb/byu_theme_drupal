@@ -1,5 +1,8 @@
-GETTING STARTED
-----------------------------------
+# BYU Drupal 7 Theme
+
+Getting Started:
+--------------------
+
 Please see our full documentation here: https://theme-dev.byu.edu/templates/drupal-components
 - Downloading: Theme, SCSS Modules (Prepro & Sassy), and Library (PHPSass)
 - Installing
@@ -14,7 +17,8 @@ Please see our full documentation here: https://theme-dev.byu.edu/templates/drup
  
  Suggest new options on slack! BYUWeb team and #drupal-users channel
 
-BUILD A THEME WITH ZURB FOUNDATION
+
+BUILD A THEME WITH ZURB FOUNDATION:
 ----------------------------------
 This BYU Theme is a sub-theme of Zurb Foundation. Please download the current Zurb Foundation 7.x-4.x version.
 https://drupal.org/project/zurb-foundation
