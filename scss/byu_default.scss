@@ -146,7 +146,13 @@ byu-search {
   }
   input[type=search] {
     border-radius: 0;
-    height: 30px;
+    height: 35px;
+  }
+
+  @media (min-width: 1024px) {
+    input[type=search] {
+      height: 30px;
+    }
   }
 }
 
@@ -257,9 +263,11 @@ byu-search {
     z-index: 100;
   }
 
-  .hero-behind-menu {
-    margin-top: -36px;
-    z-index: -1;
+  @media (min-width: 1024px) {
+    .hero-behind-menu {
+      margin-top: -36px;
+      z-index: -1;
+    }
   }
 
   .full-width-images .block img {
