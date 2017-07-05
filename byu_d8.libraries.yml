@@ -41,7 +41,7 @@ components-latest-js:
     url: https://github.com/byuweb/byu-theme-components/blob/master/LICENSE
     gpl-compatible: true
   js:
-     https://cdn.byu.edu/byu-theme-components/experimental/byu-search-enhancements/byu-theme-components.min.js: { type: external, minified: true }
+     https://cdn.byu.edu/byu-theme-components/latest/byu-theme-components.min.js: { type: external, minified: true }
 components-latest-css:
   remote: https://github.com/byuweb/byu-theme-components/
   version: 1.x.x
