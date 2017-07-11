@@ -364,42 +364,35 @@ are placed at the bottom of the menu in mobile views. Please make sure your cont
         '#collapsible' => TRUE,
         '#collapsed' => TRUE,
     );
+
+    $form['zurb_foundation']['header']['hero']['hero_space_width'] = array(
+        '#type' => 'select',
+        '#title' => t('Hero Space Width'),
+        '#description' => t('The custom page width setting is under BYU General Page. See the next section of settings.'),
+        '#options' => array(
+            0 => t("Full Width (default)"),
+            1 => t('Custom Width'),
+        ),
+        '#default_value' => theme_get_setting('hero_space_width'),
+    );
+
     $form['zurb_foundation']['header']['hero']['hero_show_behind_menu'] = array(
         '#type' => 'select',
         '#title' => t('How do you want the Hero space & Menu to be?'),
         '#description' => t('If enabled, the site name and main menu will appear in a bar along the top of the page. You will want to make sure that the menu background is set to transparent.'),
         '#options' => array(
-            0 => t("Show normally below the menu, not behind the menu (constrained OR full)"),
-            1 => t('Show Full Width Hero behind menu'),
-            2 => t('Not Using Full Width Hero - Show constrained width hero behind the menu.'),
+            0 => t("Show hero below the menu (default)"),
+            1 => t('Show hero behind menu'),
         ),
         '#default_value' => theme_get_setting('hero_show_behind_menu'),
     );
+
     $form['zurb_foundation']['header']['hero']['hero_full_image_width'] = array(
         '#type'          => 'checkbox',
-        '#title'         => t('Full width Header: Make images stretch full width'),
+        '#title'         => t('Make images stretch full width'),
         '#default_value' => theme_get_setting('hero_full_image_width'),
-        '#description'   => t("If you are using full width region..."),
+        '#description'   => t("Whether you are using a full width or constrained width hero, use this setting to tell images to expand to the full width of the hero space."),
     );
-    $form['zurb_foundation']['header']['hero']['hero_constrained_image_width'] = array(
-        '#type'          => 'checkbox',
-        '#title'         => t('Constrained width: Make images stretch to container width'),
-        '#default_value' => theme_get_setting('hero_constrained_image_width'),
-        '#description'   => t("If you are using constrained hero region..."),
-    );
-//
-//    $form['zurb_foundation']['header']['menu']['full_hero_behind_menu'] = array(
-//        '#type'          => 'checkbox',
-//        '#title'         => t('Have full width hero image/video show behind transparent menu'),
-//        '#default_value' => theme_get_setting('full_hero_behind_menu'),
-//        '#description'   => t("This allows part of the full width hero to show through behind the menu."),
-//    );
-//    $form['zurb_foundation']['header']['menu']['hero_behind_menu'] = array(
-//        '#type'          => 'checkbox',
-//        '#title'         => t('Have hero image/video show behind transparent menu'),
-//        '#default_value' => theme_get_setting('hero_behind_menu'),
-//        '#description'   => t("This allows part of the hero to show through behind the menu."),
-//    );
 
 
 //Page Settings

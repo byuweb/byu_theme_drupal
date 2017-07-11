@@ -287,11 +287,15 @@ byu-menu.transparent {
 }
 
 // regions
-#full-width-hero.hero_full_width_image_behind_menu,
-#constrained-width-hero.hero_custom_width_behind_menu {
+.hero_show_behind_menu {
   position: relative;
   margin-top: -36px;
   z-index: -1;
+}
+
+.custom-width-hero {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .full-width-images > section img {

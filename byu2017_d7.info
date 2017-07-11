@@ -89,8 +89,7 @@ scripts[] = js/foundation.min.js
 
 
 regions[header_actions]      = Header Actions
-regions[hero]                = Hero Space - Full Width
-regions[header]              = Feature Section  - Constrained Width
+regions[hero]                = Hero Space
 regions[help]                = Help
 regions[highlighted]         = Highlighted
 regions[featured]            = Featured

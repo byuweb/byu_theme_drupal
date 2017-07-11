@@ -201,35 +201,41 @@ function byu2017_d7_preprocess_page(&$variables) {
 
 
     // Menu Settings
+
+
     if ($variables['header']['menu'] = theme_get_setting('menu_disable')) {
         // menu is disabled
         $menu_use = FALSE;
-        $hero_class = 'menu-disabled';
         $transparent = FALSE;
+        $hero_vs_menu = 'menu_disable';
     } else {
         $menu_use = TRUE;
         if ($variables['header']['menu'] = theme_get_setting('transparent')) {
             $transparent = TRUE;
             if ($variables['header']['hero'] = theme_get_setting('hero_show_behind_menu') == '1') {
-                $hero_class = 'hero_full_width_image_behind_menu';
-            } else if ($variables['header']['hero'] = theme_get_setting('hero_show_behind_menu') == '2') {
-                $hero_class = 'hero_custom_width_behind_menu';
-            } else { // 0  - normal
-
-                $hero_class = 'hero_normal';
+                $hero_vs_menu = 'hero_show_behind_menu';
+            } else { // 0  - below menu
+                $hero_vs_menu = 'hero_below_menu';
             }
-
         } else {
             $transparent = FALSE;
-            $hero_class = 'hero_normal';
+            $hero_vs_menu = 'hero_below_menu';
         }
-
     }
     $variables['menu_use'] = $menu_use;
     $variables['transparent'] = $transparent;
-    $variables['hero_class'] = $hero_class;
+    $variables['hero_vs_menu'] = $hero_vs_menu;
 
-    // hero
+
+    // Hero
+    $hero_setting = theme_get_setting('hero_space_width');
+    if($hero_setting == '0') {
+        $variables['hero_space_width'] = 'full-width-hero';
+    } else {
+        $variables['hero_space_width'] = 'custom-width-hero';
+    }
+//    $variables['hero_space_width'] = $hero_space_width;
+
     if ($variables['header']['hero'] = theme_get_setting('hero_full_image_width')) {
         $hero_full_image_width = TRUE;
     } else {
@@ -237,12 +243,6 @@ function byu2017_d7_preprocess_page(&$variables) {
     }
     $variables['hero_full_image_width'] = $hero_full_image_width;
 
-    if ($variables['header']['hero'] = theme_get_setting('hero_constrained_image_width')) {
-        $hero_constrained_image_width = TRUE;
-    } else {
-        $hero_constrained_image_width = FALSE;
-    }
-    $variables['hero_constrained_image_width'] = $hero_constrained_image_width;
 
     // General Settings
     if ($variables['general_page'] = theme_get_setting('full_width')) {

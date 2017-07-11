@@ -108,41 +108,23 @@
   </byu-header>
 
 
+<?php if (!empty($page['hero'])): ?>
+    <!-- Hero Space -->
+    <div class= "<?php print $hero_vs_menu . ' '; print $hero_space_width; ?> <?php
+        if ($hero_full_image_width == TRUE){
+            print 'full-width-images"';
+            if ($hero_space_width == 'custom-width-hero') {
+                print 'style="width:' . $page_width . 'px"';
+            }
+        }
+        else {
+            print '"';
+        }
+    ?>>
+    <?php print render($page['hero']); ?>
+</div>
+<?php endif; ?>
 
-  <?php if (!empty($page['hero'])): ?>
-    <!-- Full Width Hero Space -->
-    <div id="full-width-hero" class=" <?php print $hero_class; ?> <?php if ($hero_full_image_width == TRUE){ print 'full-width-images'; } ?>">
-      <?php print render($page['hero']); ?>
-    </div>
-  <?php endif; ?>
-
-
-  <!--.l-header region -->
-  <header id="constrained-width-hero" role="banner" class="l-header <?php print $hero_class; ?> <?php if ($hero_constrained_image_width == TRUE){ print 'full-width-images'; } ?>">
-
-    <?php if (!empty($page['header'])): ?>
-      <!--.l-header-region -->
-      <!-- Set Width Hero Space -->
-      <section class="l-header-region row  <?php if ($full_width == TRUE){ print 'full-width'; } ?> <?php print $hero_class; ?>" <?php if (!empty($page_width)){ print 'style="max-width: ' . $page_width . 'px;"'; } ?>>
-        <div class="large-12 columns">
-          <?php print render($page['header']); ?>
-        </div>
-      </section>
-      <!--/.l-header-region -->
-    <?php endif; ?>
-
-  </header>
-  <!--/.l-header -->
-
-  <?php if (!empty($page['featured'])): ?>
-    <!--/.featured -->
-    <section class="l-featured row  <?php if ($full_width == TRUE){ print 'full-width'; } ?>" <?php if (!empty($page_width)){ print 'style="max-width: ' . $page_width . 'px;"'; } ?>>
-      <div class="large-12 columns">
-        <?php print render($page['featured']); ?>
-      </div>
-    </section>
-    <!--/.l-featured -->
-  <?php endif; ?>
 
   <?php if ($messages && !$zurb_foundation_messages_modal): ?>
     <!--/.l-messages -->
