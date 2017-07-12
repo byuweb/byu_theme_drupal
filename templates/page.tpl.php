@@ -120,11 +120,20 @@
         else {
             print '"';
         }
-    ?>>
+    ?>
     <?php print render($page['hero']); ?>
 </div>
 <?php endif; ?>
 
+  <?php if (!empty($page['featured'])): ?>
+    <!--/.featured -->
+    <section class="l-featured row  <?php if ($full_width == TRUE){ print 'full-width'; } ?>" <?php if (!empty($page_width)){ print 'style="max-width: ' . $page_width . 'px;"'; } ?>>
+      <div class="large-12 columns">
+        <?php print render($page['featured']); ?>
+      </div>
+    </section>
+    <!--/.l-featured -->
+  <?php endif; ?>
 
   <?php if ($messages && !$zurb_foundation_messages_modal): ?>
     <!--/.l-messages -->
