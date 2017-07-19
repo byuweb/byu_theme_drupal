@@ -88,6 +88,19 @@ Full-Width Option (rather than constrained-width content pages)
         max-width: 100%;
     }
 
+MENU FORMATTING
+-----------------------------------
+
+In the demo file about byu-menu, it mentions the options to add several classes to specific menu links, to improve the formatting.
+http://2017-components-demo.cdn.byu.edu/byu-menu.html
+
+It demonstrates adding the class 'long-link' to a link with extra long text.
+This is the preferred method for adding classes to certain links:
+
+1. Download and enable this module:
+https://www.drupal.org/project/menu_attributes
+2. Go to your menu, edit a link, and in the Menu Attributes section, specify the class you'd like.
+
 
 
 HELP & SUPPORT
