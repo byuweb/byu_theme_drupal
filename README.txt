@@ -3,6 +3,8 @@
 Getting Started:
 --------------------
 
+This theme requires PHP version 5.4 or higher.
+
 Please see our full documentation here: https://theme-dev.byu.edu/templates/drupal-components
 - Downloading: Theme, SCSS Modules (Prepro & Sassy), and Library (PHPSass)
 - Installing
