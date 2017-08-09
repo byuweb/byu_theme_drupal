@@ -313,6 +313,18 @@ main.row.full-width {
   padding: 20px 0;
 }
 
+/* STICKY FOOTER */
+.page.sticky-footer {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+#page-container.sticky-footer {
+  flex-grow: 1;
+}
+
+
 
 /* Remove box-shadow from menu button in Firefox, Edge, IE11 */
 
