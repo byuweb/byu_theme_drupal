@@ -1,5 +1,5 @@
 <!--.page -->
-<div role="document" class="page">
+<div role="document" class="page <?php if ($footer_sticky == TRUE){print 'sticky-footer';}?>">
   <byu-header <?php if ($full_width == TRUE){ print 'full-width'; } ?>>
     <!--    <span slot="title">-->
     <?php if ($site_name): ?>
@@ -155,7 +155,7 @@
     <!--/.l-help -->
   <?php endif; ?>
 
-  <div id="page-container" <?php if (!empty($min_page_height)){ print 'style="min-height: ' . $min_page_height . 'px;"'; } ?>>
+    <div id="page-container" <?php if ($footer_sticky == TRUE){print 'class="sticky-footer"';}?> <?php if (!empty($min_page_height)){ print 'style="min-height: ' . $min_page_height . 'px;"'; } ?>>
 
     <main role="main" class="row l-main <?php if ($full_width == TRUE){ print 'full-width'; } ?>" <?php if (!empty($page_width)){ print 'style="max-width: ' . $page_width . 'px;"'; } ?>>
 

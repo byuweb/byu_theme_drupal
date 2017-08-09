@@ -256,7 +256,16 @@ function byu2017_d7_preprocess_page(&$variables) {
     $variables['min_page_height'] = $min_page_height;
 
 
-//    dpm($variables);
+    // Footer Settings
+
+    if ($variables['footer']['sticky_footer'] = theme_get_setting('footer_sticky')) {
+        $footer_sticky = TRUE;
+    } else {
+        $footer_sticky = FALSE;
+    }
+    $variables['footer_sticky'] = $footer_sticky;
+
+
     return $variables;
 }
 

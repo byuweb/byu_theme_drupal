@@ -427,6 +427,18 @@ are placed at the bottom of the menu in mobile views. Please make sure your cont
         '#title' => t('BYU Footer Settings'),
         '#collapsible' => TRUE,
     );
+    $form['zurb_foundation']['footer']['sticky_footer'] = array(
+        '#type' => 'fieldset',
+        '#title' => t('Sticky Footer Settings'),
+        '#collapsible' => FALSE,
+        '#collapsed' => FALSE,
+    );
+    $form['zurb_foundation']['footer']['sticky_footer']['footer_sticky'] = array(
+        '#type'          => 'checkbox',
+        '#title'         => t('Make the footer sticky'),
+        '#default_value' => theme_get_setting('footer_sticky'),
+        '#description'   => t("A sticky footer will automatically stick to the bottom of the page until there is enough content to force it farther down."),
+    );
     $form['zurb_foundation']['footer']['footer_regions'] = array(
         '#markup' => '<p>To place content in the footer, go to the <a href="../admin/structure/block" target="_blank">blocks page</a> and place blocks into one of the footer regions. Footer 1, Footer 2, Footer 3, and Footer 4 correspond to the 4 footer columns.</p><p>The header for the footer column will be the block title of the first block in the region.</p>',
     );
