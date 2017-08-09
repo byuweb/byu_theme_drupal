@@ -127,6 +127,11 @@ span[slot="user-name"] {
   float: none !important;
 }
 
+/* --------- menu ---------- */
+byu-menu a {
+  color: $navy !important;
+}
+
 /* -------- search --------- */
 /* -- from instructions on byu-search component for SIMPLE search -- */
 byu-search {
@@ -290,6 +295,7 @@ byu-search {
 
   .main {
     padding: 30px;
+    padding-top: 35px !important;
     margin-left: auto;
     margin-right: auto;
 
