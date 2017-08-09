@@ -20,8 +20,7 @@ function byu2017_d7_preprocess_html(&$variables) {
 
     // To include the components and their styling:
     $version = trim(theme_get_setting('version'));
-    if(!is_null($version ) ) {
-
+    if(empty($version)==FALSE) {
         drupal_add_css('//cdn.byu.edu/byu-theme-components/' . $version . '/byu-theme-components.min.css', array('type' => 'external'));
         drupal_add_js('//cdn.byu.edu/byu-theme-components/' . $version . '/byu-theme-components.min.js', 'external');
     } else {
