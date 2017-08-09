@@ -75,6 +75,7 @@ span[slot="user-name"] {
 .secondary-footer [class*="column"] + [class*="column"]:last-child {
   float: none !important; }
 
+/* --------- menu ---------- */
 /* -------- search --------- */
 /* -- from instructions on byu-search component for SIMPLE search -- */
 byu-search .element-invisible {
@@ -204,6 +205,7 @@ byu-menu {
 
 .main {
   padding: 30px;
+  padding-top: 35px;
   margin-left: auto;
   margin-right: auto; }
   .main.no-min-height {

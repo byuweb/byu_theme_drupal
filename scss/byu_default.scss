@@ -127,6 +127,8 @@ span[slot="user-name"] {
   float: none !important;
 }
 
+/* --------- menu ---------- */
+
 /* -------- search --------- */
 /* -- from instructions on byu-search component for SIMPLE search -- */
 byu-search {
@@ -290,6 +292,7 @@ byu-search {
 
   .main {
     padding: 30px;
+    padding-top: 35px;
     margin-left: auto;
     margin-right: auto;
 
