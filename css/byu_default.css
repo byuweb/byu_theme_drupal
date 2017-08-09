@@ -76,9 +76,6 @@ span[slot="user-name"] {
   float: none !important; }
 
 /* --------- menu ---------- */
-byu-menu a {
-  color: #002E5D !important;
-}
 
 /* -------- search --------- */
 /* -- from instructions on byu-search component for SIMPLE search -- */
