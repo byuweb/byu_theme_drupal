@@ -182,7 +182,7 @@ h3 {
   font-size: 24px; }
 
 byu-menu {
-  z-index: 100; }
+  z-index: 14; }
 
 @media (min-width: 1024px) {
   .hero-behind-menu {
