@@ -3,7 +3,8 @@
 Getting Started:
 --------------------
 
-This theme requires PHP version 5.4 or higher.
+This theme requires PHP version 5.4 or higher. It is highly encouraged that you have the jQuery Update module 
+so you can have a recent version of jQuery.
 
 Please see our full documentation here: https://theme-dev.byu.edu/templates/drupal-components
 - Downloading: Theme, SCSS Modules (Prepro & Sassy), and Library (PHPSass)
