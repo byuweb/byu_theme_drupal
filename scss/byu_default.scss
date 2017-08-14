@@ -317,7 +317,7 @@ main.row.full-width {
 .page.sticky-footer {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 #page-container.sticky-footer {
