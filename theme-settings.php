@@ -584,11 +584,15 @@ are placed at the bottom of the menu in mobile views. Please make sure your cont
         '#default_value' => theme_get_setting('footer_option'),
         '#options' => array(
             'normal' => 'Normal: 4 Even Columns',
-            'one_two_merged' => 'Double wide, normal, normal (2:1:1 columns) - leave Footer 2 empty.',
-            'two_three_merged' => 'Normal, double wide, normal (1:2:1 columns) - leave Footer 3 empty.',
+            'one_two_merged' => 'Double wide, normal, normal (2:1:1 columns) - leave Footer 4 empty.',
+            'two_three_merged' => 'Normal, double wide, normal (1:2:1 columns) - leave Footer 4 empty.',
             'three_four_merged' => 'Normal, normal, double wide (1:1:2 columns) - leave Footer 4 empty.',
         ),
         '#description' => 'If you select any footer layout besides normal, do not place content in the Footer 4 region. It will not be used.',
+        
+    );
+    $form['footer_style']['footer_info'] = array(
+        '#markup' => '<p>Note: If you are selecting a double wide column layout, you are responsible for formatting your content inside that wide column. That means if you want it to contain two columns of links, you need to add a class to do that.</p><p>The class "two-columns" is available if you would like to use that.</p>',
     );
     $form['footer_style']['footer_regions'] = array(
         '#markup' => '<p>To place content in the footer:<br>1.Make sure you have the module <a 
