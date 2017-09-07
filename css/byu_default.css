@@ -34,6 +34,9 @@ byu-header #site-title a:hover {
 .p-libreb p, .p-libreb span, .p-libreb div, .p-libreb a {
   font-family: "Libre Baskerville", Georgia, serif; }
 
+p {
+  color: #141414; }
+
 [slot="site-title"] p, [slot="site-title"] span, [slot="site-title"] div, [slot="site-title"] a,
 #site-title p,
 #site-title span,
@@ -187,6 +190,7 @@ byu-menu {
 @media (min-width: 1024px) {
   .hero-behind-menu {
     margin-top: -36px;
+    position: relative;
     z-index: -1; } }
 
 .full-width-images .block img {
