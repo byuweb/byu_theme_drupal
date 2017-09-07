@@ -165,6 +165,8 @@ function byu_d8_preprocess_page(&$variables) {
 
     // search
     $variables['search_use'] = theme_get_setting('search_use');
+    $variables['search_submit'] = theme_get_setting('search_submit');
+    $variables['search_input'] = theme_get_setting('search_input');
     // menu
     $variables['menu_disable'] = theme_get_setting('menu_disable');
     $variables['transparent'] = theme_get_setting('transparent');
