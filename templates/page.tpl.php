@@ -1,6 +1,8 @@
 <!--.page -->
 <div role="document" class="page <?php if ($footer_sticky == TRUE){print 'sticky-footer';}?>">
-  <byu-header <?php if ($full_width == TRUE){ print 'full-width'; } ?>>
+  <byu-header <?php if ($full_width == TRUE){ print 'full-width'; } ?> <?php if ($home_url == TRUE){ print
+      'home-url="' . $home_link . '"'; } ?> >
+
     <!--    <span slot="title">-->
     <?php if ($site_name): ?>
 
