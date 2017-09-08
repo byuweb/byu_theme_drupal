@@ -126,8 +126,22 @@ function byu2017_d7_preprocess_html(&$variables) {
  */
 function byu2017_d7_preprocess_page(&$variables) {
 
-    // Header Settings
-    if ($variables['header']['subtitle'] = theme_get_setting('sub_title_use')) {
+//--------- Header Settings ---------//
+
+
+    ///Home URL Settings
+    if ($variables['header'] = theme_get_setting('home_url')) {
+        $home_url = TRUE;
+        $home_link = trim(theme_get_setting('home_url'));
+        $variables['home_url'] = $home_url;
+        $variables['home_link'] = $home_link;
+    } else {
+        $home_url = FALSE;
+        $variables['home_url'] = $home_url;
+    }
+
+    ///Subtitle Settings
+    if ($variables['subtitle'] = theme_get_setting('sub_title_use')) {
         $subtitle_use = TRUE;
 //        $subtitle = $variables['header']['subtitle']['subtitle_text']['value'];
         $subtitle = trim(theme_get_setting('subtitle_text'));
@@ -155,7 +169,7 @@ function byu2017_d7_preprocess_page(&$variables) {
         $variables['subtitle_use'] = $subtitle_use;
     }
     // User Info Settings
-    if ($variables['header']['user_info'] = theme_get_setting('login_use')) {
+    if ($variables['user_info'] = theme_get_setting('login_use')) {
         $login_use = TRUE;
         $login_url = trim(theme_get_setting('login_url'));
         if(empty($login_url)) {
@@ -191,7 +205,7 @@ function byu2017_d7_preprocess_page(&$variables) {
     }
 
     // Search Settings
-    if ($variables['header']['search'] = theme_get_setting('search_use')) {
+    if ($variables['search'] = theme_get_setting('search_use')) {
         $search_use = TRUE;
     } else {
         $search_use = FALSE;
@@ -202,16 +216,16 @@ function byu2017_d7_preprocess_page(&$variables) {
     // Menu Settings
 
 
-    if ($variables['header']['menu'] = theme_get_setting('menu_disable')) {
+    if ($variables['menu'] = theme_get_setting('menu_disable')) {
         // menu is disabled
         $menu_use = FALSE;
         $transparent = FALSE;
         $hero_vs_menu = 'menu_disable';
     } else {
         $menu_use = TRUE;
-        if ($variables['header']['menu'] = theme_get_setting('transparent')) {
+        if ($variables['menu'] = theme_get_setting('transparent')) {
             $transparent = TRUE;
-            if ($variables['header']['hero'] = theme_get_setting('hero_show_behind_menu') == '1') {
+            if ($variables['hero'] = theme_get_setting('hero_show_behind_menu') == '1') {
                 $hero_vs_menu = 'hero_show_behind_menu';
             } else { // 0  - below menu
                 $hero_vs_menu = 'hero_below_menu';
@@ -235,7 +249,7 @@ function byu2017_d7_preprocess_page(&$variables) {
     }
 //    $variables['hero_space_width'] = $hero_space_width;
 
-    if ($variables['header']['hero'] = theme_get_setting('hero_full_image_width')) {
+    if ($variables['hero'] = theme_get_setting('hero_full_image_width')) {
         $hero_full_image_width = TRUE;
     } else {
         $hero_full_image_width = FALSE;

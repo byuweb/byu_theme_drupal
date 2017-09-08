@@ -223,6 +223,18 @@ function byu2017_d7_form_system_theme_settings_alter(&$form, &$form_state) {
     );
 
 
+// Home URL Settings
+
+    $form['zurb_foundation']['header']['home_url'] = array(
+        '#type'          => 'textfield',
+        '#title'         => t('Home URL Redirection'),
+        '#default_value' => theme_get_setting('home_url'),
+        '#description'   => t("By default, the logo redirects to byu.edu. Enter a URL here to redirect the BYU logo to link to another site. "),
+    );
+
+
+// Subtitle Settings
+
     $form['zurb_foundation']['header']['subtitle'] = array(
         '#type' => 'fieldset',
         '#title' => 'Subtitle Settings',
@@ -254,6 +266,8 @@ function byu2017_d7_form_system_theme_settings_alter(&$form, &$form_state) {
         '#description'   => t("The subtitle appears below (or above) the Main Title."),
     );
 
+
+// User Info & Sign In Settings
 
     $form['zurb_foundation']['header']['user_info'] = array(
         '#type' => 'fieldset',
@@ -323,6 +337,7 @@ function byu2017_d7_form_system_theme_settings_alter(&$form, &$form_state) {
 //        '#description'   => t("The subtitle appears below (or above) the Main Title.  Default value if blank is '../user/logout'. If you are using CAS, use '../caslogout'."),
 //    );
 
+
 //Header Actions Settings
     $form['zurb_foundation']['header']['header_actions'] = array(
         '#type' => 'fieldset',
@@ -336,6 +351,7 @@ There should only ever be 2 one-word links or one 2-word link, as this space is 
 the <a href="../admin/structure/block" target="_blank">blocks page</a> and place a block into the Header Actions region.</p><p>Action links
 are placed at the bottom of the menu in mobile views. Please make sure your content fits at various breakpoints.</p>',
     );
+
 
 //Menu Settings
     $form['zurb_foundation']['header']['menu'] = array(
@@ -357,7 +373,9 @@ are placed at the bottom of the menu in mobile views. Please make sure your cont
         '#description'   => t("This allows part of the hero to show through behind the menu."),
     );
 
-// Hero
+
+// Hero Settings
+
     $form['zurb_foundation']['header']['hero'] = array(
         '#type' => 'fieldset',
         '#title' => t('Hero Settings'),
