@@ -397,6 +397,11 @@ byu-search {
     padding: 12px 25px;
   }
 
+/* Remove white strip under footer */
+
+#drupal-live-announce {
+  display: none;
+}
 
 
 /* ------------- Do NOT make custom changes here - if you do they will be overridden when you update the theme.

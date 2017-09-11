@@ -289,6 +289,10 @@ byu-menu {
   color: #fff;
   padding: 12px 25px; }
 
+/* Remove white strip under footer */
+#drupal-live-announce {
+  display: none; }
+
 /* ------------- Do NOT make custom changes here - if you do they will be overridden when you update the theme.
 1. Create a custom.scss file in this scss directory.
 2. Edit byu2017_d7.info and find the lines where scss/byu_default.scss is included. You will see a commented out line
