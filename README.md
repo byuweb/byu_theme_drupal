@@ -1,7 +1,6 @@
 # BYU Drupal 7 Theme
 
 ## Getting Started:
---------------------
 
 This theme requires PHP version 5.4 or higher. It is highly encouraged that you have the jQuery Update module 
 so you can have a recent version of jQuery.
@@ -22,7 +21,7 @@ Please see our full documentation here: https://theme-dev.byu.edu/templates/drup
 
 
 ## BUILD A THEME WITH ZURB FOUNDATION:
-----------------------------------
+
 This BYU Theme is a sub-theme of Zurb Foundation. Please download the current Zurb Foundation 7.x-4.x version.
 https://drupal.org/project/zurb-foundation
 
@@ -32,8 +31,6 @@ if you intend to modify this theme, you should make your changes inside the BYU2
 
 
 ## Styling Changes & Sub Theming:
-----------------------------------------
-
 ### Advanced (Recommended)
 A. IF you will be styling extensively or adding templates to the theme, you should use a sub theme.
 Inside this theme is a folder 'subtheme'.
@@ -86,7 +83,6 @@ You will also have to uncomment the line for declaring the js file in byu2017_d7
 
 
 ## Full-Width Option (rather than constrained-width content pages)
-------------------------------------
 1. Make sure you have sub-themed the BYU theme
 2. Create your custom.scss if you haven't already and add:
     main.row {
@@ -94,7 +90,6 @@ You will also have to uncomment the line for declaring the js file in byu2017_d7
     }
 
 ## MENU FORMATTING
------------------------------------
 
 In the demo file about byu-menu, it mentions the options to add several classes to specific menu links, to improve the formatting.
 http://2017-components-demo.cdn.byu.edu/byu-menu.html
@@ -124,7 +119,6 @@ and
 These fields take simple css selectors, so if your search module isn't working, make sure you are using a css selector that will not target multiple divs, and that will not change. (i.e. id's of these search elements often change once you start searching or reloading the page.)
 
 ## HELP & SUPPORT
-------------------------------------------
 This theme was created by the BYU Web Community.
 For questions involving adopting and using this theme, consult the BYU-Web slack group. See the
 #Byu-theme-help channel for questions and support.
@@ -140,7 +134,6 @@ https://github.com/byuweb/calendar_widget/releases/tag/drupal7_module
 
 
 ## Notes from Zurb Foundation:
-------------------------------------------
 This theme does not support IE7. If you need it downgrade to Foundation 2 see
 http://foundation.zurb.com/docs/faq.php or use the script in the starter
 template.php THEMENAME_preprocess_html function.
@@ -159,7 +152,6 @@ template.php THEMENAME_preprocess_html function.
   admin/config/development/performance.
 
 ## BUILD A THEME WITH DRUSH
-----------------------------------
 If you have drush and the zurb foundation theme enabled you can create a
 subtheme easily with a drush.
 
@@ -167,7 +159,6 @@ The command to do this is simply:
   drush fst [THEMENAME] [Description !Optional]
 
 ## MANUALLY BUILD A THEME
-----------------------------------
  1. Setup the location for your new sub-theme.
 
     Copy the STARTER folder out of the zurb_foundation/ folder and rename it to
@@ -250,7 +241,6 @@ The command to do this is simply:
     Drupal 7's Theme Guide online at: http://drupal.org/theme-guide
 
 ## CHANGING FOUNDATION DEFAULT SETTINGS
-------------------------------------
 In order to avoid overwriting your customizations in _settings.scss when
 updating Zurb Foundation, subthemes default to placing the standard Foundation
 settings in [subtheme-name]/scss/_variables.scss.
