@@ -256,6 +256,9 @@ byu-menu {
   .one_two_merged .region-footer-11 {
     width: 50%; } }
 
+byu-footer-column p {
+  margin: 0; }
+
 /* ----------- Helpful Classess ---- */
 .two-column, .three-column, .four-column {
   -webkit-column-gap: 15px;
