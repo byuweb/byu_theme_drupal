@@ -30,6 +30,7 @@ If you would like to request other settings or options, please contact Katria Le
 Enhancement requests and settings for the theme should be posted in the #Drupal-users channel. 
 Or in github:https://github.com/byuweb/byu_d8/issues
 Enhancement requests for the header and footer specifically should be posted in the #engineering-group channel.
+Or in github: https://github.com/byuweb/byu-theme-components/issues
 
 ### Reporting Bugs & Issues
 
