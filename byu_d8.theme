@@ -120,14 +120,22 @@ function byu_d8_preprocess_page(&$variables) {
 //    if($variables['is_front']){
 //        $variables['#attached']['library'][] = 'theme_name/custom-library';
 //    }
-    $version = trim(theme_get_setting('version'));
-    if(!is_null($version ) ) {
+    $version = trim(theme_get_setting('components_version'));
+    if(!empty($version ) ) {
+
+        if($version == '1.x.x') {
+            $variables['#attached']['library'][] = 'byu_d8/components-1.x.x';
+        } elseif ($version == '1.2.x') {
+            $variables['#attached']['library'][] = 'byu_d8/components-1.2.x';
+        } elseif ($version == 'latest') {
+            $variables['#attached']['library'][] = 'byu_d8/components-latest';
+        }
+
         $variables['#attached']['library'][] = 'byu_d8/custom-library';
 //        drupal_add_css('//cdn.byu.edu/byu-theme-components/' . $version . '/byu-theme-components.min.css', array('type' => 'external'));
 //        drupal_add_js('//cdn.byu.edu/byu-theme-components/' . $version . '/byu-theme-components.min.js', 'external');
-    } else {
-        $variables['#attached']['library'][] = 'byu_d8/components-latest-js';
-        $variables['#attached']['library'][] = 'byu_d8/components-latest-css';
+    } else { // setting wasn't set yet
+        $variables['#attached']['library'][] = 'byu_d8/components-latest';
     }
     
     /* --- Load Fonts ------- */

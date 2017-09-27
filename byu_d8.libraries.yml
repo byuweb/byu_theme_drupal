@@ -33,7 +33,19 @@ libre-baskerville:
   css:
     theme:
       https://fonts.googleapis.com/css?family=Libre Baskerville: { type: external, minified: true }
-components-latest-js:
+components-latest:
+  remote: https://github.com/byuweb/byu-theme-components/
+  version: latest
+  license:
+    name: BYUWeb
+    url: https://github.com/byuweb/byu-theme-components/blob/master/LICENSE
+    gpl-compatible: true
+  js:
+     https://cdn.byu.edu/byu-theme-components/latest/byu-theme-components.min.js: { type: external, minified: true }
+  css:
+    theme:
+      https://cdn.byu.edu/byu-theme-components/latest/byu-theme-components.min.css: { type: external, minified: true }
+components-1.x.x:
   remote: https://github.com/byuweb/byu-theme-components/
   version: 1.x.x
   license:
@@ -41,17 +53,22 @@ components-latest-js:
     url: https://github.com/byuweb/byu-theme-components/blob/master/LICENSE
     gpl-compatible: true
   js:
-     https://cdn.byu.edu/byu-theme-components/latest/byu-theme-components.min.js: { type: external, minified: true }
-components-latest-css:
-  remote: https://github.com/byuweb/byu-theme-components/
-  version: 1.x.x
-  license:
-    name: BYUWebCSS
-    url: https://github.com/byuweb/byu-theme-components/blob/master/LICENSE
-    gpl-compatible: true
+     https://cdn.byu.edu/byu-theme-components/1.x.x/byu-theme-components.min.js: { type: external, minified: true }
   css:
     theme:
-      https://cdn.byu.edu/byu-theme-components/latest/byu-theme-components.min.css: { type: external, minified: true }
+      https://cdn.byu.edu/byu-theme-components/1.x.x/byu-theme-components.min.css: { type: external, minified: true }
+components-1.2.x:
+  remote: https://github.com/byuweb/byu-theme-components/
+  version: 1.2.x
+  license:
+    name: BYUWeb
+    url: https://github.com/byuweb/byu-theme-components/blob/master/LICENSE
+    gpl-compatible: true
+  js:
+     https://cdn.byu.edu/byu-theme-components/1.2.x/byu-theme-components.min.js: { type: external, minified: true }
+  css:
+    theme:
+      https://cdn.byu.edu/byu-theme-components/1.2.x/byu-theme-components.min.css: { type: external, minified: true }
 font-awesome:
   remote: https://fortawesome.github.io/Font-Awesome/
   version: 4.5.0

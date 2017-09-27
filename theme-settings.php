@@ -13,11 +13,11 @@ function byu_d8_form_system_theme_settings_alter(&$form, Drupal\Core\Form\FormSt
         '#title' => t('General'),
     );
     // Breadcrumbs
-    $form['options']['general']['breadcrumbs'] = array(
-        '#type' => 'checkbox',
-        '#title' => 'Breadcrumbs',
-        '#default_value' => theme_get_setting('breadcrumbs'),
-    );
+//    $form['options']['general']['breadcrumbs'] = array(
+//        '#type' => 'checkbox',
+//        '#title' => 'Breadcrumbs',
+//        '#default_value' => theme_get_setting('breadcrumbs'),
+//    );
 
     // Loader Setting
     $form['options']['general']['loader'] = array(
@@ -42,7 +42,23 @@ function byu_d8_form_system_theme_settings_alter(&$form, Drupal\Core\Form\FormSt
         '#title' => 'BYU Style Options: Design Your Site',
         '#open' => FALSE,
     );
-
+    // component versions
+    $form['components'] = array(
+        '#type' => 'details',
+        '#title' => t('BYU Component Settings'),
+        '#group' => 'design',
+    );
+    $form['components']['components_version'] = array(
+        '#type' => 'select',
+        '#title' => t('Which version of BYU Web components do you want to load?'),
+        '#description' => t('1.x.x. is recommended because it will incorporate all new features and bug fixes without big changes that may require manual adjustments.'),
+        '#options' => array(
+            '1.x.x' => t('1.x.x - Get new features & bug fixes'),
+            '1.2.x' => t('1.2.x - Stay on version 1.2 and only get bug fixes, no features'),
+            'latest' => t('Latest - every update, including major version changes.'),
+        ),
+        '#default_value' => theme_get_setting('components_version'),
+    );
 
     // Fonts
     $form['fonts'] = array(
