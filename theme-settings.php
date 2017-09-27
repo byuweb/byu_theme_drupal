@@ -56,6 +56,7 @@ function byu_d8_form_system_theme_settings_alter(&$form, Drupal\Core\Form\FormSt
             '1.x.x' => t('1.x.x - Get new features & bug fixes'),
             '1.2.x' => t('1.2.x - Stay on version 1.2 and only get bug fixes, no features'),
             'latest' => t('Latest - every update, including major version changes.'),
+            'master' => t('Master - Latest development, Use for Development & Testing.'),
         ),
         '#default_value' => theme_get_setting('components_version'),
     );

@@ -127,6 +127,8 @@ function byu_d8_preprocess_page(&$variables) {
             $variables['#attached']['library'][] = 'byu_d8/components-1.x.x';
         } elseif ($version == '1.2.x') {
             $variables['#attached']['library'][] = 'byu_d8/components-1.2.x';
+        } elseif ($version == 'master') {
+            $variables['#attached']['library'][] = 'byu_d8/components-master';
         } elseif ($version == 'latest') {
             $variables['#attached']['library'][] = 'byu_d8/components-latest';
         }
