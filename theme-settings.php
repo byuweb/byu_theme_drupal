@@ -321,13 +321,13 @@ function byu_d8_form_system_theme_settings_alter(&$form, Drupal\Core\Form\FormSt
         '#type'          => 'textfield',
         '#title'         => t('Alternate Search Input'),
         '#default_value' => theme_get_setting('search_input'),
-        '#description'   => t("If you're using a different search module and the component is having difficulty finding the search input, enter the class, id, or attribute name (include the period, hashtag, or brackets) of your search input. This will tell the component exactly what content to search. For example: [data-drupal-selector=\"edit-keys\"] or #my-search-input. Please note that, in Drupal, some IDs change, so make sure you're picking a permanent one."),
+        '#description'   => t("If you're using a different search module and the component is having difficulty finding the search input, enter the class, id, or attribute name (include the period, hashtag, or brackets) of your search input. This will tell the component exactly what content to search. For example: [data-drupal-selector=\'edit-keys\'] or #my-search-input. Please note that, in Drupal, some IDs change, so make sure you're picking a permanent one. Also note that you should use single quotes instead of double quotes, as this will be wrapped in double quotes inside the component."),
     );
     $form['header_style']['search']['search_submit'] = array(
         '#type'          => 'textfield',
         '#title'         => t('Alternate Search Submit'),
         '#default_value' => theme_get_setting('search_submit'),
-        '#description'   => t("If you're using a different search module and the component is having difficulty finding the submit button, enter the class, id, or attribute name (include the period, hashtag, or brackets) of your submit button. This will tell the component exactly what button to trigger. For example: [data-drupal-selector=\"edit-submit\"] or #my-submit-button. Please note that, in Drupal, some IDs change, so make sure you're picking a permanent one."),
+        '#description'   => t("If you're using a different search module and the component is having difficulty finding the submit button, enter the class, id, or attribute name (include the period, hashtag, or brackets) of your submit button. This will tell the component exactly what button to trigger. For example: [data-drupal-selector=\'edit-submit\'] or #my-submit-button. Please note that, in Drupal, some IDs change, so make sure you're picking a permanent one. Also note that you should use single quotes instead of double quotes, as this will be wrapped in double quotes inside the component."),
     );
     $form['header_style']['search']['search_info'] = array(
         '#markup' => '<p>For more information on how the search component works, go to <a href="http://2017-components-demo.cdn.byu.edu/byu-search.html">http://2017-components-demo.cdn.byu.edu/byu-search.html</a>.</p>',
