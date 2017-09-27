@@ -7,8 +7,7 @@ package: Custom
 # core: 8.x
 libraries:
   - byu_d8/global-styling
-  - byu_d8/components-latest-js
-  - byu_d8/components-latest-css
+#  - byu_d8/components-latest
 #  - byu_d8/font-awesome
 
 regions:
