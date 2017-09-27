@@ -10,11 +10,13 @@
   "license": "BYU",
   "dependencies": {
     "bootstrap-sass": "^3.3.7",
-    "gulp": "^3.9.1",
+    "clean-css": "^4.1.9",
+    "debug": "^2.6.9",
+    "debug-fabulous": "^0.1.1",
     "gulp-autoprefixer": "^3.1.1",
-    "gulp-clean-css": "^3.8.0",
+    "gulp-clean-css": "^3.9.0",
     "gulp-concat": "^2.6.1",
-    "gulp-inject": "^4.2.0",
+    "gulp-inject": "^4.3.0",
     "gulp-minify": "^1.0.0",
     "gulp-notify": "^2.2.0",
     "gulp-sass": "^3.1.0",
@@ -23,6 +25,7 @@
   },
   "devDependencies": {
     "bootstrap": "^3.3.7",
+    "gulp": "^3.9.1",
     "jquery": "^3.2.1"
   }
 }

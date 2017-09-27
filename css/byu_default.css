@@ -68,6 +68,11 @@ byu-header[mobile-view] [slot="actions"] p {
   padding: 2px;
   background: #003DA5; }
 
+/* Disable royal_bg if mobile/tablet */
+@media (max-width: 1023px) {
+  .action-link {
+    background: transparent !important; } }
+
 .region.region-header-actions {
   display: flex; }
 
