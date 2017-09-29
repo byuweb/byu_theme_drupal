@@ -1,0 +1,7 @@
+my-library-name:
+  version: 8.x
+#  css:
+#    base:
+#      css/byu_default.css: {}
+#  js:
+#    js/my-js.js: {}
