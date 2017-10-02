@@ -33,6 +33,21 @@ BYU HEADER
 BYU GENERAL PAGE
 BYU FOOTER
 
+## Templates
+Please read documentation online to become familiar with how Drupal templating works.
+     https://www.drupal.org/docs/8/theming/twig
+     Template Naming Conventions: 
+     https://www.drupal.org/docs/8/theming/twig/twig-template-naming-conventions
+
+If you are customizing templates, please note that several template references are currently hard-coded to refer
+to the files in the byu_d8 theme. (This is a neccessary requirement to allow subthemes to start out as minimal
+as possible.)
+ 
+For example, inside the page.html.twig file it refers to the header.html.twig file. 
+If you copy the page.html.twig file into your subtheme and make changes, the page template will still point
+to the BYU_d8 header.html.twig file unless you change this in your version of the page template. You would then 
+need to have your own version of the header.html.twig file.
+
 ## Requesting Features and Options
 If you would like to request other settings or options, please contact Katria Lesser or post in the #drupal-users group on the BYUWeb slack team.
 Enhancement requests and settings for the theme should be posted in the #Drupal-users channel. 
