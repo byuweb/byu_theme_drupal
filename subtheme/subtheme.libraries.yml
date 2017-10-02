@@ -2,6 +2,6 @@ my-library-name:
   version: 8.x
 #  css:
 #    base:
-#      css/byu_default.css: {}
+#      css/custom.css: {}
 #  js:
-#    js/my-js.js: {}
+#    js/custom.js: {}

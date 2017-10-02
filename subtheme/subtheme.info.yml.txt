@@ -1,6 +1,6 @@
 name: BYU Homepage Theme
 type: theme
-base theme: byu_d8
+base theme: subtheme
 description: 'Example Sub Theme of BYU Drupal 8 (A Responsive BYU Homepage Theme using web components).'
 package: Custom
 
@@ -12,8 +12,8 @@ libraries:
 
 
 libraries-override:
-  byu_d8/components-latest-css: false
-  byu_d8/components-latest-js: false
+  subtheme/components-latest-css: false
+  subtheme/components-latest-js: false
 
 #Please do not delete regions unless you are sure it will not break anything.
 regions:
