@@ -131,6 +131,8 @@ function byu_d8_preprocess_page(&$variables) {
             $variables['#attached']['library'][] = 'byu_d8/components-master';
         } elseif ($version == 'latest') {
             $variables['#attached']['library'][] = 'byu_d8/components-latest';
+        } elseif ($version == 'none') {
+            // don't attach components at all
         }
 
         $variables['#attached']['library'][] = 'byu_d8/custom-library';
