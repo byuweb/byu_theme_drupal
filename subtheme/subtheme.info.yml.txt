@@ -1,4 +1,4 @@
-name: BYU Homepage SubTheme Starter
+name: BYU SubTheme Starter
 type: theme
 core: 8.x
 base theme: byu_d8
