@@ -3,7 +3,7 @@
 
 /**
  * @file
- * Functions to support theming in the byu_d8 theme.
+ * Functions to support theming in the subtheme theme.
  */
 
 use Drupal\Core\Form\FormStateInterface;
@@ -13,13 +13,13 @@ use Drupal\Core\Template\Attribute;
  * Implements hook_theme_suggestions_HOOK_alter().
  */
 global $base_url;
-$theme_root = $base_url.'/'.drupal_get_path('theme','byu_d8');
+$theme_root = $base_url.'/'.drupal_get_path('theme','subtheme');
 
 
 //
-//function byu_d8_preprocess_views_view(&$variables){
+//function subtheme_preprocess_views_view(&$variables){
 //    global $base_url;
-//    $theme_root = $base_url.'/'.drupal_get_path('theme','byu_d8');
+//    $theme_root = $base_url.'/'.drupal_get_path('theme','subtheme');
 //    $variables['theme_root'] = $theme_root;
 //    $query = \Drupal::entityQuery('taxonomy_term');
 //    $query->condition('vid', "team_categories");
@@ -33,7 +33,7 @@ $theme_root = $base_url.'/'.drupal_get_path('theme','byu_d8');
  * Do some browser detection and generate body classes based on them
  * "Borrowed" from wordpress
  */
-function byu_d8_browser_classes() {
+function subtheme_browser_classes() {
     // A little browser detection shall we?
     $browser = $_SERVER[ 'HTTP_USER_AGENT' ];
     $classes = array();
@@ -92,9 +92,9 @@ function byu_d8_browser_classes() {
 
 
 
-function byu_d8_preprocess_page(&$variables) {
+function subtheme_preprocess_page(&$variables) {
     global $base_url;
-    $theme_root = $base_url.'/'.drupal_get_path('theme','byu_d8');
+    $theme_root = $base_url.'/'.drupal_get_path('theme','subtheme');
     $variables['theme_root'] = $theme_root;
     $user = \Drupal::currentUser()->id();
     $account = \Drupal\user\Entity\User::load($user);
@@ -109,7 +109,7 @@ function byu_d8_preprocess_page(&$variables) {
     $current_path = \Drupal::service('path.current')->getPath();
     $path_args = explode('/', $current_path);
     $variables['arg'] = $path_args[1];
-    //$variables['logopath'] = $base_url . '/' . drupal_get_path('theme','byu_d8') . '/logo.png';
+    //$variables['logopath'] = $base_url . '/' . drupal_get_path('theme','subtheme') . '/logo.png';
     //$variables['user'] = $user;
     //$variables['name'] = $name;
     //$variables['info'] = $info;
@@ -124,54 +124,54 @@ function byu_d8_preprocess_page(&$variables) {
     if(!empty($version ) ) {
 
         if($version == '1.x.x') {
-            $variables['#attached']['library'][] = 'byu_d8/components-1.x.x';
+            $variables['#attached']['library'][] = 'subtheme/components-1.x.x';
         } elseif ($version == '1.2.x') {
-            $variables['#attached']['library'][] = 'byu_d8/components-1.2.x';
+            $variables['#attached']['library'][] = 'subtheme/components-1.2.x';
         } elseif ($version == 'master') {
-            $variables['#attached']['library'][] = 'byu_d8/components-master';
+            $variables['#attached']['library'][] = 'subtheme/components-master';
         } elseif ($version == 'latest') {
-            $variables['#attached']['library'][] = 'byu_d8/components-latest';
+            $variables['#attached']['library'][] = 'subtheme/components-latest';
         }
 
-        $variables['#attached']['library'][] = 'byu_d8/custom-library';
+        $variables['#attached']['library'][] = 'subtheme/custom-library';
 //        drupal_add_css('//cdn.byu.edu/byu-theme-components/' . $version . '/byu-theme-components.min.css', array('type' => 'external'));
 //        drupal_add_js('//cdn.byu.edu/byu-theme-components/' . $version . '/byu-theme-components.min.js', 'external');
     } else { // setting wasn't set yet
-        $variables['#attached']['library'][] = 'byu_d8/components-latest';
+        $variables['#attached']['library'][] = 'subtheme/components-latest';
     }
     
     /* --- Load Fonts ------- */
     $font_package = trim(theme_get_setting('font_package'));
     if($font_package == 'fonts-full' ) {
-        $variables['#attached']['library'][] = 'byu_d8/fonts-full';
+        $variables['#attached']['library'][] = 'subtheme/fonts-full';
     } else { // load fonts-basic
-        $variables['#attached']['library'][] = 'byu_d8/fonts-basic';
+        $variables['#attached']['library'][] = 'subtheme/fonts-basic';
     }
     $fontawesome_use = trim(theme_get_setting('fontawesome_use'));
     if($fontawesome_use == TRUE ) {
-        $variables['#attached']['library'][] = 'byu_d8/font-awesome';
+        $variables['#attached']['library'][] = 'subtheme/font-awesome';
     }
     $librebaskerville_use = trim(theme_get_setting('librebaskerville_use'));
     if($librebaskerville_use == TRUE ) {
-        $variables['#attached']['library'][] = 'byu_d8/librebaskerville';
+        $variables['#attached']['library'][] = 'subtheme/librebaskerville';
     }
     $sourcesans_use = trim(theme_get_setting('sourcesans_use'));
     if($sourcesans_use == TRUE ) {
-        $variables['#attached']['library'][] = 'byu_d8/sourcesans';
+        $variables['#attached']['library'][] = 'subtheme/sourcesans';
     }
     
     /* ------ Load Helper Styles --------- */
     $byu_buttons = trim(theme_get_setting('byu_buttons'));
     if($byu_buttons == TRUE ) {
-        $variables['#attached']['library'][] = 'byu_d8/byu-buttons';
+        $variables['#attached']['library'][] = 'subtheme/byu-buttons';
     }
     $byu_tables = trim(theme_get_setting('byu_tables'));
     if($byu_tables == TRUE ) {
-        $variables['#attached']['library'][] = 'byu_d8/byu-tables';
+        $variables['#attached']['library'][] = 'subtheme/byu-tables';
     }
     $byu_box_shadows = trim(theme_get_setting('byu_box_shadows'));
     if($byu_box_shadows == TRUE ) {
-        $variables['#attached']['library'][] = 'byu_d8/byu-box-shadows';
+        $variables['#attached']['library'][] = 'subtheme/byu-box-shadows';
     }
     
     
@@ -198,7 +198,7 @@ function byu_d8_preprocess_page(&$variables) {
     $variables['page_title'] = $variables['page']['#title'];
     $variables['clients_top'] = views_embed_view('client', 'block_4');
     $variables['current_url'] = $_SERVER['REQUEST_URI'];
-    $theme_root = $base_url.'/'.drupal_get_path('theme','byu_d8');
+    $theme_root = $base_url.'/'.drupal_get_path('theme','subtheme');
     $variables['theme_root'] = $theme_root;
     $libraries['#attached']['library'][] = 'herchel/global-styling';
 
@@ -323,7 +323,7 @@ function getSearch(&$variables) {
 }
 
 //
-//function byu_d8_theme_suggestions_page_alter(array &$suggestions, array $variables) {
+//function subtheme_theme_suggestions_page_alter(array &$suggestions, array $variables) {
 //    $request = \Drupal::routeMatch()->getRouteObject()->getDefault('view_id');
 //    //Override Panels Page
 //    $current_uri = \Drupal::request()->getRequestUri();
@@ -357,7 +357,7 @@ function getSearch(&$variables) {
 //    }
 //
 //}
-//function byu_d8_theme_suggestions_block_alter(&$suggestions, $variables) {
+//function subtheme_theme_suggestions_block_alter(&$suggestions, $variables) {
 //    //Override Block Type
 //    $content = $variables['elements']['content'];
 //    if (isset($content['#block_content']) && $content['#block_content'] instanceof \Drupal\block_content\BlockContentInterface) {
@@ -368,24 +368,24 @@ function getSearch(&$variables) {
 ///**
 // * Implements hook_preprocess_HOOK() for node.html.twig.
 // */
-//function byu_d8_preprocess_node(&$variables) {
+//function subtheme_preprocess_node(&$variables) {
 //    global $base_url;
 //    // Assign Related Block to Porfolio Single Page
 //    $variables['related_portfolio'] = views_embed_view('portfolio_block', 'block_related');
 //    $variables['related_portfolio_carousel'] = views_embed_view('portfolio_block', 'block_related_carousel');
 //    $variables['base_url'] = $base_url;
-//    $theme_root = $base_url.'/'.drupal_get_path('theme','byu_d8');
+//    $theme_root = $base_url.'/'.drupal_get_path('theme','subtheme');
 //    $variables['theme_root'] = $theme_root;
 //
 //    // Allowed view modes
 //    $view_mode = $variables['view_mode']; // Retrieve view mode
 //    $allowed_view_modes = ['full']; // Array of allowed view modes (for performance so as to not execute on unneeded nodes)
 //
-//    // If view mode is in allowed view modes list, pass to byu_d8_add_regions_to_node()
+//    // If view mode is in allowed view modes list, pass to subtheme_add_regions_to_node()
 //    if(in_array($view_mode, $allowed_view_modes)) {
 //        // Allowed regions (for performance so as to not execute for unneeded region)
 //        $allowed_regions = ['left_sidebar','right_sidebar'];
-//        byu_d8_add_regions_to_node($allowed_regions, $variables);
+//        subtheme_add_regions_to_node($allowed_regions, $variables);
 //    }
 //
 //    $node = $variables['node'];
@@ -401,10 +401,10 @@ function getSearch(&$variables) {
 //}
 //
 ///**
-// * byu_d8_add_regions_to_node
+// * subtheme_add_regions_to_node
 // */
 //
-//function byu_d8_add_regions_to_node($allowed_regions, &$variables) {
+//function subtheme_add_regions_to_node($allowed_regions, &$variables) {
 //    // Retrieve active theme
 //    $theme = \Drupal::theme()->getActiveTheme()->getName();
 //
@@ -436,9 +436,9 @@ function getSearch(&$variables) {
 //    }
 //}
 //
-function byu_d8_preprocess_html(&$variables) {
+function subtheme_preprocess_html(&$variables) {
     global $base_url;
-    $theme_root = $base_url.'/'.drupal_get_path('theme','byu_d8');
+    $theme_root = $base_url.'/'.drupal_get_path('theme','subtheme');
     $variables['theme_root'] = $theme_root;
     $current_path = \Drupal::service('path.current')->getPath();
     $path_args = explode('/', $current_path);
@@ -482,13 +482,13 @@ function byu_d8_preprocess_html(&$variables) {
 //    ];
 
     // adding browser classes to body
-    $browserclasses = byu_d8_browser_classes();
+    $browserclasses = subtheme_browser_classes();
     $variables['attributes']['class'][] = implode(' ', $browserclasses);// Concatenate with spaces.
 
     
 }
 //
-//function byu_d8_theme_suggestions_node_alter(array &$suggestions, array $variables) {
+//function subtheme_theme_suggestions_node_alter(array &$suggestions, array $variables) {
 //    $product_type = $variables['elements']['#node']->getType();
 //    if ($variables['elements']['#view_mode'] == 'teaser') {
 //        $suggestions[] = 'node__' . $product_type . '__teaser';
@@ -499,13 +499,13 @@ function byu_d8_preprocess_html(&$variables) {
 /**
  * Implements hook_preprocess_user().
  */
-function byu_d8_preprocess_user(&$variables) {
+function subtheme_preprocess_user(&$variables) {
     /** @var User $account */
     $account = $variables['elements']['#user'];
 
     $variables['username'] = $account->getDisplayName();
 }
-function byu_d8_preprocess_block(&$variables) {
+function subtheme_preprocess_block(&$variables) {
 //    kint($variables);
 //    if($variables['block']->region == 'footer_11') :
 //        $variables['title_attributes_array'][] = 'invisible-elements';
@@ -515,7 +515,7 @@ function byu_d8_preprocess_block(&$variables) {
 //        $variables['search_link'] = 'test';
 //    }
 }
-function byu_d8_preprocess_region(&$variables) {
+function subtheme_preprocess_region(&$variables) {
     /* ---- processing footer content ----- */
 //    kint($variables);
 //    $variables['elements'][0]['#theme']['#attrbiutes'][] = 'test';
