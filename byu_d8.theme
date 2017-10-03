@@ -432,7 +432,7 @@ function byu_d8_preprocess_html(&$variables) {
 
 
 
-    $font_one = theme_get_setting('font_one');
+    $font_one = "h1-" . theme_get_setting('font_one');
     $font_two = theme_get_setting('font_two');
     $font_three = theme_get_setting('font_three');
     $font_four = theme_get_setting('font_four');
