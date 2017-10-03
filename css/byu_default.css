@@ -99,8 +99,7 @@ byu-search .form-item, byu-search .form-actions {
   /* border-radius: 0px; */ }
 
 byu-search input[type=search] {
-  border-radius: 0;
-  height: 35px; }
+  border-radius: 0; }
 
 @media (min-width: 1024px) {
   byu-search input[type=search] {
