@@ -95,6 +95,69 @@ function byu_d8_form_system_theme_settings_alter(&$form, Drupal\Core\Form\FormSt
         '#default_value' => theme_get_setting('sourcesans_use'),
         '#description' => t('This sans-serif font is a google font alternative, and may load faster.'),
     );
+    $libre_en = theme_get_setting('librebaskerville_use');
+    $sourcesans_en = theme_get_setting('sourcesans_use');
+
+//    $fontOptions = array(
+//        "vitesse" => "Vitesse",
+//        "gotham" => "Gotham",
+//        "sentinel" => "Sentinel",
+//    );
+//    if($libre_en == true) {
+////        array_push($fontOptions, 'librebask', 'Libre Bakserville');
+//        $libre_array = array('librebask'=>'Libre Baskerville');
+//        array_merge($fontOptions, $libre_array);
+//    }
+//    if($sourcesans_en == true) {
+////        array_push($fontOptions, 'sourcesans', 'Source Sans');
+//        $sourcesans_array = array('sourcesans'=>'Source Sans');
+//        array_merge($fontOptions, $sourcesans_array);
+//    }
+
+
+
+    if(($libre_en == true) && ($sourcesans_en == true) ) {
+//        array_push($fontOptions, 'librebask', 'Libre Bakserville');
+//        $libre_array = array('librebask'=>'Libre Baskerville');
+        $fontOptions = array(
+            "vitesse" => "Vitesse",
+            "gotham" => "Gotham",
+            "sentinel" => "Sentinel",
+            "libre" => "Libre Baskerville",
+            "sourcesans" => "Source Sans",
+        );
+    } else if ($libre_en == true) {
+        $fontOptions = array(
+            "vitesse" => "Vitesse",
+            "gotham" => "Gotham",
+            "sentinel" => "Sentinel",
+            "libre" => "Libre Baskerville",
+        );
+    } else if($sourcesans_en == true) {
+        $fontOptions = array(
+            "vitesse" => "Vitesse",
+            "gotham" => "Gotham",
+            "sentinel" => "Sentinel",
+            "sourcesans" => "Source Sans",
+        );
+    } else {
+        $fontOptions = array(
+            "vitesse" => "Vitesse",
+            "gotham" => "Gotham",
+            "sentinel" => "Sentinel",
+        );
+    }
+
+
+
+
+    $form['fonts']['fonts_test']= array(
+        '#type' => 'select',
+        '#title' => t('Font test options'),
+        '#description' => t('These are font options.'),
+        '#options' => $fontOptions,
+        '#default_value' => theme_get_setting('version'),
+    );
 
     $form['fonts']['font_one'] = array(
         '#type' => 'select',
