@@ -458,7 +458,7 @@ function byu_d8_preprocess_html(&$variables) {
     $browserclasses = byu_d8_browser_classes();
     $variables['attributes']['class'][] = implode(' ', $browserclasses);// Concatenate with spaces.
 
-    kint($variables);
+//    kint($variables);
 }
 //
 //function byu_d8_theme_suggestions_node_alter(array &$suggestions, array $variables) {
