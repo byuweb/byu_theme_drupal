@@ -430,19 +430,20 @@ function byu_d8_preprocess_html(&$variables) {
     // katria left off here getting these variables in
 //    array_push($variables['attributes']['class'],$full_width, $custom_width, $min_page_height);
 
-
+    // we need an intro class to initialize the array so the next pushes/additions go through correctly - don't remove!
+    $variables['attributes']['class'][] = 'body';
 
     $font_one = "h1-" . theme_get_setting('font_one');
-    $font_two = theme_get_setting('font_two');
-    $font_three = theme_get_setting('font_three');
-    $font_four = theme_get_setting('font_four');
-    $font_five = theme_get_setting('font_five');
+    $font_two = "h2-" . theme_get_setting('font_two');
+    $font_three = "h3-" . theme_get_setting('font_three');
+    $font_four = "h4-" . theme_get_setting('font_four');
+    $font_five = "h5-" . theme_get_setting('font_five');
     $font_one_color = theme_get_setting('font_one_color');
     $font_two_color = theme_get_setting('font_two_color');
     $font_three_color = theme_get_setting('font_three_color');
     $font_four_color = theme_get_setting('font_four_color');
     $font_five_color = theme_get_setting('font_five_color');
-    $p_font = theme_get_setting('p_font');
+    $p_font = "p-" . theme_get_setting('p_font');
 
     array_push($variables['attributes']['class'],$font_one, $font_two, $font_three, $font_four, $font_five, $font_one_color, $font_two_color, $font_three_color, $font_four_color, $font_five_color, $p_font);
 //    array_push($variables['attributes']['class'],$variables['logged_in']);
@@ -457,7 +458,7 @@ function byu_d8_preprocess_html(&$variables) {
     $browserclasses = byu_d8_browser_classes();
     $variables['attributes']['class'][] = implode(' ', $browserclasses);// Concatenate with spaces.
 
-    
+    kint($variables);
 }
 //
 //function byu_d8_theme_suggestions_node_alter(array &$suggestions, array $variables) {

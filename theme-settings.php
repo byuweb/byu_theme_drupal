@@ -83,10 +83,10 @@ function byu_d8_form_system_theme_settings_alter(&$form, Drupal\Core\Form\FormSt
         '#title'         => t('Load FontAwesome library'),
         '#default_value' => theme_get_setting('fontawesome_use'),
     );
-    $form['fonts']['librebaskerville_use'] = array(
+    $form['fonts']['libreberville_use'] = array(
         '#type'          => 'checkbox',
         '#title'         => t('Load Libre Baskerville font'),
-        '#default_value' => theme_get_setting('librebaskerville_use'),
+        '#default_value' => theme_get_setting('libreberville_use'),
         '#description' => t('This serif font is a google font alternative, and may load faster.'),
     );
     $form['fonts']['sourcesans_use'] = array(
@@ -95,7 +95,7 @@ function byu_d8_form_system_theme_settings_alter(&$form, Drupal\Core\Form\FormSt
         '#default_value' => theme_get_setting('sourcesans_use'),
         '#description' => t('This sans-serif font is a google font alternative, and may load faster.'),
     );
-    $libre_en = theme_get_setting('librebaskerville_use');
+    $libre_en = theme_get_setting('libreberville_use');
     $sourcesans_en = theme_get_setting('sourcesans_use');
 
     $fontOptions = array(
@@ -104,9 +104,9 @@ function byu_d8_form_system_theme_settings_alter(&$form, Drupal\Core\Form\FormSt
         "sentinel" => "Sentinel",
     );
     if($libre_en == true) {
-//        array_push($fontOptions, 'librebask', 'Libre Bakserville');
+//        array_push($fontOptions, 'libreb', 'Libre Bakserville');
 
-        $libre_array = array('librebask'=>'Libre Baskerville');
+        $libre_array = array('libreb'=>'Libre Baskerville');
         $fontOptions = array_merge($fontOptions, $libre_array);
 
     }
@@ -116,23 +116,10 @@ function byu_d8_form_system_theme_settings_alter(&$form, Drupal\Core\Form\FormSt
         $fontOptions = array_merge($fontOptions, $sourcesans_array);
     }
 
-
-    $form['fonts']['fonts_test']= array(
-        '#type' => 'select',
-        '#title' => t('Font test options'),
-        '#description' => t('These are font options.'),
-        '#options' => $fontOptions,
-        '#default_value' => theme_get_setting('version'),
-    );
-
     $form['fonts']['font_one'] = array(
         '#type' => 'select',
         '#title' => t('H1 Font'),
-        '#options' => array(
-            'h1-vitesse' => t('Vitesse'),
-            'h1-gotham' => t('Gotham'),
-            'h1-sentinel' => t('Sentinel'),
-        ),
+        '#options' => $fontOptions,
         '#default_value' => theme_get_setting('font_one'),
     );
     $form['fonts']['font_one_color'] = array(
@@ -148,11 +135,7 @@ function byu_d8_form_system_theme_settings_alter(&$form, Drupal\Core\Form\FormSt
     $form['fonts']['font_two'] = array(
         '#type' => 'select',
         '#title' => t('H2 Font'),
-        '#options' => array(
-            'h2-vitesse' => t('Vitesse'),
-            'h2-gotham' => t('Gotham'),
-            'h2-sentinel' => t('Sentinel'),
-        ),
+        '#options' => $fontOptions,
         '#default_value' => theme_get_setting('font_two'),
     );
     $form['fonts']['font_two_color'] = array(
@@ -168,11 +151,7 @@ function byu_d8_form_system_theme_settings_alter(&$form, Drupal\Core\Form\FormSt
     $form['fonts']['font_three'] = array(
         '#type' => 'select',
         '#title' => t('H3 Font'),
-        '#options' => array(
-            'h3-vitesse' => t('Vitesse'),
-            'h3-gotham' => t('Gotham'),
-            'h3-sentinel' => t('Sentinel'),
-        ),
+        '#options' => $fontOptions,
         '#default_value' => theme_get_setting('font_three'),
     );
     $form['fonts']['font_three_color'] = array(
@@ -189,11 +168,7 @@ function byu_d8_form_system_theme_settings_alter(&$form, Drupal\Core\Form\FormSt
     $form['fonts']['font_four'] = array(
         '#type' => 'select',
         '#title' => t('H4 Font'),
-        '#options' => array(
-            'h4-vitesse' => t('Vitesse'),
-            'h4-gotham' => t('Gotham'),
-            'h4-sentinel' => t('Sentinel'),
-        ),
+        '#options' => $fontOptions,
         '#default_value' => theme_get_setting('font_four'),
     );
     $form['fonts']['font_four_color'] = array(
@@ -209,11 +184,7 @@ function byu_d8_form_system_theme_settings_alter(&$form, Drupal\Core\Form\FormSt
     $form['fonts']['font_five'] = array(
         '#type' => 'select',
         '#title' => t('H5 Font'),
-        '#options' => array(
-            'h5-vitesse' => t('Vitesse'),
-            'h5-gotham' => t('Gotham'),
-            'h5-sentinel' => t('Sentinel'),
-        ),
+        '#options' => $fontOptions,
         '#default_value' => theme_get_setting('font_five'),
     );
     $form['fonts']['font_five_color'] = array(
@@ -226,14 +197,27 @@ function byu_d8_form_system_theme_settings_alter(&$form, Drupal\Core\Form\FormSt
         ),
         '#default_value' => theme_get_setting('font_five_color'),
     );
+
+    $pFontOptions = array(
+        'default' => t('Default'),
+        'gotham' => t('Gotham (san-serif)'),
+    );
+    if($libre_en == true) {
+//        array_push($fontOptions, 'libreb', 'Libre Bakserville');
+
+        $libre_array = array('libreb'=>'Libre Baskerville');
+        $pFontOptions = array_merge($pFontOptions, $libre_array);
+
+    }
+    if($sourcesans_en == true) {
+//        array_push($fontOptions, 'sourcesans', 'Source Sans');
+        $sourcesans_array = array('sourcesans'=>'Source Sans');
+        $pFontOptions = array_merge($pFontOptions, $sourcesans_array);
+    }
     $form['fonts']['p_font'] = array(
         '#type' => 'select',
         '#title' => t('Paragraph Font'),
-        '#options' => array(
-            'p-default' => t('Default'),
-            'p-gotham' => t('Gotham (san serif)'),
-            'p-libreb' => t('Libre Baskerville (serif)'),
-        ),
+        '#options' => $pFontOptions,
         '#default_value' => theme_get_setting('p_font'),
     );
 
