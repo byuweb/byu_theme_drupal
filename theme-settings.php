@@ -71,7 +71,7 @@ function byu_d8_form_system_theme_settings_alter(&$form, Drupal\Core\Form\FormSt
     $form['fonts']['font_package'] = array(
         '#type' => 'select',
         '#title' => t('Which font package do you want to load?'),
-        '#description' => t('If you want Sentinel to show as an option below, select the FULL font package. Save this page and return to set the other settings.'),
+        '#description' => t('If you select Sentinel below, then you need to use the FULL font package.'),
         '#options' => array(
             'fonts-basic' => t('Basic: Vitesse & Gotham'),
             'fonts-full' => t('Full: Vitesse, Gotham, Sentinel & a few others'),
@@ -80,7 +80,7 @@ function byu_d8_form_system_theme_settings_alter(&$form, Drupal\Core\Form\FormSt
     );
     $form['fonts']['fontawesome_use'] = array(
         '#type'          => 'checkbox',
-        '#title'         => t('Load FontAwesome 4 library'),
+        '#title'         => t('Load FontAwesome library'),
         '#default_value' => theme_get_setting('fontawesome_use'),
     );
     $form['fonts']['libreberville_use'] = array(
@@ -98,25 +98,22 @@ function byu_d8_form_system_theme_settings_alter(&$form, Drupal\Core\Form\FormSt
     $libre_en = theme_get_setting('libreberville_use');
     $sourcesans_en = theme_get_setting('sourcesans_use');
 
-//    if(theme_get_setting('font_package') == 'fonts-full') {
-//        $sentinel_en = true;
-//    } else {
-//        $sentinel_en = false;
-//    }
-    $sentinel_en = (theme_get_setting('font_package') == 'fonts-full');
-
     $fontOptions = array(
         "vitesse" => "Vitesse",
         "gotham" => "Gotham",
+        "sentinel" => "Sentinel",
     );
-    if($sentinel_en == true) {
-        $fontOptions['sentinel'] = 'Sentinel';
-    }
     if($libre_en == true) {
-        $fontOptions['libreb'] = 'Libre Baskerville';
+//        array_push($fontOptions, 'libreb', 'Libre Bakserville');
+
+        $libre_array = array('libreb'=>'Libre Baskerville');
+        $fontOptions = array_merge($fontOptions, $libre_array);
+
     }
     if($sourcesans_en == true) {
-        $fontOptions['sourcesans'] = 'Source Sans';
+//        array_push($fontOptions, 'sourcesans', 'Source Sans');
+        $sourcesans_array = array('sourcesans'=>'Source Sans');
+        $fontOptions = array_merge($fontOptions, $sourcesans_array);
     }
 
     $form['fonts']['font_one'] = array(
@@ -206,10 +203,16 @@ function byu_d8_form_system_theme_settings_alter(&$form, Drupal\Core\Form\FormSt
         'gotham' => t('Gotham (san-serif)'),
     );
     if($libre_en == true) {
-        $fontOptions['libreb'] = 'Libre Baskerville';
+//        array_push($fontOptions, 'libreb', 'Libre Bakserville');
+
+        $libre_array = array('libreb'=>'Libre Baskerville');
+        $pFontOptions = array_merge($pFontOptions, $libre_array);
+
     }
     if($sourcesans_en == true) {
-        $fontOptions['sourcesans'] = 'Source Sans';
+//        array_push($fontOptions, 'sourcesans', 'Source Sans');
+        $sourcesans_array = array('sourcesans'=>'Source Sans');
+        $pFontOptions = array_merge($pFontOptions, $sourcesans_array);
     }
     $form['fonts']['p_font'] = array(
         '#type' => 'select',
