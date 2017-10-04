@@ -11,11 +11,6 @@ libraries:
 # Define libraries in subtheme.libraries.yml
 # See this page for instructions: https://www.drupal.org/docs/8/theming-drupal-8/adding-stylesheets-css-and-javascript-js-to-a-drupal-8-theme
 
-
-libraries-override:
-  subtheme/components-latest-css: false
-  subtheme/components-latest-js: false
-
 #Please do not delete regions unless you are sure it will not break anything.
 regions:
   header: 'Header'
