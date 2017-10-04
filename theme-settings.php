@@ -200,10 +200,10 @@ function byu_d8_form_system_theme_settings_alter(&$form, Drupal\Core\Form\FormSt
         'gotham' => t('Gotham (san-serif)'),
     );
     if($libre_en == true) {
-        $pfontOptions['libreb'] = 'Libre Baskerville';
+        $pFontOptions['libreb'] = 'Libre Baskerville';
     }
     if($sourcesans_en == true) {
-        $pfontOptions['sourcesans'] = 'Source Sans';
+        $pFontOptions['sourcesans'] = 'Source Sans';
     }
     $form['fonts']['p_font'] = array(
         '#type' => 'select',
