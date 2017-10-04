@@ -29,10 +29,13 @@ byu-header #site-title a:hover {
   color: #fff; }
 
 .p-gotham p, .p-gotham span, .p-gotham div, .p-gotham a {
-  font-family: "Gotham A", "Gotham B", Arial, sans-serif; }
+  font-family: "Gotham A", "Gotham B", sans-serif; }
 
 .p-libreb p, .p-libreb span, .p-libreb div, .p-libreb a {
   font-family: "Libre Baskerville", Georgia, serif; }
+
+.p-sourcesans p, .p-sourcesans span, .p-sourcesans div, .p-sourcesans a {
+  font-family: 'Source Sans Pro', sans-serif; }
 
 p {
   color: #141414; }
