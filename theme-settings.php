@@ -87,13 +87,13 @@ function byu_d8_form_system_theme_settings_alter(&$form, Drupal\Core\Form\FormSt
         '#type'          => 'checkbox',
         '#title'         => t('Load Libre Baskerville font'),
         '#default_value' => theme_get_setting('libreberville_use'),
-        '#description' => t('This serif font is a google font alternative, and may load faster.'),
+        '#description' => t('This serif font is a google font alternative, and may load faster. Click Save, and then this font will be available in the options below.'),
     );
     $form['fonts']['sourcesans_use'] = array(
         '#type'          => 'checkbox',
         '#title'         => t('Load Source Sans font'),
         '#default_value' => theme_get_setting('sourcesans_use'),
-        '#description' => t('This sans-serif font is a google font alternative, and may load faster.'),
+        '#description' => t('This sans-serif font is a google font alternative, and may load faster. Click Save, and then this font will be available in the options below.'),
     );
     $libre_en = theme_get_setting('libreberville_use');
     $sourcesans_en = theme_get_setting('sourcesans_use');
