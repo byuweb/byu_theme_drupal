@@ -227,6 +227,28 @@ byu-search {
       font-family: "Sentinel A", "Sentinel B", "Vitesse A", "Vitesse B", Helvetica, serif;
     }
   }
+.h1-sourcesans h1,
+.h2-sourcesans h2,
+.h3-sourcesans h3,
+.h4-sourcesans h4,
+.h5-sourcesans h5 {
+  font-family: 'Source Sans Pro', sans-serif;
+  span, a {
+    font-family: 'Source Sans Pro', sans-serif;
+  }
+}
+
+.h1-libreb h1,
+.h2-libreb h2,
+.h3-libreb h3,
+.h4-libreb h4,
+.h5-libreb h5 {
+  font-family: 'Libre Baskerville', serif;
+  span, a {
+    font-family: 'Libre Baskerville', serif;
+  }
+}
+
 
   .h1-navy h1, .h2-navy h2, .h3-navy h3, .h4-navy h4, .h5-navy h5 {
     color: $navy;

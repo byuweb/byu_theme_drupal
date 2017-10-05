@@ -161,6 +161,40 @@ byu-search input[type=search] {
   .h5-sentinel h5 a {
     font-family: "Sentinel A", "Sentinel B", "Vitesse A", "Vitesse B", Helvetica, serif; }
 
+.h1-sourcesans h1,
+.h2-sourcesans h2,
+.h3-sourcesans h3,
+.h4-sourcesans h4,
+.h5-sourcesans h5 {
+  font-family: 'Source Sans Pro', sans-serif; }
+  .h1-sourcesans h1 span, .h1-sourcesans h1 a,
+  .h2-sourcesans h2 span,
+  .h2-sourcesans h2 a,
+  .h3-sourcesans h3 span,
+  .h3-sourcesans h3 a,
+  .h4-sourcesans h4 span,
+  .h4-sourcesans h4 a,
+  .h5-sourcesans h5 span,
+  .h5-sourcesans h5 a {
+    font-family: 'Source Sans Pro', sans-serif; }
+
+.h1-libreb h1,
+.h2-libreb h2,
+.h3-libreb h3,
+.h4-libreb h4,
+.h5-libreb h5 {
+  font-family: 'Libre Baskerville', serif; }
+  .h1-libreb h1 span, .h1-libreb h1 a,
+  .h2-libreb h2 span,
+  .h2-libreb h2 a,
+  .h3-libreb h3 span,
+  .h3-libreb h3 a,
+  .h4-libreb h4 span,
+  .h4-libreb h4 a,
+  .h5-libreb h5 span,
+  .h5-libreb h5 a {
+    font-family: 'Libre Baskerville', serif; }
+
 .h1-navy h1, .h2-navy h2, .h3-navy h3, .h4-navy h4, .h5-navy h5 {
   color: #002E5D; }
   .h1-navy h1 a, .h2-navy h2 a, .h3-navy h3 a, .h4-navy h4 a, .h5-navy h5 a {
