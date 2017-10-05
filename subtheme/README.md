@@ -11,8 +11,8 @@ THIS IS NOT A FINAL RELEASE. THIS THEME IS STILL IN BETA MODE.
 Make sure that you have installed the byu_d8 theme properly and followed all instructions.
 
 ## INSTALLATION
-1. Copy this subtheme directory to your themes/ folder. It should be NEXT to byu_d8 now. If you hit back and try to enable it again, it usually works with another try.
-2. Rename this directory to be the MACHINE NAME of your theme. It should contain only lowercase letters and underscores.
+1. Copy this subtheme directory to your themes/ folder. It should be NEXT to byu_d8 now. 
+2. Rename this directory to be the MACHINE NAME of your theme. It should contain only lowercase letters, numbers, and underscores.
 3. Rename subtheme.info.yml.txt to yourthemename.info.yml WITHOUT the .txt. This was done in the demo so that Drupal won't see
 the theme until it is copied outside of byu_d8 and activated.
 4. Rename all other files in your folder to yourthemename.extension, i.e. my_new_subtheme.libraries.yml 
