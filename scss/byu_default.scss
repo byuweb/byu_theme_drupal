@@ -400,6 +400,18 @@ byu-search {
   margin: 0;
   }
 
+  #wrapper.sticky-footer {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  .main.sticky-footer {
+    flex-grow: 1;
+  }
+
+
+
   /* ----------- Helpful Classess ---- */
   .two-column, .three-column, .four-column {
     -webkit-column-gap: 15px; /* Chrome, Safari, Opera */

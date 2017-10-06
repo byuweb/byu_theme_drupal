@@ -621,6 +621,17 @@ are placed at the bottom of the menu in mobile views. Please make sure your cont
     );
 
     // Footer Option
+    $form['footer_style']['sticky_footer'] = array(
+        '#type' => 'fieldset',
+        '#title' => t('Sticky Footer Settings'),
+        '#open' => FALSE,
+    );
+    $form['footer_style']['sticky_footer']['footer_sticky'] = array(
+        '#type'          => 'checkbox',
+        '#title'         => t('Make the footer sticky'),
+        '#default_value' => theme_get_setting('footer_sticky'),
+        '#description'   => t("A sticky footer will automatically stick to the bottom of the page until there is enough content to force it farther down."),
+    );
     $form['footer_style']['footer_option'] = array(
         '#type' => 'select',
         '#title' => 'Select a footer style option:',
@@ -632,7 +643,6 @@ are placed at the bottom of the menu in mobile views. Please make sure your cont
             'three_four_merged' => 'Normal, normal, double wide (1:1:2 columns) - leave Footer 4 empty.',
         ),
         '#description' => 'If you select any footer layout besides normal, do not place content in the Footer 4 region. It will not be used.',
-        
     );
     $form['footer_style']['footer_info'] = array(
         '#markup' => '<p>Note: If you are selecting a double wide column layout, you are responsible for formatting your content inside that wide column. That means if you want it to contain two columns of links, you need to add a class to do that.</p><p>The class "two-columns" is available if you would like to use that.</p>',

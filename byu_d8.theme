@@ -272,6 +272,7 @@ function byu_d8_preprocess_page(&$variables) {
     }
 
     $variables['footer_option'] = theme_get_setting('footer_option');
+    $variables['footer_sticky'] = theme_get_setting('footer_sticky');
 //    $variables['footer_color_option'] = theme_get_setting('footer_color_option');
     $variables['header_sticky_option'] = theme_get_setting('header_sticky_option');
     $variables['page_header_option'] = theme_get_setting('page_header_option');
