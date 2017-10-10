@@ -13,3 +13,14 @@
   };
 
 })(jQuery, Drupal);
+
+  jQuery( document ).ready(function( $ ) {
+
+      if (document.querySelector("#admin-menu") != null) {
+          $("body").addClass("adminimal-menu");
+      }
+
+      else if (document.querySelector("#toolbar") != null) {
+          $("body").addClass("normal-admin-menu");
+      }
+  });

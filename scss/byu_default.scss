@@ -324,6 +324,13 @@ main.row.full-width {
   flex-grow: 1;
 }
 
+body.adminimal-menu .page.sticky-footer {
+  min-height: unquote("calc(100vh - 28px)");
+}
+
+body.normal-admin-menu .page.sticky-footer {
+  min-height: unquote("calc(100vh - 64px)");
+}
 
 
 /* Remove box-shadow from menu button in Firefox, Edge, IE11 */
