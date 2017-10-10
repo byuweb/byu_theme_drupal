@@ -459,6 +459,13 @@ function byu_d8_preprocess_html(&$variables) {
     $browserclasses = byu_d8_browser_classes();
     $variables['attributes']['class'][] = implode(' ', $browserclasses);// Concatenate with spaces.
 
+    // Get currently active user and his/her roles.
+    $account = \Drupal::currentUser();
+    $roles = $account->getRoles();
+    foreach ($roles as $role) {
+        $variables['attributes']['class'][] = 'role-' . $role;
+    }
+
 //    kint($variables);
 }
 //
