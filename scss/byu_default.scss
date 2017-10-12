@@ -410,6 +410,13 @@ byu-search {
     flex-grow: 1;
   }
 
+  body.admin-menu-bar #wrapper.sticky-footer {
+    min-height: unquote("calc(100vh - 39px)");
+  }
+
+  body.admin-extended-menu-bar #wrapper.sticky-footer {
+    min-height: unquote("calc(100vh - 78px)");
+  }
 
 
   /* ----------- Helpful Classess ---- */

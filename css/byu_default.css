@@ -308,6 +308,12 @@ byu-footer-column p {
 .main.sticky-footer {
   flex-grow: 1; }
 
+body.admin-menu-bar #wrapper.sticky-footer {
+  min-height: calc(100vh - 39px); }
+
+body.admin-extended-menu-bar #wrapper.sticky-footer {
+  min-height: calc(100vh - 78px); }
+
 /* ----------- Helpful Classess ---- */
 .two-column, .three-column, .four-column {
   -webkit-column-gap: 15px;

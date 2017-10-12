@@ -3,6 +3,10 @@ global-styling:
   css:
     base:
       css/byu_default.css: {}
+  js:
+    js/scripts.js: {}
+  dependencies:
+      - core/jquery
 fonts-basic:
   remote: https://cloud.typography.com/75214/7683772/css/fonts.css
   version: 1.0.0
