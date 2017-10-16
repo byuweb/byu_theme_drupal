@@ -4,7 +4,7 @@ jQuery( document ).ready(function( $ ) {
         $("body").addClass("admin-menu-bar");
     }
 
-    var extendedToolbar = jQuery("#toolbar-item-administration-tray");
+    var extendedToolbar = $("#toolbar-item-administration-tray");
 
     if (extendedToolbar.hasClass('is-active')) {
         $("body").addClass("admin-extended-menu-bar");
