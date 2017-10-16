@@ -13,11 +13,16 @@ function byu2017_d7_preprocess_html(&$variables) {
         // This is the Light Font Package - Vitesse and Gotham only.
         drupal_add_css('//cloud.typography.com/75214/7683772/css/fonts.css', array('type' => 'external'));
     }
-    // if Libre Baskerville is needed
-    if (trim(theme_get_setting('p_font')) == 'p-libreb') {
-        drupal_add_css('https://fonts.googleapis.com/css?family=Libre Baskerville', array('type' => 'external'));
-    }
 
+    $librebaskerville_use = trim(theme_get_setting('librebaskerville_use'));
+    if($librebaskerville_use == TRUE ) {
+        drupal_add_css('https://fonts.googleapis.com/css?family=Libre+Baskerville', array('type' => 'external'));
+    }
+    $sourcesans_use = trim(theme_get_setting('sourcesans_use'));
+    if($sourcesans_use == TRUE ) {
+        drupal_add_css('https://fonts.googleapis.com/css?family=Source+Sans+Pro', array('type' => 'external'));
+    }
+    
     // To include the components and their styling:
     $version = trim(theme_get_setting('version'));
     if(empty($version)==FALSE) {
@@ -37,6 +42,10 @@ function byu2017_d7_preprocess_html(&$variables) {
 //
 //  // Need legacy support for IE downgrade to Foundation 2 or use JS file below
 //  // drupal_add_js('http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE7.js', 'external');
+
+
+    // we need an intro class to initialize the array so the next pushes/additions go through correctly - don't remove!
+    $variables['classes_array'][] = 'body';
     
     $font_package = theme_get_setting('font_package');
     if (!empty($font_package)){
@@ -44,27 +53,27 @@ function byu2017_d7_preprocess_html(&$variables) {
     }
     $font_one = theme_get_setting('font_one');
     if (!empty($font_one)){
-        $variables['classes_array'][] = trim(theme_get_setting('font_one'));
+        $variables['classes_array'][] = "h1-" . theme_get_setting('font_one');
     }
     $font_two = theme_get_setting('font_two');
     if (!empty($font_two)){
-        $variables['classes_array'][] = trim(theme_get_setting('font_two'));
+        $variables['classes_array'][] = "h2-" . theme_get_setting('font_two');
     }
     $font_three = theme_get_setting('font_three');
     if (!empty($font_three)){
-        $variables['classes_array'][] = trim(theme_get_setting('font_three'));
+        $variables['classes_array'][] = "h3-" . theme_get_setting('font_three');
     }
     $font_four = theme_get_setting('font_four');
     if (!empty($font_four)){
-        $variables['classes_array'][] = trim(theme_get_setting('font_four'));
+        $variables['classes_array'][] = "h4-" . theme_get_setting('font_four');
     }
     $font_five = theme_get_setting('font_five');
     if (!empty($font_five)){
-        $variables['classes_array'][] = trim(theme_get_setting('font_five'));
+        $variables['classes_array'][] = "h5-" . theme_get_setting('font_five');
     }
     $p_font = theme_get_setting('p_font');
     if (!empty($p_font)){
-        $variables['classes_array'][] = trim(theme_get_setting('p_font'));
+        $variables['classes_array'][] = "p-" . theme_get_setting('p_font');
     }
     $a_color = theme_get_setting('a_color');
     if (!empty($a_color)){

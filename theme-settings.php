@@ -31,21 +31,47 @@ function byu2017_d7_form_system_theme_settings_alter(&$form, &$form_state) {
     $form['zurb_foundation']['fonts']['font_package'] = array(
         '#type' => 'select',
         '#title' => t('Which font package do you want to load?'),
-        '#description' => t('If you select Sentinel below, then you need to use the FULL font package.'),
+        '#description' => t('If you want Sentinel to show as an option below, select the FULL font package. Save this page and return to set the other settings.'),
         '#options' => array(
             'fonts-basic' => t('Basic: Vitesse & Gotham'),
             'fonts-full' => t('Full: Vitesse, Gotham, Sentinel & a few others'),
         ),
         '#default_value' => theme_get_setting('font_package'),
     );
+    $form['zurb_foundation']['fonts']['libreberville_use'] = array(
+        '#type'          => 'checkbox',
+        '#title'         => t('Load Libre Baskerville font'),
+        '#default_value' => theme_get_setting('libreberville_use'),
+        '#description' => t('This serif font is a google font alternative, and may load faster. Click Save, and then this font will be available in the options below.'),
+    );
+    $form['zurb_foundation']['fonts']['sourcesans_use'] = array(
+        '#type'          => 'checkbox',
+        '#title'         => t('Load Source Sans font'),
+        '#default_value' => theme_get_setting('sourcesans_use'),
+        '#description' => t('This sans-serif font is a google font alternative, and may load faster. Click Save, and then this font will be available in the options below.'),
+    );
+    $libre_en = theme_get_setting('libreberville_use');
+    $sourcesans_en = theme_get_setting('sourcesans_use');
+    $sentinel_en = (theme_get_setting('font_package') == 'fonts-full');
+
+    $fontOptions = array(
+        "vitesse" => "Vitesse",
+        "gotham" => "Gotham",
+    );
+    if($sentinel_en == true) {
+        $fontOptions['sentinel'] = 'Sentinel';
+    }
+    if($libre_en == true) {
+        $fontOptions['libreb'] = 'Libre Baskerville';
+    }
+    if($sourcesans_en == true) {
+        $fontOptions['sourcesans'] = 'Source Sans';
+    }
+
     $form['zurb_foundation']['fonts']['font_one'] = array(
         '#type' => 'select',
         '#title' => t('H1 Font'),
-        '#options' => array(
-            'h1-vitesse' => t('Vitesse'),
-            'h1-gotham' => t('Gotham'),
-            'h1-sentinel' => t('Sentinel'),
-        ),
+        '#options' => $fontOptions,
         '#default_value' => theme_get_setting('font_one'),
     );
     $form['zurb_foundation']['fonts']['font_one_color'] = array(
@@ -61,11 +87,7 @@ function byu2017_d7_form_system_theme_settings_alter(&$form, &$form_state) {
     $form['zurb_foundation']['fonts']['font_two'] = array(
         '#type' => 'select',
         '#title' => t('H2 Font'),
-        '#options' => array(
-            'h2-vitesse' => t('Vitesse'),
-            'h2-gotham' => t('Gotham'),
-            'h2-sentinel' => t('Sentinel'),
-        ),
+        '#options' => $fontOptions,
         '#default_value' => theme_get_setting('font_two'),
     );
     $form['zurb_foundation']['fonts']['font_two_color'] = array(
@@ -81,11 +103,7 @@ function byu2017_d7_form_system_theme_settings_alter(&$form, &$form_state) {
     $form['zurb_foundation']['fonts']['font_three'] = array(
         '#type' => 'select',
         '#title' => t('H3 Font'),
-        '#options' => array(
-            'h3-vitesse' => t('Vitesse'),
-            'h3-gotham' => t('Gotham'),
-            'h3-sentinel' => t('Sentinel'),
-        ),
+        '#options' => $fontOptions,
         '#default_value' => theme_get_setting('font_three'),
     );
     $form['zurb_foundation']['fonts']['font_three_color'] = array(
@@ -102,11 +120,7 @@ function byu2017_d7_form_system_theme_settings_alter(&$form, &$form_state) {
     $form['zurb_foundation']['fonts']['font_four'] = array(
         '#type' => 'select',
         '#title' => t('H4 Font'),
-        '#options' => array(
-            'h4-vitesse' => t('Vitesse'),
-            'h4-gotham' => t('Gotham'),
-            'h4-sentinel' => t('Sentinel'),
-        ),
+        '#options' => $fontOptions,
         '#default_value' => theme_get_setting('font_four'),
     );
     $form['zurb_foundation']['fonts']['font_four_color'] = array(
@@ -122,11 +136,7 @@ function byu2017_d7_form_system_theme_settings_alter(&$form, &$form_state) {
     $form['zurb_foundation']['fonts']['font_five'] = array(
         '#type' => 'select',
         '#title' => t('H5 Font'),
-        '#options' => array(
-            'h5-vitesse' => t('Vitesse'),
-            'h5-gotham' => t('Gotham'),
-            'h5-sentinel' => t('Sentinel'),
-        ),
+        '#options' => $fontOptions,
         '#default_value' => theme_get_setting('font_five'),
     );
     $form['zurb_foundation']['fonts']['font_five_color'] = array(
@@ -139,16 +149,24 @@ function byu2017_d7_form_system_theme_settings_alter(&$form, &$form_state) {
         ),
         '#default_value' => theme_get_setting('font_five_color'),
     );
+
+    $pFontOptions = array(
+        'default' => t('Default'),
+        'gotham' => t('Gotham (san-serif)'),
+    );
+    if($libre_en == true) {
+        $pFontOptions['libreb'] = 'Libre Baskerville';
+    }
+    if($sourcesans_en == true) {
+        $pFontOptions['sourcesans'] = 'Source Sans';
+    }
     $form['zurb_foundation']['fonts']['p_font'] = array(
         '#type' => 'select',
         '#title' => t('Paragraph Font'),
-        '#options' => array(
-            'p-default' => t('Default'),
-            'p-gotham' => t('Gotham (san serif)'),
-            'p-libreb' => t('Libre Baskerville (serif)'),
-        ),
+        '#options' => $pFontOptions,
         '#default_value' => theme_get_setting('p_font'),
     );
+
     $form['zurb_foundation']['fonts']['a_color'] = array(
         '#type' => 'select',
         '#title' => t('Link Color'),
