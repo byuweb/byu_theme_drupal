@@ -332,6 +332,15 @@ main.row.full-width {
   padding: 20px 0;
 }
 
+
+/* FOOTER */
+
+// Overrides styling in Zurb Foundation that displays incorrectly outside Chrome
+.column + .column:last-child {
+  float: unset;
+}
+
+
 /* STICKY FOOTER */
 .page.sticky-footer {
   display: flex;
