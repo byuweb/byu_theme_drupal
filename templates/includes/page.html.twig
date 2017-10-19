@@ -1,5 +1,5 @@
 <div id="wrapper" {%  if footer_sticky == true %} class="sticky-footer"  {% endif %}>
-    {% include '/themes/byu_d8/templates/includes/header.html.twig' %}
+    {% include byu_theme_root ~ '/templates/includes/header.html.twig' %}
 
     <div class="main-top {{ hero_width }} {{ hero_image_width }} {{ hero_vs_menu }} {%  if hero_width == 'custom-width' %} {%  if custom_width %} " style="width: {{ custom_width }}px{% endif %} {% endif %}">
         {% if page.slide_show %}
@@ -9,7 +9,7 @@
 
     <div role="main" class="main {{ min_page_height }} {%  if footer_sticky == true %}sticky-footer{% endif %} {%  if custom_width %}custom-width" style="width: {{ custom_width }}px{% endif %}">
 
-        {% include '/themes/byu_d8/templates/includes/custom-breadcrumb.html.twig' %}
+        {% include byu_theme_root ~ '/templates/includes/custom-breadcrumb.html.twig' %}
 
         {% if messages %}
             <section id="messages" class="messages">
@@ -90,6 +90,6 @@
             {% endif %}
         {% endif %}
     </div>
-    {% include '/themes/byu_d8/templates/includes/footer.html.twig' %}
+    {% include byu_theme_root ~ '/templates/includes/footer.html.twig' %}
 </div>
 
