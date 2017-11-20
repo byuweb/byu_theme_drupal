@@ -447,7 +447,9 @@ function byu_d8_preprocess_html(&$variables) {
     $font_five_color = theme_get_setting('font_five_color');
     $p_font = "p-" . theme_get_setting('p_font');
 
-    array_push($variables['attributes']['class'],$font_one, $font_two, $font_three, $font_four, $font_five, $font_one_color, $font_two_color, $font_three_color, $font_four_color, $font_five_color, $p_font);
+    //array_push($variables['attributes']['class'],$font_one, $font_two, $font_three, $font_four, $font_five, $font_one_color, $font_two_color, $font_three_color, $font_four_color, $font_five_color, $p_font);
+    $variables['attributes'] = new Attribute($variables['attributes']);
+    $variables['attributes']->addClass([$font_one, $font_two, $font_three, $font_four, $font_five, $font_one_color, $font_two_color, $font_three_color, $font_four_color, $font_five_color, $p_font]);
 //    array_push($variables['attributes']['class'],$variables['logged_in']);
 //    $variables['attributes']['class'][] = [
 //        logged_in ? 'user-logged-in',
