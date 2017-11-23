@@ -6497,6 +6497,12 @@ byu-search input[type=search] {
   byu-search input[type=search] {
     height: 30px; } }
 
+byu-search div.input-group {
+  width: 100%; }
+
+byu-search span.input-group-btn {
+  width: 0; }
+
 /* ------------ */
 .h1-vitesse h1,
 .h2-vitesse h2,
@@ -6738,6 +6744,10 @@ body.admin-extended-menu-bar #wrapper.sticky-footer {
 /* Remove white strip under footer */
 #drupal-live-announce {
   display: none; }
+
+/* Remove weird header top margin */
+h1, h2, h3, h4, h5 {
+  margin-top: 0; }
 
 /* ------------- Do NOT make custom changes here - if you do they will be overridden when you update the theme.
 1. Create a custom.scss file in this scss directory.

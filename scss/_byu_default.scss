@@ -179,6 +179,14 @@ byu-search {
       height: 30px;
     }
   }
+
+  div.input-group {
+    width: 100%;
+  }
+
+  span.input-group-btn {
+    width: 0;
+  }
 }
 
   /* ------------ */
@@ -440,6 +448,11 @@ byu-search {
 
 #drupal-live-announce {
   display: none;
+}
+
+/* Remove weird header top margin */
+h1, h2, h3, h4, h5 {
+  margin-top: 0;
 }
 
 
