@@ -9,28 +9,26 @@ var inject = require('gulp-inject');
 var minify = require('gulp-minify');
 
 
-gulp.task('styles', function() {
-    gulp.src('./scss/*.scss')
-        .pipe(sourcemaps.init())
-        .pipe(sass().on('error', sass.logError))
-        .pipe(sourcemaps.write('.'))
-        .pipe(gulp.dest('./css/'));
+gulp.task('styles', function () {
+  gulp.src('./scss/*.scss')
+      .pipe(sourcemaps.init())
+      .pipe(sass().on('error', sass.logError))
+      .pipe(sourcemaps.write('.'))
+      .pipe(gulp.dest('./css/'));
 });
 // maybe comment later?
-gulp.task('minify-css', function() {
+gulp.task('minify-css', function () {
   return gulp.src('./css/*.css')
-    .pipe(cleanCSS({compatibility: 'ie8'}))
-    .pipe(gulp.dest('./css/'));
+      .pipe(cleanCSS({compatibility: 'ie8'}))
+      .pipe(gulp.dest('./css/'));
 });
 
 //gulp.task('index', function () {
 //  var target = gulp.src('./public/index.html');
-//  // It's not necessary to read the files (will speed up things), we're only after their paths:
-//  var sources = gulp.src(['./js/**/*.js', './css/**/*.css'], {read: false});
-//
-//  return target.pipe(inject(sources, { relative: true }))
-//    .pipe(gulp.dest('./public'));
-//});
+//  // It's not necessary to read the files (will speed up things), we're only
+// after their paths: var sources = gulp.src(['./js/**/*.js',
+// './css/**/*.css'], {read: false});  return target.pipe(inject(sources, {
+// relative: true })) .pipe(gulp.dest('./public')); });
 
 //gulp.task('compress', function() {
 //  gulp.src('./js/*.js')
@@ -45,7 +43,7 @@ gulp.task('minify-css', function() {
 //});
 
 //Watch task
-gulp.task('default',['styles'], function() {
+gulp.task('default', ['styles'], function () {
   gulp.watch('scss/**/*.scss');
 });
 

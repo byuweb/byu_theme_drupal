@@ -1,13 +1,16 @@
-<div id="wrapper" {%  if footer_sticky == true %} class="sticky-footer"  {% endif %}>
+<div id="wrapper" {% if footer_sticky == true %} class="sticky-footer" {% endif %}>
     {% include byu_theme_root ~ '/templates/includes/header.html.twig' %}
 
-    <div class="main-top {{ hero_width }} {{ hero_image_width }} {{ hero_vs_menu }} {%  if hero_width == 'custom-width' %} {%  if custom_width %} " style="width: {{ custom_width }}px{% endif %} {% endif %}">
+    <div class="main-top {{ hero_width }} {{ hero_image_width }} {{ hero_vs_menu }} {% if hero_width == 'custom-width' %} {% if custom_width %} "
+         style="width: {{ custom_width }}px{% endif %} {% endif %}">
         {% if page.slide_show %}
             {{ page.slide_show }}
         {% endif %}
     </div>
 
-    <div role="main" class="main {{ min_page_height }} {%  if footer_sticky == true %}sticky-footer{% endif %} {%  if custom_width %}custom-width" style="width: {{ custom_width }}px{% endif %}">
+    <div role="main"
+         class="main {{ min_page_height }} {% if footer_sticky == true %}sticky-footer{% endif %} {% if custom_width %}custom-width"
+         style="width: {{ custom_width }}px{% endif %}">
 
         {% include byu_theme_root ~ '/templates/includes/custom-breadcrumb.html.twig' %}
 

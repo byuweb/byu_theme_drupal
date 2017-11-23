@@ -25,13 +25,11 @@
  * @see template_preprocess_block()
  */
 #}
-{%
-  set classes = [
-    'block',
-    'block-' ~ configuration.provider|clean_class,
-    'block-' ~ plugin_id|clean_class,
-  ]
-%}
+{% set classes = [
+'block',
+'block-' ~ configuration.provider|clean_class,
+'block-' ~ plugin_id|clean_class,
+] %}
 
   {{ title_prefix }}
 
@@ -42,13 +40,13 @@
     {#{% block content %}#}
       {#{{ content }}#}
     {#{% endblock %}#}
-    <div{{ attributes.addClass(classes) }}>
+<div{{ attributes.addClass(classes) }}>
     {% if label %}
-      {#<h2{{ title_attributes }}>{{ label }} {{ attributes['class'][0] }}</h2>#}
+        {#<h2{{ title_attributes }}>{{ label }} {{ attributes['class'][0] }}</h2>#}
     {% endif %}
     {% block content %}
-      {{ content }}
+        {{ content }}
     {% endblock %}
 
-    </div>
+</div>
 

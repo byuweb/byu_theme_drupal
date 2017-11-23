@@ -1,52 +1,56 @@
 {% if header_sticky_option == 'always_sticky' %}
-<byu-header id="header" {%  if full_width == TRUE %}full-width {% endif %} data-plugin-options='{"stickyEnabled": true, "stickyEnableOnBoxed": true, "stickyEnableOnMobile": true, "stickyStartAt": 0, "stickySetTop": "0", "stickyChangeLogo": false}'>
+<byu-header id="header" {% if full_width == TRUE %}full-width {% endif %}
+            data-plugin-options='{"stickyEnabled": true, "stickyEnableOnBoxed": true, "stickyEnableOnMobile": true, "stickyStartAt": 0, "stickySetTop": "0", "stickyChangeLogo": false}'>
     {% else %}
-<byu-header id="header"  {%  if full_width == TRUE %}full-width {% endif %} class="" data-plugin-options='{"stickyEnabled": false, "stickyEnableOnBoxed": false, "stickyEnableOnMobile": true, "stickyStartAt": 0, "stickySetTop": "0"}'>
-{% endif %}
-
-
-    {% if subtitle_above == TRUE %}
-        {% if subtitle_use == TRUE %}
-            <div slot="site-title" class="subtitle {%  if subtitle_italic == TRUE %}italic {% endif %}" >{{ subtitle_text }}</div>
-        {% endif %}
-    {% endif %}
-
-
-    <a slot="site-title" href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home">{{ site_name }}</a>
-
-    {% if subtitle_above == FALSE %}
-        {% if subtitle_use == true %}
-            <div slot="site-title" class="subtitle {%  if subtitle_italic == TRUE %}italic {% endif %}" >{{ subtitle_text }}</div>
-        {% endif %}
-    {% endif %}
-
-    <byu-menu class="header-nav-main header-nav-main-effect-1 header-nav-main-sub-effect-1 collapse">
-        {% if page.primary_menu %}
-            {{ page.primary_menu }}
-        {% endif %}
-    </byu-menu>
-
-    {% if page.header_actions %}
-        <div slot="actions" class="{{ actions_bg }}">{{ page.header_actions }}</div>
-    {% endif %}
-
-    {% if login_use == TRUE %}
-    <byu-user-info slot="user">
-        <a slot="login" href="{{ login_url }}">Sign In</a>
-        <!-- if you are using CAS, use the CAS sign out link instead: -->
-        <!--      <a slot="logout" href="/caslogout">Sign Out</a>-->
-        <a slot="logout" href="{{ logout_url }}">Sign Out</a>
-        {% if user.name.0.value %}
-            <span slot="user-name">{{ user.name.0.value }}</span>
+    <byu-header id="header" {% if full_width == TRUE %}full-width {% endif %} class=""
+                data-plugin-options='{"stickyEnabled": false, "stickyEnableOnBoxed": false, "stickyEnableOnMobile": true, "stickyStartAt": 0, "stickySetTop": "0"}'>
         {% endif %}
 
-    <byu-user-info>
-    {% endif %}
-        {#<byu-search slot="search">#}
-            {#{{ search_form }}#}
-        {#</byu-search>#}
 
-</byu-header>
+        {% if subtitle_above == TRUE %}
+            {% if subtitle_use == TRUE %}
+                <div slot="site-title"
+                     class="subtitle {% if subtitle_italic == TRUE %}italic {% endif %}">{{ subtitle_text }}</div>
+            {% endif %}
+        {% endif %}
+
+
+        <a slot="site-title" href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home">{{ site_name }}</a>
+
+        {% if subtitle_above == FALSE %}
+            {% if subtitle_use == true %}
+                <div slot="site-title"
+                     class="subtitle {% if subtitle_italic == TRUE %}italic {% endif %}">{{ subtitle_text }}</div>
+            {% endif %}
+        {% endif %}
+
+        <byu-menu class="header-nav-main header-nav-main-effect-1 header-nav-main-sub-effect-1 collapse">
+            {% if page.primary_menu %}
+                {{ page.primary_menu }}
+            {% endif %}
+        </byu-menu>
+
+        {% if page.header_actions %}
+            <div slot="actions" class="{{ actions_bg }}">{{ page.header_actions }}</div>
+        {% endif %}
+
+        {% if login_use == TRUE %}
+        <byu-user-info slot="user">
+            <a slot="login" href="{{ login_url }}">Sign In</a>
+            <!-- if you are using CAS, use the CAS sign out link instead: -->
+            <!--      <a slot="logout" href="/caslogout">Sign Out</a>-->
+            <a slot="logout" href="{{ logout_url }}">Sign Out</a>
+            {% if user.name.0.value %}
+                <span slot="user-name">{{ user.name.0.value }}</span>
+            {% endif %}
+
+            <byu-user-info>
+                {% endif %}
+                {#<byu-search slot="search">#}
+                {#{{ search_form }}#}
+                {#</byu-search>#}
+
+    </byu-header>
     <div class="header-nav-main header-nav-main-effect-1 header-nav-main-sub-effect-1 collapse">
         {% if page.primary_menu %}
             {{ page.primary_menu }}

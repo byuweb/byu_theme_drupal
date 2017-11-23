@@ -12,14 +12,12 @@
  * @see template_preprocess_region()
  */
 #}
-{%
-  set classes = [
-    'region',
-    'region-' ~ region|clean_class,
-  ]
-%}
+{% set classes = [
+'region',
+'region-' ~ region|clean_class,
+] %}
 {% if content %}
     <byu-footer-column {{ attributes.addClass(classes) }}>
-      {{ content }}
+        {{ content }}
     </byu-footer-column>
 {% endif %}

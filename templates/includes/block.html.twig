@@ -25,39 +25,37 @@
  * @see template_preprocess_block()
  */
 #}
-{%
-  set classes = [
-    'block',
-    'block-' ~ configuration.provider|clean_class,
-    'block-' ~ plugin_id|clean_class,
-  ]
-%}
+{% set classes = [
+'block',
+'block-' ~ configuration.provider|clean_class,
+'block-' ~ plugin_id|clean_class,
+] %}
 
   {{ title_prefix }}
 {% if 'byu-footer' in attributes['class'] %}
 
     {% if label %}
-      <span slot="header" {{ title_attributes }}>{{ label }}</span>
+        <span slot="header" {{ title_attributes }}>{{ label }}</span>
     {% endif %}
     {#{% block content %}#}
-      {{ content['body'][0]['#text']|t }}
+    {{ content['body'][0]['#text']|t }}
     {#{% endblock %}#}
 
 {% else %}
     {#{% if label %}#}
-      {#<span slot="header" {{ title_attributes }}>Test {{ label }}</span>#}
+    {#<span slot="header" {{ title_attributes }}>Test {{ label }}</span>#}
     {#{% endif %}#}
     {#{{ title_suffix }}#}
     {#{% block content %}#}
-      {#{{ content }}#}
+    {#{{ content }}#}
     {#{% endblock %}#}
     <div{{ attributes.addClass(classes) }}>
-    {% if label %}
-      <h2{{ title_attributes }}>{{ label }}</h2>
-    {% endif %}
-    {% block content %}
-      {{ content }}
-    {% endblock %}
+        {% if label %}
+            <h2{{ title_attributes }}>{{ label }}</h2>
+        {% endif %}
+        {% block content %}
+            {{ content }}
+        {% endblock %}
 
     </div>
 {% endif %}
