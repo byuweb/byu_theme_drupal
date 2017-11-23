@@ -4,7 +4,7 @@
 Contact Katria Lesser on slack if you have questions about when this will be fully available. We are working out licensing issues and some bug fixes.
 
 ## INSTALLATION
-1. Git clone (or download) and enable (Drupal Bootstrap)[https://drupal.org/project/bootstrap].
+1. Git clone (or download) and enable [Drupal Bootstrap](https://drupal.org/project/bootstrap).
 2. Git clone (or download) the byu_d8 theme, and enable it. 
 3. There is a strong dependency for the BYU footer: Download the module Block Class https://www.drupal.org/project/block_class
 And enable it.
