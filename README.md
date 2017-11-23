@@ -1,58 +1,58 @@
-<!-- @file Instructions for subtheming using the Sass Starterkit. -->
-<!-- @defgroup sub_theming_sass -->
-<!-- @ingroup sub_theming -->
-# Sass Starterkit
+# BYU Drupal 8 Thee
+> Drupal 8 Theme using Bootstrap &amp; Components
 
-Below are instructions on how to create a Bootstrap sub-theme using a Sass
-preprocessor.
+Contact Katria Lesser on slack if you have questions about when this will be fully available. We are working out licensing issues and some bug fixes.
 
-- [Prerequisites](#prerequisites)
-- [Additional Setup](#setup)
-- [Overrides](#overrides)
+## INSTALLATION
+1. Git clone (or download) and enable (Drupal Bootstrap)[https://drupal.org/project/bootstrap].
+2. Git clone (or download) the byu_d8 theme, and enable it. 
+3. There is a strong dependency for the BYU footer: Download the module Block Class https://www.drupal.org/project/block_class
+And enable it.
+4. Go to Appearance > Settings > BYU_D8. You will see settings similar to the byu2017_d7 theme.
 
-## Prerequisites
-- Read the @link getting_started Getting Started @endlink and @link sub_theming Sub-theming @endlink documentation topics.
-- You must understand the basic concept of using the [Sass] CSS pre-processor.
-- You must use a **[local Sass compiler](https://www.google.com/search?q=sass+compiler)**.
-- You must use the [Bootstrap Framework Source Files] ending in the `.scss`
-  extension, not files ending in `.css`.
+These sections each have several options.
+BYU FONTS
+BYU HEADER
+BYU GENERAL PAGE
+BYU FOOTER
 
-## Additional Setup {#setup}
-Download and extract the **latest** 3.x.x version of
-[Bootstrap Framework Source Files] into the root of your new sub-theme. After
-it has been extracted, the directory should be renamed (if needed) so it reads
-`./THEMENAME/bootstrap`.
+## Requesting Features and Options
+If you would like to request other settings or options, please contact Katria Lesser or post in the #drupal-users group on the BYUWeb slack team.
+Enhancement requests and settings for the theme should be posted in the #Drupal-users channel. 
+Or in github:https://github.com/byuweb/byu_d8/issues
+Enhancement requests for the header and footer specifically should be posted in the #engineering-group channel.
+Or in github: https://github.com/byuweb/byu-theme-components/issues
 
-If for whatever reason you have an additional `bootstrap` directory wrapping the
-first `bootstrap` directory (e.g. `./THEMENAME/bootstrap/bootstrap`), remove the
-wrapping `bootstrap` directory. You will only ever need to touch these files if
-or when you upgrade your version of the [Bootstrap Framework].
+### Reporting Bugs & Issues
 
-{.alert.alert-warning} **WARNING:** Do not modify the files inside of
-`./THEMENAME/bootstrap` directly. Doing so may cause issues when upgrading the
-[Bootstrap Framework] in the future.
+For the Drupal 8 theme: https://github.com/byuweb/byu_d8/issues
+For the header or footer not working (if you think this is related to the components, and not Drupal):
+https://github.com/byuweb/byu-theme-components/issues
+If you aren't sure if it's a component or drupal issue, assume it is Drupal and it will be redirected if it
+is for the components group instead.
 
-## Overrides {#overrides}
-The `./THEMENAME/scss/_default-variables.scss` file is generally where you will
-spend the majority of your time providing any default variables that should be
-used by the [Bootstrap Framework] instead of its own.
+## Understanding Header/Footer Components
+You can read the full documentation for the BYU Header & Footer components on these pages:
+http://2017-components-demo.cdn.byu.edu/
+and 
+http://webcommunity.byu.edu/html-5
 
-The `./THEMENAME/scss/overrides.scss` file contains various Drupal overrides to
-properly integrate with the [Bootstrap Framework]. It may contain a few
-enhancements, feel free to edit this file as you see fit.
+### Questions? Ask the Group
+The Engineering team of web developers around campus that supports the components is on slack.
+Join the byuweb team (see http://webcommunity.byu.edu/) and go to the #engineering-group channel.
 
-The `./THEMENAME/scss/style.scss` file is the glue that combines:
-`_default-variables.scss`, [Bootstrap Framework Source Files] and the 
-`overrides.scss` file together. Generally, you will not need to modify this
-file unless you need to add or remove files to be imported. This is the file
-that you should compile to `./THEMENAME/css/style.css` (note the same file
-name, using a different extension of course).
+## Search Options
+The search in the byu header can be disabled in the header settings.
+You can also customize how it works. It is using the byu-search component. 
 
-#### See also:
-- @link theme_settings Theme Settings @endlink
-- @link templates Templates @endlink
-- @link plugins Plugin System @endlink
+If you use the default core search module, it will work out of the box.
+### Using Different Search Modules
+You are able to use different search modules (i.e. Custom Search or Google Custom Search). If the search
+component gets confused finding your search/text input and your button/submit input, the theme has
+settings provided to tell it specifically which elements to target.
 
-[Bootstrap Framework]: http://getbootstrap.com
-[Bootstrap Framework Source Files]: https://github.com/twbs/bootstrap-sass
-[Sass]: http://sass-lang.com
+For example, if you use the Custom Search module, you will want to specify:
+`input[data-drupal-selector="edit-keys"]` for the Search Box element
+and 
+`input[data-drupal-selector="edit-submit"]` for the Search Button element.
+These fields take simple css selectors, so if your search module isn't working, make sure you are using a css selector that will not target multiple divs, and that will not change. (i.e. id's of these search elements often change once you start searching or reloading the page.)
