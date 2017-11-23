@@ -6,9 +6,9 @@ dependencies:
   module:
     - system
   theme:
-    - byu_d8
-id: byu_d8_main_menu
-theme: byu_d8
+    - byu_theme
+id: byu_theme_main_menu
+theme: byu_theme
 region: primary_menu
 weight: 0
 provider: null

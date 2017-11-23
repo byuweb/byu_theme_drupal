@@ -11,7 +11,7 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-byu_d8.mobile:
+byu_theme.mobile:
   label: mobile
   mediaQuery: ''
   weigth: 0
@@ -19,7 +19,7 @@ byu_d8.mobile:
     - 1x
     - 1.5x
     - 2x
-byu_d8.tablet:
+byu_theme.tablet:
   label: tablet
   mediaQuery: '(min-width: 768px)'
   weight: 1
@@ -27,7 +27,7 @@ byu_d8.tablet:
     - 1x
     - 1.5x
     - 2x
-byu_d8.tablet-wide:
+byu_theme.tablet-wide:
   label: tablet-wide
   mediaQuery: '(min-width: 1024px)'
   weight: 2
@@ -35,7 +35,7 @@ byu_d8.tablet-wide:
     - 1x
     - 1.5x
     - 2x
-byu_d8.desktop:
+byu_theme.desktop:
   label: desktop
   mediaQuery: '(min-width: 1200px)'
   weight: 3

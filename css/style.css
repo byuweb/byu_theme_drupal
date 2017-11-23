@@ -6412,7 +6412,7 @@ byu-menu:not([mobile-view]) a {
 byu-menu a:hover, .nav > li > a:hover, .nav > li > a:focus {
   background-color: transparent; }
 
-#block-byu-d8-main-menu {
+#block-byu-theme-main-menu {
   display: flex;
   align-items: center;
   justify-content: center; }

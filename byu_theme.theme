@@ -13,13 +13,13 @@ use Drupal\Core\Template\Attribute;
  * Implements hook_theme_suggestions_HOOK_alter().
  */
 global $base_url;
-$theme_root = $base_url.'/'.drupal_get_path('theme','byu_d8');
+$theme_root = $base_url.'/'.drupal_get_path('theme','byu_theme');
 
 /**
  * Do some browser detection and generate body classes based on them
  * "Borrowed" from wordpress
  */
-function byu_d8_browser_classes() {
+function byu_theme_browser_classes() {
   // A little browser detection shall we?
   $browser = $_SERVER[ 'HTTP_USER_AGENT' ];
   $classes = array();
@@ -78,11 +78,11 @@ function byu_d8_browser_classes() {
 
 
 
-function byu_d8_preprocess_page(&$variables) {
+function byu_theme_preprocess_page(&$variables) {
   global $base_url;
-  $theme_root = $base_url.'/'.drupal_get_path('theme','byu_d8');
+  $theme_root = $base_url.'/'.drupal_get_path('theme','byu_theme');
   $variables['theme_root'] = $theme_root;
-  $byu_theme_root = '/'.drupal_get_path('theme','byu_d8');
+  $byu_theme_root = '/'.drupal_get_path('theme','byu_theme');
   $variables['byu_theme_root'] = $byu_theme_root;
   $user = \Drupal::currentUser()->id();
   $account = \Drupal\user\Entity\User::load($user);
@@ -101,54 +101,54 @@ function byu_d8_preprocess_page(&$variables) {
   if(!empty($version ) ) {
 
     if($version == '1.x.x') {
-      $variables['#attached']['library'][] = 'byu_d8/components-1.x.x';
+      $variables['#attached']['library'][] = 'byu_theme/components-1.x.x';
     } elseif ($version == '1.2.x') {
-      $variables['#attached']['library'][] = 'byu_d8/components-1.2.x';
+      $variables['#attached']['library'][] = 'byu_theme/components-1.2.x';
     } elseif ($version == 'master') {
-      $variables['#attached']['library'][] = 'byu_d8/components-master';
+      $variables['#attached']['library'][] = 'byu_theme/components-master';
     } elseif ($version == 'latest') {
-      $variables['#attached']['library'][] = 'byu_d8/components-latest';
+      $variables['#attached']['library'][] = 'byu_theme/components-latest';
     } elseif ($version == 'none') {
       // don't attach components at all
     }
 
-    $variables['#attached']['library'][] = 'byu_d8/custom-library';
+    $variables['#attached']['library'][] = 'byu_theme/custom-library';
   } else { // setting wasn't set yet
-    $variables['#attached']['library'][] = 'byu_d8/components-latest';
+    $variables['#attached']['library'][] = 'byu_theme/components-latest';
   }
 
   /* --- Load Fonts ------- */
   $font_package = trim(theme_get_setting('font_package'));
   if($font_package == 'fonts-full' ) {
-    $variables['#attached']['library'][] = 'byu_d8/fonts-full';
+    $variables['#attached']['library'][] = 'byu_theme/fonts-full';
   } else { // load fonts-basic
-    $variables['#attached']['library'][] = 'byu_d8/fonts-basic';
+    $variables['#attached']['library'][] = 'byu_theme/fonts-basic';
   }
   $fontawesome_use = trim(theme_get_setting('fontawesome_use'));
   if($fontawesome_use == TRUE ) {
-    $variables['#attached']['library'][] = 'byu_d8/font-awesome';
+    $variables['#attached']['library'][] = 'byu_theme/font-awesome';
   }
   $librebaskerville_use = trim(theme_get_setting('librebaskerville_use'));
   if($librebaskerville_use == TRUE ) {
-    $variables['#attached']['library'][] = 'byu_d8/librebaskerville';
+    $variables['#attached']['library'][] = 'byu_theme/librebaskerville';
   }
   $sourcesans_use = trim(theme_get_setting('sourcesans_use'));
   if($sourcesans_use == TRUE ) {
-    $variables['#attached']['library'][] = 'byu_d8/sourcesans';
+    $variables['#attached']['library'][] = 'byu_theme/sourcesans';
   }
 
   /* ------ Load Helper Styles --------- */
   $byu_buttons = trim(theme_get_setting('byu_buttons'));
   if($byu_buttons == TRUE ) {
-    $variables['#attached']['library'][] = 'byu_d8/byu-buttons';
+    $variables['#attached']['library'][] = 'byu_theme/byu-buttons';
   }
   $byu_tables = trim(theme_get_setting('byu_tables'));
   if($byu_tables == TRUE ) {
-    $variables['#attached']['library'][] = 'byu_d8/byu-tables';
+    $variables['#attached']['library'][] = 'byu_theme/byu-tables';
   }
   $byu_box_shadows = trim(theme_get_setting('byu_box_shadows'));
   if($byu_box_shadows == TRUE ) {
-    $variables['#attached']['library'][] = 'byu_d8/byu-box-shadows';
+    $variables['#attached']['library'][] = 'byu_theme/byu-box-shadows';
   }
 
 
@@ -163,7 +163,7 @@ function byu_d8_preprocess_page(&$variables) {
   $variables['page_title'] = $variables['page']['#title'];
   $variables['clients_top'] = views_embed_view('client', 'block_4');
   $variables['current_url'] = $_SERVER['REQUEST_URI'];
-  $theme_root = $base_url.'/'.drupal_get_path('theme','byu_d8');
+  $theme_root = $base_url.'/'.drupal_get_path('theme','byu_theme');
   $variables['theme_root'] = $theme_root;
   $libraries['#attached']['library'][] = 'herchel/global-styling';
 
@@ -248,9 +248,9 @@ function byu_d8_preprocess_page(&$variables) {
   $variables['breadcrumbs'] =  theme_get_setting('breadcrumbs');
 }
 
-function byu_d8_preprocess_html(&$variables) {
+function byu_theme_preprocess_html(&$variables) {
   global $base_url;
-  $theme_root = $base_url.'/'.drupal_get_path('theme','byu_d8');
+  $theme_root = $base_url.'/'.drupal_get_path('theme','byu_theme');
   $variables['theme_root'] = $theme_root;
 
   $current_path = \Drupal::service('path.current')->getPath();
@@ -284,7 +284,7 @@ function byu_d8_preprocess_html(&$variables) {
   $variables['attributes']->addClass([$font_one, $font_two, $font_three, $font_four, $font_five, $font_one_color, $font_two_color, $font_three_color, $font_four_color, $font_five_color, $p_font]);
 
   // adding browser classes to body
-  $browserclasses = byu_d8_browser_classes();
+  $browserclasses = byu_theme_browser_classes();
   $variables['attributes']['class'][] = implode(' ', $browserclasses);// Concatenate with spaces.
 
   // Get currently active user and his/her roles.
@@ -299,15 +299,15 @@ function byu_d8_preprocess_html(&$variables) {
 /**
  * Implements hook_preprocess_user().
  */
-function byu_d8_preprocess_user(&$variables) {
+function byu_theme_preprocess_user(&$variables) {
   /** @var User $account */
   $account = $variables['elements']['#user'];
 
   $variables['username'] = $account->getDisplayName();
 }
-function byu_d8_preprocess_block(&$variables) {
+function byu_theme_preprocess_block(&$variables) {
 
 }
-function byu_d8_preprocess_region(&$variables) {
+function byu_theme_preprocess_region(&$variables) {
 
 }

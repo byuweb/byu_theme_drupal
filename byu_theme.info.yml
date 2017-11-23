@@ -31,5 +31,5 @@ regions:
   footer_41: 'Footer 4'
 
 libraries:
-  - 'byu_d8/global-styling'
-  - 'byu_d8/bootstrap-scripts'
+  - 'byu_theme/global-styling'
+  - 'byu_theme/bootstrap-scripts'

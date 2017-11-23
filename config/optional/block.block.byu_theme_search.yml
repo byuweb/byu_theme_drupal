@@ -4,9 +4,9 @@ dependencies:
   module:
     - search
   theme:
-    - byu_d8
-id: byu_d8_search
-theme: byu_d8
+    - byu_theme
+id: byu_theme_search
+theme: byu_theme
 region: search
 weight: -1
 provider: null
