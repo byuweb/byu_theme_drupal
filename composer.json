@@ -1,12 +1,12 @@
 {
     "name": "drupal/byu_theme",
     "description": "Theme for BYU based on Bootstrap and web components.",
-    "type": "project",
+    "type": "drupal-theme",
     "license": "Apache-2.0",
     "authors": [
         {
             "name": "Brigham Young University",
-            "email": "web-team@byu.edu"
+            "homepage": "https://www.byu.edu"
         }
     ],
     "repositories": [
