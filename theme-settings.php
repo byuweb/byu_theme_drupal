@@ -52,7 +52,7 @@ function byu_theme_form_system_theme_settings_alter(&$form, Drupal\Core\Form\For
     '#title' => t('Which font package do you want to load?'),
     '#description' => t('If you want Sentinel to show as an option below, select the FULL font package. Save this page and return to set the other settings.'),
     '#options' => [
-      'fonts-basic' => t('Basic: Vitesse & Gotham'),
+      'fonts-basic' => t('Basic: Vitesse, Gotham, Ringside'),
       'fonts-full' => t('Full: Vitesse, Gotham, Sentinel & a few others'),
     ],
     '#default_value' => theme_get_setting('font_package'),
@@ -81,6 +81,7 @@ function byu_theme_form_system_theme_settings_alter(&$form, Drupal\Core\Form\For
   $fontOptions = [
     "vitesse" => "Vitesse",
     "gotham" => "Gotham",
+    "ringside" => "Ringside",
   ];
   if ($sentinel_en == TRUE) {
     $fontOptions['sentinel'] = 'Sentinel';
@@ -176,6 +177,7 @@ function byu_theme_form_system_theme_settings_alter(&$form, Drupal\Core\Form\For
 
   $pFontOptions = [
     'default' => t('Default'),
+    'ringside' => t('Ringside (sans-serif)'),
     'gotham' => t('Gotham (san-serif)'),
   ];
   if ($libre_en == TRUE) {

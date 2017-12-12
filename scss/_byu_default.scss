@@ -77,6 +77,10 @@ byu-menu a:hover, .nav > li > a:hover, .nav > li > a:focus {
   justify-content: center;
 }
 
+.p-ringside p, .p-ringside span, .p-ringside div, .p-ringside a {
+  font-family: "Ringside Narrow A", "Ringside Narrow B", sans-serif;
+}
+
 .p-gotham p, .p-gotham span, .p-gotham div, .p-gotham a {
   font-family: "Gotham A", "Gotham B", sans-serif;
 }
@@ -211,6 +215,17 @@ byu-search {
       font-family: "Gotham A", "Gotham B", Arial, sans-serif;
     }
   }
+
+.h1-ringside h1,
+.h2-ringside h2,
+.h3-ringside h3,
+.h4-ringside h4,
+.h5-ringside h5 {
+  font-family: "Ringside Narrow A", "Ringside Narrow B", Arial, sans-serif;
+  span, a {
+    font-family: "Ringside Narrow A", "Ringside Narrow B", Arial, sans-serif;
+  }
+}
 
   .h1-sentinel h1,
   .h2-sentinel h2,

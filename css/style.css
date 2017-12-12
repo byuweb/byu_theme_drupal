@@ -6417,6 +6417,9 @@ byu-menu a:hover, .nav > li > a:hover, .nav > li > a:focus {
   align-items: center;
   justify-content: center; }
 
+.p-ringside p, .p-ringside span, .p-ringside div, .p-ringside a {
+  font-family: "Ringside Narrow A", "Ringside Narrow B", sans-serif; }
+
 .p-gotham p, .p-gotham span, .p-gotham div, .p-gotham a {
   font-family: "Gotham A", "Gotham B", sans-serif; }
 
@@ -6537,6 +6540,23 @@ byu-search span.input-group-btn {
   .h5-gotham h5 span,
   .h5-gotham h5 a {
     font-family: "Gotham A", "Gotham B", Arial, sans-serif; }
+
+.h1-ringside h1,
+.h2-ringside h2,
+.h3-ringside h3,
+.h4-ringside h4,
+.h5-ringside h5 {
+  font-family: "Ringside Narrow A", "Ringside Narrow B", Arial, sans-serif; }
+  .h1-ringside h1 span, .h1-ringside h1 a,
+  .h2-ringside h2 span,
+  .h2-ringside h2 a,
+  .h3-ringside h3 span,
+  .h3-ringside h3 a,
+  .h4-ringside h4 span,
+  .h4-ringside h4 a,
+  .h5-ringside h5 span,
+  .h5-ringside h5 a {
+    font-family: "Ringside Narrow A", "Ringside Narrow B", Arial, sans-serif; }
 
 .h1-sentinel h1,
 .h2-sentinel h2,
