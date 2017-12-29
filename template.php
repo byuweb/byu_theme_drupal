@@ -2,30 +2,30 @@
 
 /**
  * Implements template_preprocess_html().
- *
  */
-function byu_theme_preprocess_html(&$variables) {
+function byu_theme_preprocess_html(&$variables) 
+{
     /* --- BYU Fonts -- You must choose ONE font package to include. ---- */
-    if (trim(theme_get_setting('font_package')) == 'fonts-full'){
+    if (trim(theme_get_setting('font_package')) == 'fonts-full') {
         // Full Font Package - Vitesse, Gotham, Sentinel, and several others.
         drupal_add_css('//cloud.typography.com/75214/6517752/css/fonts.css', array('type' => 'external'));
-    } else if (trim(theme_get_setting('font_package')) == 'fonts-basic'){
+    } else if (trim(theme_get_setting('font_package')) == 'fonts-basic') {
         // This is the Light Font Package - Vitesse and Gotham only.
         drupal_add_css('//cloud.typography.com/75214/7683772/css/fonts.css', array('type' => 'external'));
     }
 
     $librebaskerville_use = trim(theme_get_setting('librebaskerville_use'));
-    if($librebaskerville_use == TRUE ) {
+    if($librebaskerville_use == true ) {
         drupal_add_css('https://fonts.googleapis.com/css?family=Libre+Baskerville', array('type' => 'external'));
     }
     $sourcesans_use = trim(theme_get_setting('sourcesans_use'));
-    if($sourcesans_use == TRUE ) {
+    if($sourcesans_use == true ) {
         drupal_add_css('https://fonts.googleapis.com/css?family=Source+Sans+Pro', array('type' => 'external'));
     }
     
     // To include the components and their styling:
     $version = trim(theme_get_setting('version'));
-    if(empty($version)==FALSE) {
+    if(empty($version)==false) {
         drupal_add_css('//cdn.byu.edu/byu-theme-components/' . $version . '/byu-theme-components.min.css', array('type' => 'external'));
         drupal_add_js('//cdn.byu.edu/byu-theme-components/' . $version . '/byu-theme-components.min.js', 'external');
     } else {
@@ -37,66 +37,66 @@ function byu_theme_preprocess_html(&$variables) {
     // drupal_add_js('//cdn.byu.edu/byu-theme-components/experimental/your-branch-name/byu-theme-components.min.js', 'external');
 
 
-//  // Add conditional CSS for IE. To use uncomment below and add IE css file
-//  drupal_add_css(path_to_theme() . '/css/ie.css', array('weight' => CSS_THEME, 'browsers' => array('!IE' => FALSE), 'preprocess' => FALSE));
-//
-//  // Need legacy support for IE downgrade to Foundation 2 or use JS file below
-//  // drupal_add_js('http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE7.js', 'external');
+    //  // Add conditional CSS for IE. To use uncomment below and add IE css file
+    //  drupal_add_css(path_to_theme() . '/css/ie.css', array('weight' => CSS_THEME, 'browsers' => array('!IE' => FALSE), 'preprocess' => FALSE));
+    //
+    //  // Need legacy support for IE downgrade to Foundation 2 or use JS file below
+    //  // drupal_add_js('http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE7.js', 'external');
 
 
     // we need an intro class to initialize the array so the next pushes/additions go through correctly - don't remove!
     $variables['classes_array'][] = 'body';
     
     $font_package = theme_get_setting('font_package');
-    if (!empty($font_package)){
+    if (!empty($font_package)) {
         $variables['classes_array'][] = trim(theme_get_setting('font_package'));
     }
     $font_one = theme_get_setting('font_one');
-    if (!empty($font_one)){
+    if (!empty($font_one)) {
         $variables['classes_array'][] = "h1-" . theme_get_setting('font_one');
     }
     $font_two = theme_get_setting('font_two');
-    if (!empty($font_two)){
+    if (!empty($font_two)) {
         $variables['classes_array'][] = "h2-" . theme_get_setting('font_two');
     }
     $font_three = theme_get_setting('font_three');
-    if (!empty($font_three)){
+    if (!empty($font_three)) {
         $variables['classes_array'][] = "h3-" . theme_get_setting('font_three');
     }
     $font_four = theme_get_setting('font_four');
-    if (!empty($font_four)){
+    if (!empty($font_four)) {
         $variables['classes_array'][] = "h4-" . theme_get_setting('font_four');
     }
     $font_five = theme_get_setting('font_five');
-    if (!empty($font_five)){
+    if (!empty($font_five)) {
         $variables['classes_array'][] = "h5-" . theme_get_setting('font_five');
     }
     $p_font = theme_get_setting('p_font');
-    if (!empty($p_font)){
+    if (!empty($p_font)) {
         $variables['classes_array'][] = "p-" . theme_get_setting('p_font');
     }
     $a_color = theme_get_setting('a_color');
-    if (!empty($a_color)){
+    if (!empty($a_color)) {
         $variables['classes_array'][] = trim(theme_get_setting('a_color'));
     } 
     $font_one_color = theme_get_setting('font_one_color');
-    if (!empty($font_one_color)){
+    if (!empty($font_one_color)) {
         $variables['classes_array'][] = trim(theme_get_setting('font_one_color'));
     }
     $font_two_color = theme_get_setting('font_two_color');
-    if (!empty($font_two_color)){
+    if (!empty($font_two_color)) {
         $variables['classes_array'][] = trim(theme_get_setting('font_two_color'));
     }
     $font_three_color = theme_get_setting('font_three_color');
-    if (!empty($font_three_color)){
+    if (!empty($font_three_color)) {
         $variables['classes_array'][] = trim(theme_get_setting('font_three_color'));
     }
     $font_four_color = theme_get_setting('font_four_color');
-    if (!empty($font_four_color)){
+    if (!empty($font_four_color)) {
         $variables['classes_array'][] = trim(theme_get_setting('font_four_color'));
     }
     $font_five_color = theme_get_setting('font_five_color');
-    if (!empty($font_five_color)){
+    if (!empty($font_five_color)) {
         $variables['classes_array'][] = trim(theme_get_setting('font_five_color'));
     }
     // Populate the body classes.
@@ -131,37 +131,37 @@ function byu_theme_preprocess_html(&$variables) {
 
 /**
  * Implements template_preprocess_page
- *
  */
-function byu_theme_preprocess_page(&$variables) {
+function byu_theme_preprocess_page(&$variables) 
+{
 
-//--------- Header Settings ---------//
+    //--------- Header Settings ---------//
 
 
     ///Home URL Settings
     if ($variables['header'] = theme_get_setting('home_url')) {
-        $home_url = TRUE;
+        $home_url = true;
         $home_link = trim(theme_get_setting('home_url'));
         $variables['home_url'] = $home_url;
         $variables['home_link'] = $home_link;
     } else {
-        $home_url = FALSE;
+        $home_url = false;
         $variables['home_url'] = $home_url;
     }
 
     ///Subtitle Settings
     if ($variables['subtitle'] = theme_get_setting('sub_title_use')) {
-        $subtitle_use = TRUE;
-//        $subtitle = $variables['header']['subtitle']['subtitle_text']['value'];
+        $subtitle_use = true;
+        //        $subtitle = $variables['header']['subtitle']['subtitle_text']['value'];
         $subtitle = trim(theme_get_setting('subtitle_text'));
-//        $subtitle = 'katria testing';
+        //        $subtitle = 'katria testing';
         $subtitle_classes = array();
 
         if (theme_get_setting('sub_title_above')) {
-//            $subtitle_classes[] = 'above';
-            $subtitle_above = TRUE;
+            //            $subtitle_classes[] = 'above';
+            $subtitle_above = true;
         } else {
-            $subtitle_above = FALSE;
+            $subtitle_above = false;
         }
 
         if (theme_get_setting('sub_title_italic')) {
@@ -174,12 +174,12 @@ function byu_theme_preprocess_page(&$variables) {
         $variables['subtitle'] = $subtitle;
 
     } else {
-        $subtitle_use = FALSE;
+        $subtitle_use = false;
         $variables['subtitle_use'] = $subtitle_use;
     }
     // User Info Settings
     if ($variables['user_info'] = theme_get_setting('login_use')) {
-        $login_use = TRUE;
+        $login_use = true;
         $login_url = trim(theme_get_setting('login_url'));
         if(empty($login_url)) {
             $login_url="../user";
@@ -190,14 +190,14 @@ function byu_theme_preprocess_page(&$variables) {
         }
         $myaccount_url = trim(theme_get_setting('myaccount_url'));
         if (theme_get_setting('myaccount_use')) {
-            $myaccount_use = TRUE;
+            $myaccount_use = true;
             $myaccount_url = trim(theme_get_setting('myaccount_url'));
             if(empty($myaccount_url)) {
                 $myaccount_url="../user";
             }
 
         } else {
-            $myaccount_use = FALSE;
+            $myaccount_use = false;
         }
 
         $variables['login_use'] = $login_use;
@@ -209,15 +209,15 @@ function byu_theme_preprocess_page(&$variables) {
 
 
     } else {
-        $login_use = FALSE;
+        $login_use = false;
         $variables['login_use'] = $login_use;
     }
 
     // Search Settings
     if ($variables['search'] = theme_get_setting('search_use')) {
-        $search_use = TRUE;
+        $search_use = true;
     } else {
-        $search_use = FALSE;
+        $search_use = false;
     }
     $variables['search_use'] = $search_use;
 
@@ -227,20 +227,20 @@ function byu_theme_preprocess_page(&$variables) {
 
     if ($variables['menu'] = theme_get_setting('menu_disable')) {
         // menu is disabled
-        $menu_use = FALSE;
-        $transparent = FALSE;
+        $menu_use = false;
+        $transparent = false;
         $hero_vs_menu = 'menu_disable';
     } else {
-        $menu_use = TRUE;
+        $menu_use = true;
         if ($variables['menu'] = theme_get_setting('transparent')) {
-            $transparent = TRUE;
+            $transparent = true;
             if ($variables['hero'] = theme_get_setting('hero_show_behind_menu') == '1') {
                 $hero_vs_menu = 'hero_show_behind_menu';
             } else { // 0  - below menu
                 $hero_vs_menu = 'hero_below_menu';
             }
         } else {
-            $transparent = FALSE;
+            $transparent = false;
             $hero_vs_menu = 'hero_below_menu';
         }
     }
@@ -256,21 +256,21 @@ function byu_theme_preprocess_page(&$variables) {
     } else {
         $variables['hero_space_width'] = 'custom-width-hero';
     }
-//    $variables['hero_space_width'] = $hero_space_width;
+    //    $variables['hero_space_width'] = $hero_space_width;
 
     if ($variables['hero'] = theme_get_setting('hero_full_image_width')) {
-        $hero_full_image_width = TRUE;
+        $hero_full_image_width = true;
     } else {
-        $hero_full_image_width = FALSE;
+        $hero_full_image_width = false;
     }
     $variables['hero_full_image_width'] = $hero_full_image_width;
 
 
     // General Settings
     if ($variables['general_page'] = theme_get_setting('full_width')) {
-        $full_width = TRUE;
+        $full_width = true;
     } else {
-        $full_width = FALSE;
+        $full_width = false;
     }
     $variables['full_width'] = $full_width;
     $page_width = trim(theme_get_setting('custom_width'));
@@ -282,9 +282,9 @@ function byu_theme_preprocess_page(&$variables) {
     // Footer Settings
 
     if ($variables['footer']['sticky_footer'] = theme_get_setting('footer_sticky')) {
-        $footer_sticky = TRUE;
+        $footer_sticky = true;
     } else {
-        $footer_sticky = FALSE;
+        $footer_sticky = false;
     }
     $variables['footer_sticky'] = $footer_sticky;
 
@@ -293,7 +293,8 @@ function byu_theme_preprocess_page(&$variables) {
 }
 
 
-function byu_theme_form_search_block_form_alter(&$form, &$form_state, $form_id) {
+function byu_theme_form_search_block_form_alter(&$form, &$form_state, $form_id) 
+{
     $placeholder_text = trim(theme_get_setting('placeholder_text'));
     $form['search_block_form']['#attributes']['placeholder'] = t($placeholder_text);
 }
@@ -301,7 +302,6 @@ function byu_theme_form_search_block_form_alter(&$form, &$form_state, $form_id) 
 
 /**
  * Implements template_preprocess_node
- *
  */
 //function STARTER_preprocess_node(&$variables) {
 //}
@@ -354,14 +354,12 @@ function byu_theme_form_search_block_form_alter(&$form, &$form_state, $form_id) 
 
 /**
  * Implements template_preprocess_panels_pane().
- *
  */
 //function STARTER_preprocess_panels_pane(&$variables) {
 //}
 
 /**
  * Implements template_preprocess_views_views_fields().
- *
  */
 //function STARTER_preprocess_views_view_fields(&$variables) {
 //}

@@ -21,7 +21,8 @@
     "use strict";
 
     // Cross-browser DOM event binding
-    function addEventListener(elem, event, fn) {
+    function addEventListener(elem, event, fn) 
+    {
         if (elem.addEventListener) {
             return elem.addEventListener(event, fn, false);
         }
@@ -31,7 +32,8 @@
     }
 
     // Check whether an item is in an array (we don't use Array.prototype.indexOf so we don't clobber any existing polyfills - this is a really simple alternative)
-    function inArray(arr, item) {
+    function inArray(arr, item) 
+    {
         var i, len;
         for (i = 0, len = arr.length; i < len; i++) {
             if (arr[i] === item) {
@@ -42,7 +44,8 @@
     }
 
     // Move the caret to the index position specified. Assumes that the element has focus
-    function moveCaret(elem, index) {
+    function moveCaret(elem, index) 
+    {
         var range;
         if (elem.createTextRange) {
             range = elem.createTextRange();
@@ -55,7 +58,8 @@
     }
 
     // Attempt to change the type property of an input element
-    function changeType(elem, type) {
+    function changeType(elem, type) 
+    {
         try {
             elem.type = type;
             return true;
@@ -139,10 +143,12 @@
         hideOnInput, liveUpdates, keydownVal, styleElem, styleRules, placeholder, timer, form, elem, len, i;
 
     // No-op (used in place of public methods when native support is detected)
-    function noop() {}
+    function noop() 
+    {}
 
     // Hide the placeholder value on a single element. Returns true if the placeholder was hidden and false if it was not (because it wasn't visible in the first place)
-    function hidePlaceholder(elem) {
+    function hidePlaceholder(elem) 
+    {
         var type;
         if (elem.value === elem.getAttribute(ATTR_CURRENT_VAL) && elem.getAttribute(ATTR_ACTIVE) === "true") {
             elem.setAttribute(ATTR_ACTIVE, "false");
@@ -160,7 +166,8 @@
     }
 
     // Show the placeholder value on a single element. Returns true if the placeholder was shown and false if it was not (because it was already visible)
-    function showPlaceholder(elem) {
+    function showPlaceholder(elem) 
+    {
         var type,
             val = elem.getAttribute(ATTR_CURRENT_VAL);
         if (elem.value === "" && val) {
@@ -182,7 +189,8 @@
         return false;
     }
 
-    function handleElem(node, callback) {
+    function handleElem(node, callback) 
+    {
 
         var handleInputs, handleTextareas, elem, len, i;
 
@@ -204,17 +212,20 @@
     }
 
     // Return all affected elements to their normal state (remove placeholder value if present)
-    function disablePlaceholders(node) {
+    function disablePlaceholders(node) 
+    {
         handleElem(node, hidePlaceholder);
     }
 
     // Show the placeholder value on all appropriate elements
-    function enablePlaceholders(node) {
+    function enablePlaceholders(node) 
+    {
         handleElem(node, showPlaceholder);
     }
 
     // Returns a function that is used as a focus event handler
-    function makeFocusHandler(elem) {
+    function makeFocusHandler(elem) 
+    {
         return function () {
 
             // Only hide the placeholder value if the (default) hide-on-focus behaviour is enabled
@@ -232,14 +243,16 @@
     }
 
     // Returns a function that is used as a blur event handler
-    function makeBlurHandler(elem) {
+    function makeBlurHandler(elem) 
+    {
         return function () {
             showPlaceholder(elem);
         };
     }
 
     // Functions that are used as a event handlers when the hide-on-input behaviour has been activated - very basic implementation of the "input" event
-    function makeKeydownHandler(elem) {
+    function makeKeydownHandler(elem) 
+    {
         return function (e) {
             keydownVal = elem.value;
 
@@ -254,7 +267,8 @@
             }
         };
     }
-    function makeKeyupHandler(elem) {
+    function makeKeyupHandler(elem) 
+    {
         return function () {
             var type;
 
@@ -279,7 +293,8 @@
             }
         };
     }
-    function makeClickHandler(elem) {
+    function makeClickHandler(elem) 
+    {
         return function () {
             if (elem === document.activeElement && elem.value === elem.getAttribute(ATTR_CURRENT_VAL) && elem.getAttribute(ATTR_ACTIVE) === "true") {
                 Utils.moveCaret(elem, 0);
@@ -288,7 +303,8 @@
     }
 
     // Returns a function that is used as a submit event handler on form elements that have children affected by this polyfill
-    function makeSubmitHandler(form) {
+    function makeSubmitHandler(form) 
+    {
         return function () {
 
             // Turn off placeholders on all appropriate descendant elements
@@ -297,7 +313,8 @@
     }
 
     // Bind event handlers to an element that we need to affect with the polyfill
-    function newElement(elem) {
+    function newElement(elem) 
+    {
 
         // If the element is part of a form, make sure the placeholder string is not submitted as a value
         if (elem.form) {
@@ -377,46 +394,48 @@
         }
 
         // If enabled, the polyfill will repeatedly check for changed/added elements and apply to those as well
-        timer = setInterval(function () {
-            for (i = 0, len = inputs.length + textareas.length; i < len; i++) {
-                elem = i < inputs.length ? inputs[i] : textareas[i - inputs.length];
+        timer = setInterval(
+            function () {
+                for (i = 0, len = inputs.length + textareas.length; i < len; i++) {
+                    elem = i < inputs.length ? inputs[i] : textareas[i - inputs.length];
 
-                // Only apply the polyfill if this element is of a type that supports placeholders, and has a placeholder attribute with a non-empty value
-                placeholder = elem.attributes.placeholder;
-                if (placeholder) {
-                    placeholder = placeholder.nodeValue;
-                    if (placeholder && Utils.inArray(validTypes, elem.type)) {
+                    // Only apply the polyfill if this element is of a type that supports placeholders, and has a placeholder attribute with a non-empty value
+                    placeholder = elem.attributes.placeholder;
+                    if (placeholder) {
+                        placeholder = placeholder.nodeValue;
+                        if (placeholder && Utils.inArray(validTypes, elem.type)) {
 
-                        // If the element hasn't had event handlers bound to it then add them
-                        if (!elem.getAttribute(ATTR_EVENTS_BOUND)) {
-                            newElement(elem);
-                        }
-
-                        // If the placeholder value has changed or not been initialised yet we need to update the display
-                        if (placeholder !== elem.getAttribute(ATTR_CURRENT_VAL) || (elem.type === "password" && !elem.getAttribute(ATTR_INPUT_TYPE))) {
-
-                            // Attempt to change the type of password inputs (fails in IE < 9)
-                            if (elem.type === "password" && !elem.getAttribute(ATTR_INPUT_TYPE) && Utils.changeType(elem, "text")) {
-                                elem.setAttribute(ATTR_INPUT_TYPE, "password");
+                            // If the element hasn't had event handlers bound to it then add them
+                            if (!elem.getAttribute(ATTR_EVENTS_BOUND)) {
+                                newElement(elem);
                             }
 
-                            // If the placeholder value has changed and the placeholder is currently on display we need to change it
-                            if (elem.value === elem.getAttribute(ATTR_CURRENT_VAL)) {
-                                elem.value = placeholder;
-                            }
+                            // If the placeholder value has changed or not been initialised yet we need to update the display
+                            if (placeholder !== elem.getAttribute(ATTR_CURRENT_VAL) || (elem.type === "password" && !elem.getAttribute(ATTR_INPUT_TYPE))) {
 
-                            // Keep a reference to the current placeholder value in case it changes via another script
-                            elem.setAttribute(ATTR_CURRENT_VAL, placeholder);
+                                // Attempt to change the type of password inputs (fails in IE < 9)
+                                if (elem.type === "password" && !elem.getAttribute(ATTR_INPUT_TYPE) && Utils.changeType(elem, "text")) {
+                                    elem.setAttribute(ATTR_INPUT_TYPE, "password");
+                                }
+
+                                // If the placeholder value has changed and the placeholder is currently on display we need to change it
+                                if (elem.value === elem.getAttribute(ATTR_CURRENT_VAL)) {
+                                    elem.value = placeholder;
+                                }
+
+                                // Keep a reference to the current placeholder value in case it changes via another script
+                                elem.setAttribute(ATTR_CURRENT_VAL, placeholder);
+                            }
                         }
                     }
                 }
-            }
 
-            // If live updates are not enabled cancel the timer
-            if (!liveUpdates) {
-                clearInterval(timer);
-            }
-        }, 100);
+                // If live updates are not enabled cancel the timer
+                if (!liveUpdates) {
+                    clearInterval(timer);
+                }
+            }, 100
+        );
     }
 
     // Expose public methods
