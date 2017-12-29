@@ -4,7 +4,7 @@
  * Implements template_preprocess_html().
  *
  */
-function byu2017_d7_preprocess_html(&$variables) {
+function byu_theme_preprocess_html(&$variables) {
     /* --- BYU Fonts -- You must choose ONE font package to include. ---- */
     if (trim(theme_get_setting('font_package')) == 'fonts-full'){
         // Full Font Package - Vitesse, Gotham, Sentinel, and several others.
@@ -133,7 +133,7 @@ function byu2017_d7_preprocess_html(&$variables) {
  * Implements template_preprocess_page
  *
  */
-function byu2017_d7_preprocess_page(&$variables) {
+function byu_theme_preprocess_page(&$variables) {
 
 //--------- Header Settings ---------//
 
@@ -293,7 +293,7 @@ function byu2017_d7_preprocess_page(&$variables) {
 }
 
 
-function byu2017_d7_form_search_block_form_alter(&$form, &$form_state, $form_id) {
+function byu_theme_form_search_block_form_alter(&$form, &$form_state, $form_id) {
     $placeholder_text = trim(theme_get_setting('placeholder_text'));
     $form['search_block_form']['#attributes']['placeholder'] = t($placeholder_text);
 }
