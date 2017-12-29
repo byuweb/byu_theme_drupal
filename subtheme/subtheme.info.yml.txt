@@ -1,7 +1,7 @@
 name: BYU SubTheme Starter
 type: theme
 core: 8.x
-base theme: byu_d8
+base theme: byu_theme
 description: 'Example Sub Theme of BYU Drupal 8 (A Responsive BYU Homepage Theme using web components).'
 package: Custom
 

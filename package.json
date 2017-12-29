@@ -1,5 +1,5 @@
 {
-  "name": "byu_d8",
+  "name": "byu_theme",
   "version": "2.0.0",
   "description": "BYU D8 theme. Subtheme of Drupal Bootstrap",
   "main": "gulpfile.js",
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/byuweb/byu_d8.git"
+    "url": "git+https://github.com/byuweb/byu_theme.git"
   },
   "author": "Brigham Young University",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/byuweb/byu_d8/issues"
+    "url": "https://github.com/byuweb/byu_theme/issues"
   },
-  "homepage": "https://github.com/byuweb/byu_d8#readme",
+  "homepage": "https://github.com/byuweb/byu_theme#readme",
   "dependencies": {
     "gulp": "^3.9.1",
     "gulp-clean-css": "^3.9.0",

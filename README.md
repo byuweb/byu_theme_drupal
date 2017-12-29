@@ -5,10 +5,10 @@ Contact Katria Lesser on slack if you have questions about when this will be ful
 
 ## INSTALLATION
 1. Git clone (or download) and enable [Drupal Bootstrap](https://drupal.org/project/bootstrap).
-2. Git clone (or download) the byu_d8 theme, and enable it. 
+2. Git clone (or download) the byu_theme theme, and enable it. 
 3. There is a strong dependency for the BYU footer: Download the module Block Class https://www.drupal.org/project/block_class
 And enable it.
-4. Go to Appearance > Settings > BYU_D8. You will see settings similar to the byu2017_d7 theme.
+4. Go to Appearance > Settings > byu_theme. You will see settings similar to the byu2017_d7 theme.
 
 These sections each have several options.
 BYU FONTS
@@ -19,13 +19,13 @@ BYU FOOTER
 ## Requesting Features and Options
 If you would like to request other settings or options, please contact Katria Lesser or post in the #drupal-users group on the BYUWeb slack team.
 Enhancement requests and settings for the theme should be posted in the #Drupal-users channel. 
-Or in github:https://github.com/byuweb/byu_d8/issues
+Or in github:https://github.com/byuweb/byu_theme/issues
 Enhancement requests for the header and footer specifically should be posted in the #engineering-group channel.
 Or in github: https://github.com/byuweb/byu-theme-components/issues
 
 ### Reporting Bugs & Issues
 
-For the Drupal 8 theme: https://github.com/byuweb/byu_d8/issues
+For the Drupal 8 theme: https://github.com/byuweb/byu_theme/issues
 For the header or footer not working (if you think this is related to the components, and not Drupal):
 https://github.com/byuweb/byu-theme-components/issues
 If you aren't sure if it's a component or drupal issue, assume it is Drupal and it will be redirected if it
