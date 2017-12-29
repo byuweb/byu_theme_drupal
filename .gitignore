@@ -2,6 +2,8 @@
 humans.txt
 robots.txt
 .sass-cache
-.idea/*
+.idea/
+*/.idea/
 scss/custom.scss
 js/custom.js
+vendor/
