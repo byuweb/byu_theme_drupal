@@ -27,22 +27,22 @@ https://drupal.org/project/zurb-foundation
 
 The base Zurb Foundation theme is designed to be easily extended by its sub-themes.
 You shouldn't modify any of the CSS or PHP files in the zurb_foundation/ folder;
-if you intend to modify this theme, you should make your changes inside the BYU2017_D7 theme.
+if you intend to modify this theme, you should make your changes inside the byu_theme theme.
 
 
 ## Styling Changes & Sub Theming:
 ### Advanced (Recommended)
 A. IF you will be styling extensively or adding templates to the theme, you should use a sub theme.
 Inside this theme is a folder 'subtheme'.
-1. Copy the subtheme folder outside of the byu2017_d7 folder into sites/all/themes.
+1. Copy the subtheme folder outside of the byu_theme folder into sites/all/themes.
 2. Change the "subtheme.info.txt" file to be "subtheme.info".
 3. Rename every instance of "subtheme" to the new name of your theme.
     i.e. the folder name, info file, and information inside the info file.
 
-4. You can also further customize your theme by copying any template, js or scss file from the parent theme (byu2017_d7) into this
+4. You can also further customize your theme by copying any template, js or scss file from the parent theme (byu_theme) into this
 theme in it's appropriate place. 
-    i.e. if you copy page.tpl.php from byu2017_d7/templates/page.tpl.php into sites/all/themes/subtheme/templates/page.tpl.php then 
-    your changes made there will be reflected. It will use this page template instead of the one in byu2017_d7.
+    i.e. if you copy page.tpl.php from byu_theme/templates/page.tpl.php into sites/all/themes/subtheme/templates/page.tpl.php then 
+    your changes made there will be reflected. It will use this page template instead of the one in byu_theme.
 
 For more questions about sub theming, you can read the instructions online here:
 https://www.drupal.org/docs/7/theming/creating-a-sub-theme
@@ -54,7 +54,7 @@ Do NOT make custom changes in byu_default.scss
 If you do they will be overridden when you update the theme.
 
 1. Create a custom.scss file in this scss directory.
-2. Edit byu2017_d7.info and find the lines where scss/byu_default.scss is included. You will see a commented out line
+2. Edit byu_theme.info and find the lines where scss/byu_default.scss is included. You will see a commented out line
 that will tell the theme to look for your custom.scss file.
 3. Add your css
 4. Clear your caches.
@@ -78,7 +78,7 @@ https://github.com/richthegeek/phpsass/zipball/master and extract it into sites/
 
 Javascript Changes:
 Similarly, you should create a custom.js file under js. Or choose to subtheme.
-You will also have to uncomment the line for declaring the js file in byu2017_d7.info
+You will also have to uncomment the line for declaring the js file in byu_theme.info
 
 
 
@@ -253,13 +253,13 @@ rename _variables.scss to _settings.scss in your subtheme and then load
 ## Requesting Features and Options
 If you would like to request other settings or options, please contact Katria Lesser or post in the #drupal-users group on the BYUWeb slack team.
 Enhancement requests and settings for the theme should be posted in the #Drupal-users channel. 
-Or in github: https://github.com/byuweb/byu2017_d7/issues
+Or in github: https://github.com/byuweb/byu_theme/issues
 Enhancement requests for the header and footer specifically should be posted in the #engineering-group channel. 
 Or in github: https://github.com/byuweb/byu-theme-components/issues
 
 ### Reporting Bugs & Issues
 
-For the Drupal 7 theme: https://github.com/byuweb/byu2017_d7/issues
+For the Drupal 7 theme: https://github.com/byuweb/byu_theme/issues
 For the header or footer not working (if you think this is related to the components, and not Drupal):
 https://github.com/byuweb/byu-theme-components/issues
 If you aren't sure if it's a component or drupal issue, assume it is Drupal and it will be redirected if it

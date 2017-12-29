@@ -6,7 +6,7 @@
 
 (function ($, Drupal) {
 
-  Drupal.behaviors.byu2017_d7 = {
+  Drupal.behaviors.byu_theme = {
     attach: function(context, settings) {
 
     }

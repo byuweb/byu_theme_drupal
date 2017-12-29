@@ -1,10 +1,10 @@
 name = Subtheme
-description = Custom sub-theme based on the the byu2017_d7 theme.
+description = Custom sub-theme based on the the byu_theme theme.
 screenshot = images/screenshot.png
 
 core = 7.x
 engine = phptemplate
-base theme = byu2017_d7
+base theme = byu_theme
 
 ; This section controls the CSS files for your theme. There are 3 different
 ; things you can do with a "stylesheets" line:
