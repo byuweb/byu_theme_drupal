@@ -15,7 +15,7 @@ THIS IS NOT A FINAL RELEASE. THIS THEME IS STILL IN BETA MODE.
   Current bug: sometimes when you try to enable, it will say `The website encountered an unexpected error.` If you hit back and try to enable it again, it usually works with another try.
 
 3. There is a strong dependency for the BYU footer: Download the module Block Class https://www.drupal.org/project/block_class
-And enable it.
+And enable it. (You will need to add the class `byu-footer` to each block inside the BYU Footer.)
 
 4. Go to Appearance > Settings > BYU_D8. You will see settings similar to the byu2017_d7 theme.
 
@@ -24,6 +24,13 @@ BYU FONTS
 BYU HEADER
 BYU GENERAL PAGE
 BYU FOOTER
+
+## BYU Footer
+As mentioned above, due to Twig limitations, the block can't identify if it is inside byu-footer and know to work well with components. Because of this, we need the block class module to allow us to quickly bridge that gap.
+
+Therefore, there is a strong dependency for the BYU footer: 
+1. Download the module Block Class from https://www.drupal.org/project/block_class (or use composer) and enable it. 
+2. Configure each block(s) that is in the byu footer. You will see a class textfield option. Add the class `byu-footer` to each block inside the BYU Footer.
 
 ## Requesting Features and Options
 If you would like to request other settings or options, please contact Katria Lesser or post in the #drupal-users group on the BYUWeb slack team.
