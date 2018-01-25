@@ -17,7 +17,7 @@ Make sure that you have installed the byu_d8 theme properly and followed all ins
 the theme until it is copied outside of byu_d8 and activated.
 4. Rename all other files in your folder to yourthemename.extension, i.e. my_new_subtheme.libraries.yml 
 4. Replace 'subtheme' everywhere it is in those files.
-5. Read the documentation online about how these files work:
+5. Read the documentation online about how these files work.
 Note: Do not change anything inside the byu_d8/subtheme folder. Leave it there.
 
 ## Customization
