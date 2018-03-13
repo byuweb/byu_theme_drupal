@@ -22,12 +22,12 @@ function byu_theme_form_system_theme_settings_alter(&$form, Drupal\Core\Form\For
     '#open' => FALSE,
   ];
   // component versions
-  $form['components'] = [
+  $form['byu_components'] = [
     '#type' => 'details',
     '#title' => t('BYU Component Settings'),
     '#group' => 'design',
   ];
-  $form['components']['components_version'] = [
+  $form['byu_components']['components_version'] = [
     '#type' => 'select',
     '#title' => t('Which version of BYU Web components do you want to load?'),
     '#description' => t('1.x.x. is recommended because it will incorporate all new features and bug fixes without big changes that may require manual adjustments.'),
