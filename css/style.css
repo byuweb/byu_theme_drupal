@@ -1066,7 +1066,7 @@ html {
   -webkit-tap-highlight-color: transparent; }
 
 body {
-  font-family: "Gotham A", "Gotham B", Helvetica, Arial, sans-serif;
+  font-family: "Ringside Narrow A", "Ringside Narrow B", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.42857;
   color: #141414;
@@ -5195,7 +5195,7 @@ button.close {
   position: absolute;
   z-index: 1070;
   display: block;
-  font-family: "Gotham A", "Gotham B", Helvetica, Arial, sans-serif;
+  font-family: "Ringside Narrow A", "Ringside Narrow B", Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;
@@ -5308,7 +5308,7 @@ button.close {
   display: none;
   max-width: 276px;
   padding: 1px;
-  font-family: "Gotham A", "Gotham B", Helvetica, Arial, sans-serif;
+  font-family: "Ringside Narrow A", "Ringside Narrow B", Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;
@@ -6315,7 +6315,7 @@ body.toolbar-fixed.toolbar-vertical.toolbar-tray-open.toolbar-fixed {
   border-radius: 4px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
   color: inherit;
-  font-family: "Gotham A", "Gotham B", Helvetica, Arial, sans-serif;
+  font-family: "Ringside Narrow A", "Ringside Narrow B", Helvetica, Arial, sans-serif;
   font-size: 14px;
   list-style: none;
   min-width: 160px;
@@ -6417,16 +6417,16 @@ byu-menu a:hover, .nav > li > a:hover, .nav > li > a:focus {
   align-items: center;
   justify-content: center; }
 
-.p-ringside p, .p-ringside span, .p-ringside div, .p-ringside a {
+.p-ringside {
   font-family: "Ringside Narrow A", "Ringside Narrow B", sans-serif; }
 
-.p-gotham p, .p-gotham span, .p-gotham div, .p-gotham a {
+.p-gotham {
   font-family: "Gotham A", "Gotham B", sans-serif; }
 
-.p-libreb p, .p-libreb span, .p-libreb div, .p-libreb a {
+.p-libreb {
   font-family: "Libre Baskerville", Georgia, serif; }
 
-.p-sourcesans p, .p-sourcesans span, .p-sourcesans div, .p-sourcesans a {
+.p-sourcesans {
   font-family: 'Source Sans Pro', sans-serif; }
 
 p {
