@@ -4,7 +4,7 @@ base theme: bootstrap
 version: 2.0.0
 
 name: 'BYU'
-description: 'Uses the Bootstrap framework Sass source files and must be compiled (not for beginners).'
+description: 'BYU brand-compliant theme. Mobile-friendly and accessible.'
 package: 'BYU'
 
 regions:
