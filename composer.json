@@ -1,0 +1,23 @@
+{
+  "name": "drupal/byu_theme",
+  "description": "BYU brand compliant, responsive, and accessible theme.",
+  "type": "drupal-theme",
+  "homepage": "https://drupal.org/project/byu_theme",
+  "license": "GPL-2.0+",
+  "authors": [
+    {
+      "name": "Katria Lesser",
+      "email": "katria_lesser@byu.edu"
+    }
+  ],
+  "support": {
+    "issues": "https://drupal.org/project/issues/byu_theme",
+    "source": "https://cgit.drupalcode.org/byu_theme"
+  },
+  "minimum-stability": "dev",
+  "require": {
+    "drupal/jquery_update": "~2.7",
+    "drupal/sassy": "~2.21",
+    "drupal/zurb_foundation": "~4.1"
+  }
+}

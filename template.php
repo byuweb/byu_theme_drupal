@@ -131,6 +131,22 @@ function byu_theme_preprocess_html(&$variables) {
  */
 function byu_theme_preprocess_page(&$variables) {
 
+  /* --- Check for dependencies --- */
+  $themes = list_themes();
+  if (!isset($themes['zurb_foundation'])) {
+    drupal_get_messages();
+    drupal_set_message(t(drupal_set_message('Missing the required base theme: ZURB Foundation.', 'warning')));
+  }
+  if(!module_exists('sassy_foundation')) {
+    drupal_set_message(t('BYU Theme requires that module <em>sassy</em> and <em>sassy_foundation</em> are installed.'), 'warning');
+  }
+  if(!module_exists('jquery_update')) {
+    drupal_set_message(t('BYU Theme requires that module <em>jquery_update</em> is installed.'), 'warning');
+  }
+  if(!file_exists('sites/all/libraries/phpsass')) {
+    drupal_set_message(t('BYU Theme requires that library <em>PHP Sass</em> is installed.'), 'warning');
+  }
+
   /*--------- Header Settings ---------*/
 
   // Home URL Settings.
