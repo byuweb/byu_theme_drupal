@@ -1,10 +1,4 @@
-<?php
-
-/**
- * @file
- */
-?>
-name = BYU 2017 Theme
+name = BYU Theme
 description = BYU Custom sub-theme based on the the Zurb Foundation base theme.
 screenshot = images/screenshot.png
 
@@ -48,10 +42,6 @@ stylesheets[all][] = scss/custom.scss
 
 ; Foundation JavaScript.
 
-; Modernizr acts as a shim for HTML5 elements for older browsers
-; as well as detection for mobile devices.
-scripts[] = js/vendor/custom.modernizr.js
-
 ; Foundation framework scripts (minified).
 ; If you prefer to have more control over which components are included you
 ; can comment this line and uncomment the ones below you want.
@@ -77,7 +67,7 @@ scripts[] = js/foundation.min.js
 
 ; Theme scripts.
 ; This is for byu default styles. don't change.
- scripts[] = js/scripts.js
+scripts[] = js/scripts.js
 
 ; if you are customizing with javascript, uncomment this line:
 ; scripts[] = js/custom.js
@@ -109,7 +99,7 @@ regions[footer_firstcolumn]  = Footer one
 regions[footer_secondcolumn] = Footer two
 regions[footer_thirdcolumn]  = Footer three
 regions[footer_fourthcolumn] = Footer four
-#regions[footer]              = Footer
+;regions[footer]              = Footer
 
 ; Various page elements output by the theme can be toggled on and off. The
 ; "features" control which of these check boxes display on the
@@ -117,15 +107,14 @@ regions[footer_fourthcolumn] = Footer four
 ; for elements not used by your sub-theme. To add a check box, uncomment the
 ; entry for it below. See the Drupal 7 Theme Guide for more info:
 ; http://drupal.org/node/171205#features
-
- features[] = logo
- features[] = name
+features[] = logo
+features[] = name
 ; features[] = slogan
- features[] = node_user_picture
- features[] = comment_user_picture
- features[] = favicon
- features[] = main_menu
- features[] = secondary_menu
+features[] = node_user_picture
+features[] = comment_user_picture
+features[] = favicon
+features[] = main_menu
+features[] = secondary_menu
 
 ; Panel Layouts
 plugins[panels][layouts] = layouts
