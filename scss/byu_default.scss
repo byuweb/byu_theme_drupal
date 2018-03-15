@@ -337,7 +337,7 @@ main.row.full-width {
 
 // Overrides styling in Zurb Foundation that displays incorrectly outside Chrome
 byu-footer [class*="column"] + [class*="column"]:last-child {
-  float: unset;
+  float: left;
 }
 
 
