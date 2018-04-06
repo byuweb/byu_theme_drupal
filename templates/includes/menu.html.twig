@@ -28,16 +28,15 @@
         ]
       %}
       {% if menu_level == 0 and item.is_expanded and item.below %}
-        <li{{ item.attributes.addClass(item_classes) }}>
-        <a href="{{ item.url }}" class="dropdown-toggle" data-toggle="dropdown">{{ item.title }} <span class="caret"></span></a>
+      <a href="{{ item.url }}" class="dropdown-toggle" data-toggle="dropdown">  
+        {{ item.title }} <span class="caret"></span>
       {% else %}
-        <li{{ item.attributes.addClass(item_classes) }}>
         {{ link(item.title, item.url) }}
       {% endif %}
       {% if item.below %}
         {{ _self.menu_links(item.below, attributes.removeClass(classes), menu_level + 1, classes) }}
       {% endif %}
-      </li>
+      </a>
     {% endfor %}
   {% endif %}
 {% endmacro %}
