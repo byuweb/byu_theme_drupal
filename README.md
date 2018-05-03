@@ -1,15 +1,7 @@
 # DEPRECATED BYU Drupal 8 Theme
 
 ## DEPRECATED
-**This theme has been replaced by the [BYU Theme](https://drupal.org/projects/byu_theme) on Drupal.org and this repository will be deleted on 08/13/2018** Follow these instructions to upgrade to the new theme.
-
-1.	Download byu_theme and bootstrap from Drupal.org. If using composer, you’ll only need to download byu_theme (it will automatically download bootstrap as a dependency).
-2.	Make note of your current theme settings. It could be by saving the byu_d8.settings config file, screenshot of the UI, or any other way you’d like.
-3.	Install and set as default byu_theme.
-4.	If using a subtheme: change the base theme of your subtheme to byu_theme.
-5.	Edit the byu_theme settings to your liking. If it is a subtheme, you settings should not have been affected.
-6.	Clear caches. Minor changes and bug fixes have been applied to the theme during this migration and the base theme has been changed, so check to be sure everything still displays correctly and make necessary fixes.
-7.	Uninstall and remove the old byu_d8 theme and porto. 
+**This theme has been replaced by the [BYU Theme](https://drupal.org/projects/byu_theme) on Drupal.org and this repository will be deleted on 08/13/2018** Follow these instructions to upgrade to the new theme: https://byu.box.com/s/i99mu7vva7deve8dfz2r2z1muelrzeon
 
 
 ## INSTALLATION
