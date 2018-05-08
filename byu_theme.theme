@@ -293,7 +293,6 @@ function byu_theme_preprocess_html(&$variables) {
   foreach ($roles as $role) {
     $variables['attributes']['class'][] = 'role-' . $role;
   }
-
 }
 
 /**
