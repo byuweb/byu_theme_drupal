@@ -136,6 +136,22 @@ function byu_theme_preprocess_page(&$variables) {
   if($sourcesans_use == TRUE ) {
     $variables['#attached']['library'][] = 'byu_theme/sourcesans';
   }
+  $domine_use = trim(theme_get_setting('domine_use'));
+  if($domine_use == TRUE ) {
+    $variables['#attached']['library'][] = 'byu_theme/domine';
+  }
+  $montserrat_use = trim(theme_get_setting('montserrat_use'));
+  if($montserrat_use == TRUE ) {
+    $variables['#attached']['library'][] = 'byu_theme/montserrat';
+  }
+  $zilla_slab_use = trim(theme_get_setting('zilla_slab_use'));
+  if($zilla_slab_use == TRUE ) {
+    $variables['#attached']['library'][] = 'byu_theme/zillaslab';
+  }
+  $roboto_use = trim(theme_get_setting('roboto_use'));
+  if($roboto_use == TRUE ) {
+    $variables['#attached']['library'][] = 'byu_theme/roboto';
+  }
 
   /* ------ Load Helper Styles --------- */
   $byu_buttons = trim(theme_get_setting('byu_buttons'));

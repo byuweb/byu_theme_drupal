@@ -43,17 +43,6 @@ fonts-full:
     theme:
       https://cloud.typography.com/75214/6517752/css/fonts.css: { type: external, minified: true }
 
-libre-baskerville:
-  remote: https://fonts.googleapis.com/css?family=Libre Baskerville
-  version: 4.5.0
-  license:
-    name: Google
-    url: https://fonts.googleapis.com/css?family=Libre Baskerville
-    gpl-compatible: true
-  css:
-    theme:
-      https://fonts.googleapis.com/css?family=Libre Baskerville: { type: external, minified: true }
-
 components-latest:
   remote: https://github.com/byuweb/byu-theme-components/
   version: latest
@@ -121,13 +110,37 @@ librebaskerville:
   version: VERSION
   css:
     theme:
-      'https://fonts.googleapis.com/css?family=Libre Baskerville': { type: external }
+      'https://fonts.googleapis.com/css?family=Libre+Baskerville': { type: external }
 
 sourcesans:
   version: VERSION
   css:
     theme:
       'https://fonts.googleapis.com/css?family=Source+Sans+Pro': { type: external }
+
+domine:
+  version: VERSION
+  css:
+    theme:
+      'https://fonts.googleapis.com/css?family=Domine': { type: external }
+
+montserrat:
+  version: VERSION
+  css:
+    theme:
+      'https://fonts.googleapis.com/css?family=Montserrat': { type: external }
+
+zillaslab:
+  version: VERSION
+  css:
+    theme:
+      'https://fonts.googleapis.com/css?family=Zilla+Slab': { type: external }
+
+roboto:
+  version: VERSION
+  css:
+    theme:
+      'https://fonts.googleapis.com/css?family=Roboto': { type: external }
 
 byu-buttons:
   remote: https://github.com/byuweb/byu-theme-style-helpers/
