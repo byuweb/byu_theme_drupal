@@ -36,61 +36,94 @@
                 </div>
             </section>
         {% endif %}
-        {% if page.left_sidebar and page.right_sidebar is empty %}
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3">
-                    <aside class="sidebar">
-                        {{ page.left_sidebar }}
-                    </aside>
-                </div>
-                <div class="col-md-9">
-                    {{ page.content }}
-                </div>
-            </div>
 
-        </div>
+
+        {% if page.left_sidebar and page.right_sidebar is empty %}
+            <div class="container">
+                {% if page.before_content %}
+                    <div class="row content-top">
+                        <div class="col-md-12">
+                            {{ page.before_content }}
+                        </div>
+                    </div>
+                {% endif %}
+
+                <div class="row">
+                    <div class="col-md-3">
+                        <aside class="sidebar">
+                            {{ page.left_sidebar }}
+                        </aside>
+                    </div>
+                    <div class="col-md-9">
+                        {{ page.content }}
+                    </div>
+                </div>
+
+            </div>
 
         {% elseif page.right_sidebar and page.left_sidebar is empty %}
-        <div class="container">
-            <div class="row">
-                <div class="col-md-9">
-                    {{ page.content }}
-                </div>
-                <div class="col-md-3">
-                    <aside class="sidebar">
-                        {{ page.right_sidebar }}
-                    </aside>
+            <div class="container">
+                {% if page.before_content %}
+                    <div class="row content-top">
+                        <div class="col-md-12">
+                            {{ page.before_content }}
+                        </div>
+                    </div>
+                {% endif %}
+
+                <div class="row">
+                    <div class="col-md-9">
+                        {{ page.content }}
+                    </div>
+                    <div class="col-md-3">
+                        <aside class="sidebar">
+                            {{ page.right_sidebar }}
+                        </aside>
+                    </div>
                 </div>
             </div>
-        </div>
 
 
         {% elseif page.right_sidebar and page.left_sidebar %}
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3">
-                    <aside class="sidebar">
-                        {{ page.left_sidebar }}
-                    </aside>
-                </div>
-                <div class="col-md-6">
-                    {{ page.content }}
-                </div>
-                <div class="col-md-3">
-                    <aside class="sidebar">
-                        {{ page.right_sidebar }}
-                    </aside>
+            <div class="container">
+                {% if page.before_content %}
+                    <div class="row content-top">
+                        <div class="col-md-12">
+                            {{ page.before_content }}
+                        </div>
+                    </div>
+                {% endif %}
+
+                <div class="row">
+                    <div class="col-md-3">
+                        <aside class="sidebar">
+                            {{ page.left_sidebar }}
+                        </aside>
+                    </div>
+                    <div class="col-md-6">
+                        {{ page.content }}
+                    </div>
+                    <div class="col-md-3">
+                        <aside class="sidebar">
+                            {{ page.right_sidebar }}
+                        </aside>
+                    </div>
                 </div>
             </div>
-        </div>
 
 
         {% else %}
-        <!--content-->
-        <div>
-            {{ page.content }}
-        </div>
+            <!--content-->
+            {% if page.before_content %}
+                <div class="row content-top">
+                    <div class="col-md-12">
+                        {{ page.before_content }}
+                    </div>
+                </div>
+            {% endif %}
+            <div>
+                {{ page.content }}
+            </div>
         {% endif %}
         {% if page.after_content %}
             {{ page.after_content }}
@@ -98,4 +131,3 @@
     </div>
     {% include byu_theme_root ~  '/templates/includes/footer.html.twig' %}
 </div>
-
