@@ -309,6 +309,24 @@ function byu_theme_preprocess_html(&$variables) {
   foreach ($roles as $role) {
     $variables['attributes']['class'][] = 'role-' . $role;
   }
+
+  // Adds a class to the body based on whether or not this page is the front page/homepage.
+  if (\Drupal::service('path.matcher')->isFrontPage()) {
+    $thisPage = 'front';
+  }
+  else {
+    $thisPage = 'not-front';
+  }
+  $variables['attributes']->addClass($thisPage);
+
+  // Adds a class to the body based on the current pages content type. If there is no node, no class is added.
+  $node = \Drupal::request()->attributes->get('node');
+  if ($node) {
+    $contentType = $node->bundle();
+    $contentType = str_replace("_", "-", $contentType);
+    $contentType = "type-" . $contentType;
+    $variables['attributes']->addClass($contentType);
+  }
 }
 
 /**
