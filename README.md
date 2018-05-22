@@ -50,3 +50,7 @@ These fields take simple css selectors, so if your search module isn't working,
 make sure you are using a css selector that will not target multiple divs, and 
 that will not change. (i.e. id's of these search elements often change once you 
 start searching or reloading the page.)
+
+## Hidden Region
+
+This theme comes with a region that is used purely for referencing the blocks in that region. This is useful in situations such as using a block entity reference field in some content type. Putting the block in the hidden field would allow you to still use the block in that block entity reference field, but it wouldn't appear on the website.
