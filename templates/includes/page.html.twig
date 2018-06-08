@@ -7,7 +7,7 @@
         {% endif %}
     </div>
 
-    <div role="main" class="main {{ min_page_height }} {%  if footer_sticky == true %}sticky-footer{% endif %} {%  if custom_width %}custom-width" style="max-width: {{ custom_width }}px{% endif %}">
+    <div role="main" class="main {{ min_page_height }} {%  if footer_sticky == true %}sticky-footer{% endif %} {%  if custom_width %}custom-width" style="max-width: {{ custom_width }}px; width: 100%;{% endif %}">
         {% if page_title %}
             <!--breadcrumbs-->
             {% if page.breadcrumb %}
