@@ -33,7 +33,6 @@ $lightteal: #e5f7ef;
 $green: #66B200; // doesn't work with accessibility
 $lightgreen: #e0f0cc;
 
-
 a {
   color: $royal;
 }
@@ -80,26 +79,16 @@ byu-menu a:hover, .nav > li > a:hover, .nav > li > a:focus {
 .p-ringside {
   font-family: "Ringside Narrow A", "Ringside Narrow B", sans-serif;
 }
+
 .p-gotham {
   font-family: "Gotham A", "Gotham B", sans-serif;
 }
+
 .p-libreb {
   font-family: "Libre Baskerville", Georgia, serif;
 }
 .p-sourcesans {
   font-family: 'Source Sans Pro', sans-serif;
-}
-.p-domine {
-  font-family: 'Domine', sans-serif;
-}
-.p-montserrat {
-  font-family: 'Montserrat', sans-serif;
-}
-.p-zilla_slab {
-  font-family: 'Zilla Slab', sans-serif;
-}
-.p-roboto {
-  font-family: 'Roboto', sans-serif;
 }
 
 p {
@@ -269,50 +258,6 @@ byu-search {
   }
 }
 
-.h1-domine h1,
-.h2-domine h2,
-.h3-domine h3,
-.h4-domine h4,
-.h5-domine h5 {
-  font-family: 'Domine', serif;
-  span, a {
-    font-family: 'Domine', serif;
-  }
-}
-
-.h1-montserrat h1,
-.h2-montserrat h2,
-.h3-montserrat h3,
-.h4-montserrat h4,
-.h5-montserrat h5 {
-  font-family: 'Montserrat', serif;
-  span, a {
-    font-family: 'Montserrat', serif;
-  }
-}
-
-.h1-zilla_slab h1,
-.h2-zilla_slab h2,
-.h3-zilla_slab h3,
-.h4-zilla_slab h4,
-.h5-zilla_slab h5 {
-  font-family: 'Zilla Slab', serif;
-  span, a {
-    font-family: 'Zilla Slab', serif;
-  }
-}
-
-.h1-roboto h1,
-.h2-roboto h2,
-.h3-roboto h3,
-.h4-roboto h4,
-.h5-roboto h5 {
-  font-family: 'Roboto', serif;
-  span, a {
-    font-family: 'Roboto', serif;
-  }
-}
-
 
   .h1-navy h1, .h2-navy h2, .h3-navy h3, .h4-navy h4, .h5-navy h5 {
     color: $navy;
@@ -407,10 +352,35 @@ byu-search {
     &.min-height-500 {
       min-height: 500px;
     }
+
+    &.custom-width-1400 {
+      max-width: 1400px;
+    }
+
+    &.custom-width-1200 {
+      max-width: 1200px;
+    }
+
+    &.custom-width-1024 {
+      max-width: 1024px;
+    }
+
+    &.custom-width-1000 {
+      max-width: 1000px;
+    }
+
+    &.custom-width-992 {
+      max-width: 992px;
+    }
+
+    &.custom-width-940 {
+      max-width: 940px;
+    }
   }
 
   .main.custom-width {
     padding: 30px 0;
+    width: 100%;
   }
 
   #page-container {
@@ -433,9 +403,9 @@ byu-search {
   /*}*/
   /* - mobile */
   @media screen and (max-width: 767px) {
-    byu-footer:not('normal') .two-column,
-    byu-footer:not('normal') .three-column,
-    byu-footer:not('normal') .four-column {
+    byu-footer:not(normal) .two-column,
+    byu-footer:not(normal) .three-column,
+    byu-footer:not(normal) .four-column {
       column: 1;
     }
   }

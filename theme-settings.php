@@ -47,9 +47,6 @@ function byu_theme_form_system_theme_settings_alter(&$form, Drupal\Core\Form\For
     '#title' => t('BYU Font Settings'),
     '#group' => 'design',
   ];
-  $form['fonts']['google_info'] = [
-    '#markup' => '<p> These are the google font alternative for Sentinel, Vitesse, Gotham, and Ringside. They may load faster, and the BYU Paid fonts from Hoeffler may be phased out in the future.</p>',
-  ];
   $form['fonts']['font_package'] = [
     '#type' => 'select',
     '#title' => t('Which font package do you want to load?'),
@@ -77,37 +74,9 @@ function byu_theme_form_system_theme_settings_alter(&$form, Drupal\Core\Form\For
     '#default_value' => theme_get_setting('sourcesans_use'),
     '#description' => t('This sans-serif font is a google font alternative, and may load faster. Click Save, and then this font will be available in the options below.'),
   ];
-  $form['fonts']['domine_use'] = [
-    '#type' => 'checkbox',
-    '#title' => t('Use the google alternatives to Sentinel (Domine).'),
-    '#default_value' => theme_get_setting('domine_use'),
-    '#description' => t('See <a href="https://byu.box.com/s/5rjf18yczhzku8cxy4g1kn28812eriow">here</a> for example.'),
-  ];
-  $form['fonts']['montserrat_use'] = [
-    '#type' => 'checkbox',
-    '#title' => t('Use the google alternatives to Gotham (Montserrat).'),
-    '#default_value' => theme_get_setting('montserrat_use'),
-    '#description' => t('See <a href="https://byu.box.com/s/x7by6y123p68dpnfwegqo08llf1o1ulw">here</a> for example.'),
-  ];
-  $form['fonts']['zilla_slab_use'] = [
-    '#type' => 'checkbox',
-    '#title' => t('Use the google alternatives to Vitesse (Zilla Slab).'),
-    '#default_value' => theme_get_setting('zilla_slab_use'),
-    '#description' => t('See <a href="https://byu.box.com/s/jsuskgf2f3ghc2qa8idj3az3dk8r7me0">here</a> for example.'),
-  ];
-  $form['fonts']['roboto_use'] = [
-    '#type' => 'checkbox',
-    '#title' => t('Use the google alternatives to Ringside (Roboto).'),
-    '#default_value' => theme_get_setting('roboto_use'),
-    '#description' => t('See <a href="https://byu.box.com/s/kk3iv6hzn7xwagaiv1jdiyytbj0n3i99">here</a> for example.'),
-  ];
-  $sentinel_en = (theme_get_setting('font_package') == 'fonts-full');
   $libre_en = theme_get_setting('libreberville_use');
   $sourcesans_en = theme_get_setting('sourcesans_use');
-  $domine_use = theme_get_setting('domine_use');
-  $montserrat_use = theme_get_setting('montserrat_use');
-  $zilla_slab_use = theme_get_setting('zilla_slab_use');
-  $roboto_use = theme_get_setting('roboto_use');
+  $sentinel_en = (theme_get_setting('font_package') == 'fonts-full');
 
   $fontOptions = [
     "vitesse" => "Vitesse",
@@ -122,18 +91,6 @@ function byu_theme_form_system_theme_settings_alter(&$form, Drupal\Core\Form\For
   }
   if ($sourcesans_en == TRUE) {
     $fontOptions['sourcesans'] = 'Source Sans';
-  }
-  if ($domine_use == TRUE) {
-    $fontOptions['domine'] = 'Domine';
-  }
-  if ($montserrat_use == TRUE) {
-    $fontOptions['montserrat'] = 'Montserrat';
-  }
-  if ($zilla_slab_use == TRUE) {
-    $fontOptions['zilla_slab'] = 'Zilla Slab';
-  }
-  if ($roboto_use == TRUE) {
-    $fontOptions['roboto'] = 'Roboto';
   }
 
   $form['fonts']['font_one'] = [
@@ -229,24 +186,13 @@ function byu_theme_form_system_theme_settings_alter(&$form, Drupal\Core\Form\For
   if ($sourcesans_en == TRUE) {
     $pFontOptions['sourcesans'] = 'Source Sans';
   }
-  if ($domine_use == TRUE) {
-    $pFontOptions['domine'] = 'Domine';
-  }
-  if ($montserrat_use == TRUE) {
-    $pFontOptions['montserrat'] = 'Montserrat';
-  }
-  if ($zilla_slab_use == TRUE) {
-    $pFontOptions['zilla_slab'] = 'Zilla Slab';
-  }
-  if ($roboto_use == TRUE) {
-    $pFontOptions['roboto'] = 'Roboto';
-  }
   $form['fonts']['p_font'] = [
     '#type' => 'select',
     '#title' => t('Paragraph Font'),
     '#options' => $pFontOptions,
     '#default_value' => theme_get_setting('p_font'),
   ];
+
 
   // Header Option
   $form['header_style'] = [
@@ -446,9 +392,18 @@ are placed at the bottom of the menu in mobile views. Please make sure your cont
   ];
 
   $form['general_page']['custom_width'] = [
-    '#type' => 'textfield',
+    '#type' => 'select',
     '#title' => t('Custom Page Width'),
     '#default_value' => theme_get_setting('custom_width'),
+    '#options' => [
+      '' => 'None',
+      '1400' => '1400px',
+      '1200' => '1200px',
+      '1024' => '1024px',
+      '1000' => '1000px',
+      '992' => '992px',
+      '940' => '940px'
+    ],
     '#description' => t("Enter the number of pixels you would like. i.e. '1200' fof 1200px. Defaults to 1000px."),
   ];
 
