@@ -76,8 +76,6 @@ function byu_theme_browser_classes() {
   return $classes;
 }
 
-
-
 function byu_theme_preprocess_page(&$variables) {
   global $base_url;
   $theme_root = $base_url.'/'.drupal_get_path('theme','byu_theme');
@@ -135,22 +133,6 @@ function byu_theme_preprocess_page(&$variables) {
   $sourcesans_use = trim(theme_get_setting('sourcesans_use'));
   if($sourcesans_use == TRUE ) {
     $variables['#attached']['library'][] = 'byu_theme/sourcesans';
-  }
-  $domine_use = trim(theme_get_setting('domine_use'));
-  if($domine_use == TRUE ) {
-    $variables['#attached']['library'][] = 'byu_theme/domine';
-  }
-  $montserrat_use = trim(theme_get_setting('montserrat_use'));
-  if($montserrat_use == TRUE ) {
-    $variables['#attached']['library'][] = 'byu_theme/montserrat';
-  }
-  $zilla_slab_use = trim(theme_get_setting('zilla_slab_use'));
-  if($zilla_slab_use == TRUE ) {
-    $variables['#attached']['library'][] = 'byu_theme/zillaslab';
-  }
-  $roboto_use = trim(theme_get_setting('roboto_use'));
-  if($roboto_use == TRUE ) {
-    $variables['#attached']['library'][] = 'byu_theme/roboto';
   }
 
   /* ------ Load Helper Styles --------- */
@@ -301,31 +283,36 @@ function byu_theme_preprocess_html(&$variables) {
 
   // adding browser classes to body
   $browserclasses = byu_theme_browser_classes();
-  $variables['attributes']['class'][] = implode(' ', $browserclasses);// Concatenate with spaces.
+  $variables['attributes']['class'][] = implode(' ', $browserclasses); // Concatenate with spaces.
 
-  // Get currently active user and his/her roles.
+  // Determine whether or not this page is the homepage/front page. Add the appropriate class.
+  if (\Drupal::service('path.matcher')->isFrontPage()) {
+      $thisPage = 'front';
+  }
+  else {
+      $thisPage = 'not-front';
+  }
+  $variables['attributes']->addClass($thisPage);
+
+  // Get currently active user and his/her roles, user ID and whether or not this page is a user page.
+  if ($variables['root_path'] == 'user') {
+    $variables['attributes']['class'][] = 'user-page';
+  }
   $account = \Drupal::currentUser();
+  $userId = $account->id();
   $roles = $account->getRoles();
+  $variables['attributes']['class'][] = 'user-id-' . $userId;
   foreach ($roles as $role) {
     $variables['attributes']['class'][] = 'role-' . $role;
   }
 
-  // Adds a class to the body based on whether or not this page is the front page/homepage.
-  if (\Drupal::service('path.matcher')->isFrontPage()) {
-    $thisPage = 'front';
-  }
-  else {
-    $thisPage = 'not-front';
-  }
-  $variables['attributes']->addClass($thisPage);
-
-  // Adds a class to the body based on the current pages content type. If there is no node, no class is added.
+  // Shows content type of the page. Possibly add code that determines user's roles, since not everyone needs to see this.
   $node = \Drupal::request()->attributes->get('node');
   if ($node) {
-    $contentType = $node->bundle();
-    $contentType = str_replace("_", "-", $contentType);
-    $contentType = "type-" . $contentType;
-    $variables['attributes']->addClass($contentType);
+     $contentType = $node->bundle();
+     $contentType = str_replace("_", "-", $contentType);
+     $contentType = "type-" . $contentType;
+     $variables['attributes']->addClass($contentType);
   }
 }
 
