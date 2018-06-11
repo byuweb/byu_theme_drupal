@@ -6662,6 +6662,81 @@ byu-menu {
   margin-left: auto;
   margin-right: auto; }
 
+body.front .main-top.custom-width-1400 {
+  max-width: 1400px; }
+
+body.front .main-top.custom-width-1200 {
+  max-width: 1200px; }
+
+body.front .main-top.custom-width-1024 {
+  max-width: 1024px; }
+
+body.front .main-top.custom-width-1000 {
+  max-width: 1000px; }
+
+body.front .main-top.custom-width-992 {
+  max-width: 992px; }
+
+body.front .main-top.custom-width-940 {
+  max-width: 940px; }
+
+body.front .main.custom-width {
+  width: 100%; }
+
+body.front .main.custom-width-1400 {
+  max-width: 1400px; }
+
+body.front .main.custom-width-1200 {
+  max-width: 1200px; }
+
+body.front .main.custom-width-1024 {
+  max-width: 1024px; }
+
+body.front .main.custom-width-1000 {
+  max-width: 1000px; }
+
+body.front .main.custom-width-992 {
+  max-width: 992px; }
+
+body.front .main.custom-width-940 {
+  max-width: 940px; }
+
+body.not-front .main-top.custom-width-1400 {
+  width: 1400px; }
+
+body.not-front .main-top.custom-width-1200 {
+  width: 1200px; }
+
+body.not-front .main-top.custom-width-1024 {
+  width: 1024px; }
+
+body.not-front .main-top.custom-width-1000 {
+  width: 1000px; }
+
+body.not-front .main-top.custom-width-992 {
+  width: 992px; }
+
+body.not-front .main-top.custom-width-940 {
+  width: 940px; }
+
+body.not-front .main.custom-width-1400 {
+  width: 1400px; }
+
+body.not-front .main.custom-width-1200 {
+  width: 1200px; }
+
+body.not-front .main.custom-width-1024 {
+  width: 1024px; }
+
+body.not-front .main.custom-width-1000 {
+  width: 1000px; }
+
+body.not-front .main.custom-width-992 {
+  width: 992px; }
+
+body.not-front .main.custom-width-940 {
+  width: 940px; }
+
 .main {
   padding: 30px;
   padding-top: 35px;
@@ -6673,28 +6748,9 @@ byu-menu {
     min-height: 300px; }
   .main.min-height-500 {
     min-height: 500px; }
-  .main.custom-width-1400 {
-    width: 100%;
-    max-width: 1400px; }
-  .main.custom-width-1200 {
-    width: 100%;
-    max-width: 1200px; }
-  .main.custom-width-1024 {
-    width: 100%;
-    max-width: 1024px; }
-  .main.custom-width-1000 {
-    width: 100%;
-    max-width: 1000px; }
-  .main.custom-width-992 {
-    width: 100%;
-    max-width: 992px; }
-  .main.custom-width-940 {
-    width: 100%;
-    max-width: 940px; }
 
 .main.custom-width {
-  padding: 30px 0;
-  width: 100%; }
+  padding: 30px 0; }
 
 #page-container {
   padding: 20px 0; }

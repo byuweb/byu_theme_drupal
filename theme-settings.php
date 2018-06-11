@@ -396,7 +396,7 @@ are placed at the bottom of the menu in mobile views. Please make sure your cont
     '#title' => t('Custom Page Width'),
     '#default_value' => theme_get_setting('custom_width'),
     '#options' => [
-      'none' => 'None',
+      null => 'None',
       '1400' => '1400px',
       '1200' => '1200px',
       '1024' => '1024px',
