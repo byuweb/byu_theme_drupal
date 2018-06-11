@@ -396,7 +396,7 @@ are placed at the bottom of the menu in mobile views. Please make sure your cont
     '#title' => t('Custom Page Width'),
     '#default_value' => theme_get_setting('custom_width'),
     '#options' => [
-      '' => 'None',
+      'none' => 'None',
       '1400' => '1400px',
       '1200' => '1200px',
       '1024' => '1024px',
@@ -404,7 +404,7 @@ are placed at the bottom of the menu in mobile views. Please make sure your cont
       '992' => '992px',
       '940' => '940px'
     ],
-    '#description' => t("Enter the number of pixels you would like. i.e. '1200' fof 1200px. Defaults to 1000px."),
+    '#description' => t("Select your custom page width. You may also set a custom width yourself in your subtheme's css."),
   ];
 
   $form['general_page']['min_page_height'] = [
