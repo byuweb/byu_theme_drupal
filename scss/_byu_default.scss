@@ -409,115 +409,60 @@ byu-menu {
   }
 }
 
-body.front {
-  .main-top {
-    &.custom-width-1400 {
-      max-width: 1400px;
-    }
 
-    &.custom-width-1200 {
-      max-width: 1200px;
-    }
-
-    &.custom-width-1024 {
-      max-width: 1024px;
-    }
-
-    &.custom-width-1000 {
-      max-width: 1000px;
-    }
-
-    &.custom-width-992 {
-      max-width: 992px;
-    }
-
-    &.custom-width-940 {
-      max-width: 940px;
-    }
+.main-top {
+  &.custom-width-1400 {
+    max-width: 1400px;
   }
 
-  .main {
-    &.custom-width {
-      width: 100%;
-    }
+  &.custom-width-1200 {
+    max-width: 1200px;
+  }
 
-    &.custom-width-1400 {
-      max-width: 1400px;
-    }
+  &.custom-width-1024 {
+    max-width: 1024px;
+  }
 
-    &.custom-width-1200 {
-      max-width: 1200px;
-    }
+  &.custom-width-1000 {
+    max-width: 1000px;
+  }
 
-    &.custom-width-1024 {
-      max-width: 1024px;
-    }
+  &.custom-width-992 {
+    max-width: 992px;
+  }
 
-    &.custom-width-1000 {
-      max-width: 1000px;
-    }
-
-    &.custom-width-992 {
-      max-width: 992px;
-    }
-
-    &.custom-width-940 {
-      max-width: 940px;
-    }
+  &.custom-width-940 {
+    max-width: 940px;
   }
 }
 
-body.not-front {
-  .main-top {
-    &.custom-width-1400 {
-      width: 1400px;
-    }
-
-    &.custom-width-1200 {
-      width: 1200px;
-    }
-
-    &.custom-width-1024 {
-      width: 1024px;
-    }
-
-    &.custom-width-1000 {
-      width: 1000px;
-    }
-
-    &.custom-width-992 {
-      width: 992px;
-    }
-
-    &.custom-width-940 {
-      width: 940px;
-    }
+.main {
+  &.custom-width {
+    width: 100%;
   }
 
-  .main {
-    &.custom-width-1400 {
-      width: 1400px;
-    }
+  &.custom-width-1400 {
+    max-width: 1400px;
+  }
 
-    &.custom-width-1200 {
-      width: 1200px;
-    }
+  &.custom-width-1200 {
+    max-width: 1200px;
+  }
 
-    &.custom-width-1024 {
-      width: 1024px;
-    }
+  &.custom-width-1024 {
+    max-width: 1024px;
+  }
 
-    &.custom-width-1000 {
-      width: 1000px;
-    }
+  &.custom-width-1000 {
+    max-width: 1000px;
+  }
 
-    &.custom-width-992 {
-      width: 992px;
-    }
+  &.custom-width-992 {
+    max-width: 992px;
+  }
 
-    &.custom-width-940 {
-      width: 940px;
-    }
+  &.custom-width-940 {
+    max-width: 940px;
   }
 }
 
