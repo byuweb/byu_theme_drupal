@@ -143,6 +143,10 @@ byu-header #site-name a:hover {
   text-decoration: none;
 }
 
+byu-header byu-menu a {
+  color: $navy;
+}
+
 .p-gotham {
   #page-container {
     p, span, div, p > a, div > a {
