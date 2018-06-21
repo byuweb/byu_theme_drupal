@@ -8,6 +8,7 @@
 
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Template\Attribute;
+use Drupal\taxonomy\Entity\Term;
 
 /**
  * Implements hook_theme_suggestions_HOOK_alter().
@@ -287,33 +288,59 @@ function byu_theme_preprocess_html(&$variables) {
 
   // Determine whether or not this page is the homepage/front page. Add the appropriate class.
   if (\Drupal::service('path.matcher')->isFrontPage()) {
-      $thisPage = 'front';
+    $thisPage = 'front';
   }
   else {
-      $thisPage = 'not-front';
+    $thisPage = 'not-front';
   }
   $variables['attributes']->addClass($thisPage);
 
   // Get currently active user and his/her roles, user ID and whether or not this page is a user page.
+  $account = \Drupal::currentUser();
   if ($variables['root_path'] == 'user') {
     $variables['attributes']['class'][] = 'user-page';
+    $userId = $account->id();
+    $variables['attributes']['class'][] = 'user-id-' . $userId;
   }
-  $account = \Drupal::currentUser();
-  $userId = $account->id();
   $roles = $account->getRoles();
-  $variables['attributes']['class'][] = 'user-id-' . $userId;
   foreach ($roles as $role) {
     $variables['attributes']['class'][] = 'role-' . $role;
   }
 
-  // Shows content type of the page. Possibly add code that determines user's roles, since not everyone needs to see this.
+  // Use the class term-# on term pages.
+
+  if ($variables['root_path'] == 'taxonomy') {
+    $vocab_names = taxonomy_vocabulary_get_names();
+    foreach ($vocab_names as $vocabulary) {
+      $query = \Drupal::entityQuery('taxonomy_term');
+      $query->condition('vid', $vocabulary);
+      $tids = $query->execute();
+      $terms = Term::loadMultiple($tids);
+      foreach ($terms as $term) {
+        if (taxonomy_term_is_page($term)) {
+          $termId = $term->id();
+          $termId = 'term-' . $termId;
+          $variables['attributes']->addClass($termId);
+        }
+      }
+    }
+  }
+
+  // Shows content type of the page. Also gives
   $node = \Drupal::request()->attributes->get('node');
   if ($node) {
-     $contentType = $node->bundle();
-     $contentType = str_replace("_", "-", $contentType);
-     $contentType = "type-" . $contentType;
-     $variables['attributes']->addClass($contentType);
+    if ($node instanceof Drupal\node\NodeInterface) {
+      $nodeId = $node->id();
+      $nodeId = "node-" . $nodeId;
+      $variables['attributes']->addClass($nodeId);
+    }
+    $contentType = $node->bundle();
+    $contentType = str_replace("_", "-", $contentType);
+    $contentType = "type-" . $contentType;
+    $variables['attributes']->addClass($contentType);
   }
+
+
 }
 
 /**
