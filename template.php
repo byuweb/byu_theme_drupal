@@ -28,6 +28,7 @@ function byu_theme_preprocess_html(&$variables) {
   }
 
   // To include the components and their styling:
+  drupal_add_css(path_to_theme() . '/css/byu_default.css');
   $version = trim(theme_get_setting('version'));
   if (empty($version) == FALSE) {
     drupal_add_css('//cdn.byu.edu/byu-theme-components/' . $version . '/byu-theme-components.min.css', array('type' => 'external'));

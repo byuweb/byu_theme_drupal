@@ -590,6 +590,54 @@ byu-menu.transparent {
 .custom-width-hero {
   margin-left: auto;
   margin-right: auto; }
+  .custom-width-hero.custom-width-1400 {
+    width: 1400px; }
+  .custom-width-hero.custom-width-1200 {
+    width: 1200px; }
+  .custom-width-hero.custom-width-1024 {
+    width: 1024px; }
+  .custom-width-hero.custom-width-1000 {
+    width: 1000px; }
+  .custom-width-hero.custom-width-992 {
+    width: 992px; }
+  .custom-width-hero.custom-width-940 {
+    width: 940px; }
+
+.l-featured.custom-width-1400,
+.l-messages.custom-width-1400,
+.l-help.custom-width-1400,
+.l-main.custom-width-1400 {
+  max-width: 1400px; }
+
+.l-featured.custom-width-1200,
+.l-messages.custom-width-1200,
+.l-help.custom-width-1200,
+.l-main.custom-width-1200 {
+  max-width: 1200px; }
+
+.l-featured.custom-width-1024,
+.l-messages.custom-width-1024,
+.l-help.custom-width-1024,
+.l-main.custom-width-1024 {
+  max-width: 1024px; }
+
+.l-featured.custom-width-1000,
+.l-messages.custom-width-1000,
+.l-help.custom-width-1000,
+.l-main.custom-width-1000 {
+  max-width: 1000px; }
+
+.l-featured.custom-width-992,
+.l-messages.custom-width-992,
+.l-help.custom-width-992,
+.l-main.custom-width-992 {
+  max-width: 992px; }
+
+.l-featured.custom-width-940,
+.l-messages.custom-width-940,
+.l-help.custom-width-940,
+.l-main.custom-width-940 {
+  max-width: 940px; }
 
 .full-width-images img {
   width: 100%;

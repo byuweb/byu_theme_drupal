@@ -7,3 +7,4 @@ robots.txt
 scss/custom.scss
 js/custom.js
 vendor/
+node_modules/

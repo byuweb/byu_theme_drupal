@@ -437,10 +437,19 @@ are placed at the bottom of the menu in mobile views. Please make sure your cont
     '#description'   => t("Choose to have all pages extend full width. This applies to BYU Header, page content, and BYU Footer."),
   );
   $form['zurb_foundation']['general_page']['custom_width'] = array(
-    '#type'          => 'textfield',
+    '#type'          => 'select',
     '#title'         => t('Custom Page Width'),
     '#default_value' => theme_get_setting('custom_width'),
-    '#description'   => t("Enter the number of pixels you would like. i.e. '1200' fof 1200px. Defaults to 1000px."),
+    '#description'   => t("Select the width you would like."),
+    '#options' => array(
+      null => 'None',
+      '1400' => '1400px',
+      '1200' => '1200px',
+      '1024' => '1024px',
+      '1000' => '1000px',
+      '992' => '992px',
+      '940' => '940px'
+    )
   );
   $form['zurb_foundation']['general_page']['min_page_height'] = array(
     '#type'          => 'textfield',

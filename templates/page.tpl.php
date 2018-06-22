@@ -118,9 +118,9 @@
     <!-- Hero Space -->
     <div class= "<?php print $hero_vs_menu . ' '; print $hero_space_width; ?> <?php
     if ($hero_full_image_width == true) {
-        print 'full-width-images"';
+        print 'full-width-images';
         if ($hero_space_width == 'custom-width-hero') {
-            print 'style="width:' . $page_width . 'px"';
+          print 'custom-width-' . $page_width . '"';
         }
     }
     else {
@@ -134,8 +134,8 @@
     <?php if (!empty($page['featured'])) : ?>
     <!--/.featured -->
     <section class="l-featured row  <?php if ($full_width == true) { print 'full-width'; 
-   } ?>" <?php if (!empty($page_width)) { print 'style="max-width: ' . $page_width . 'px;"'; 
-} ?>>
+   } if (!empty($page_width)) { print 'custom-width-' . $page_width;
+  } ?>">
       <div class="large-12 columns">
         <?php print render($page['featured']); ?>
       </div>
@@ -145,9 +145,9 @@
 
     <?php if ($messages && !$zurb_foundation_messages_modal) : ?>
     <!--/.l-messages -->
-    <section class="l-messages row <?php if ($full_width == true) { print 'full-width'; 
-   } ?>" <?php if (!empty($page_width)) { print 'style="max-width: ' . $page_width . 'px;"'; 
-} ?>>
+    <section class="l-messages row <?php if ($full_width == true) { print 'full-width';
+    } if (!empty($page_width)) { print 'custom-width-' . $page_width;
+    } ?>">
       <div class="large-12 columns">
         <?php if ($messages) : print $messages; 
         endif; ?>
@@ -159,8 +159,8 @@
     <?php if (!empty($page['help'])) : ?>
     <!--/.l-help -->
     <section class="l-help row  <?php if ($full_width == true) { print 'full-width'; 
-   } ?>" <?php if (!empty($page_width)) { print 'style="max-width: ' . $page_width . 'px;"'; 
-} ?>>
+   } if (!empty($page_width)) { print 'custom-width-' . $page_width;
+} ?>">
       <div class="large-12 columns">
         <?php print render($page['help']); ?>
       </div>
@@ -173,8 +173,8 @@
 } ?>>
 
     <main role="main" class="row l-main <?php if ($full_width == true) { print 'full-width'; 
-   } ?>" <?php if (!empty($page_width)) { print 'style="max-width: ' . $page_width . 'px;"'; 
-} ?>>
+   } if (!empty($page_width)) { print 'custom-width-' . $page_width;
+} ?>">
 
       <div id="main-content-section" class="<?php print $main_grid; ?> main columns">
         <?php if (!empty($page['highlighted'])) : ?>
