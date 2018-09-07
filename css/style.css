@@ -6742,17 +6742,20 @@ byu-menu {
   margin-left: auto;
   margin-right: auto; }
 
-.main {
-  padding: 30px;
-  padding-top: 35px;
-  margin-left: auto;
-  margin-right: auto; }
-  .main.no-min-height {
-    min-height: 0; }
-  .main.min-height-300 {
-    min-height: 300px; }
-  .main.min-height-500 {
-    min-height: 500px; }
+@media screen and (min-width: 769px) {
+  .main {
+    padding: 35px 30px 30px;
+    margin-left: auto;
+    margin-right: auto; } }
+
+.main.no-min-height {
+  min-height: 0; }
+
+.main.min-height-300 {
+  min-height: 300px; }
+
+.main.min-height-500 {
+  min-height: 500px; }
 
 .main-top.custom-width-1400 {
   max-width: 1400px; }
@@ -6887,6 +6890,20 @@ body.admin-extended-menu-bar #wrapper.sticky-footer {
 /* Remove weird header top margin */
 h1, h2, h3, h4, h5 {
   margin-top: 0; }
+
+/* Drupal overrides */
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+  color: #141414; }
+
+.form-control {
+  color: #141414; }
+
+.breadcrumb > .active {
+  color: #141414; }
+
+@media screen and (max-width: 1200px) {
+  .main {
+    margin: 0 16px; } }
 
 /* ------------- Do NOT make custom changes here - if you do they will be overridden when you update the theme.
 1. Create a custom.scss file in this scss directory.

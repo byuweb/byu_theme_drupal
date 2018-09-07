@@ -391,10 +391,11 @@ byu-menu {
 }
 
 .main {
-  padding: 30px;
-  padding-top: 35px;
-  margin-left: auto;
-  margin-right: auto;
+  @media screen and (min-width: 769px) {
+    padding: 35px 30px 30px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
   &.no-min-height {
     min-height: 0;
@@ -578,6 +579,26 @@ body.admin-extended-menu-bar #wrapper.sticky-footer {
 h1, h2, h3, h4, h5 {
   margin-top: 0;
 }
+
+/* Drupal overrides */
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+  color: $darkestgray;
+}
+
+.form-control {
+  color: $darkestgray;
+}
+
+.breadcrumb > .active {
+  color: $darkestgray;
+}
+
+@media screen and (max-width: 1200px) {
+  .main{
+    margin: 0 16px;
+  }
+}
+
 
 
 /* ------------- Do NOT make custom changes here - if you do they will be overridden when you update the theme.
