@@ -56,12 +56,7 @@ function byu_theme_preprocess_page(&$variables) {
   }
 
   /* --- Load Fonts ------- */
-  $font_package = trim(theme_get_setting('font_package'));
-  if($font_package == 'fonts-full' ) {
-    $variables['#attached']['library'][] = 'byu_theme/fonts-full';
-  } else { // load fonts-basic
-    $variables['#attached']['library'][] = 'byu_theme/fonts-basic';
-  }
+  $variables['#attached']['library'][] = 'byu_theme/fonts';
   $fontawesome_use = trim(theme_get_setting('fontawesome_use'));
   if($fontawesome_use == TRUE ) {
     $variables['#attached']['library'][] = 'byu_theme/font-awesome';
