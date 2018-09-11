@@ -9,15 +9,7 @@
  */
 function byu_theme_preprocess_html(&$variables) {
   /* --- BYU Fonts -- You must choose ONE font package to include. ---- */
-  if (trim(theme_get_setting('font_package')) == 'fonts-full') {
-    // Full Font Package - Vitesse, Gotham, Sentinel, and several others.
-    drupal_add_css('//cloud.typography.com/75214/6517752/css/fonts.css', array('type' => 'external'));
-  }
-  elseif (trim(theme_get_setting('font_package')) == 'fonts-basic') {
-    // This is the Light Font Package - Vitesse and Gotham only.
-    drupal_add_css('//cloud.typography.com/75214/7683772/css/fonts.css', array('type' => 'external'));
-  }
-
+  drupal_add_css('https://cdn.byu.edu/theme-fonts/1.x.x/ringside/fonts.css', array('type' => 'external'));
   $librebaskerville_use = trim(theme_get_setting('librebaskerville_use'));
   if ($librebaskerville_use == TRUE) {
     drupal_add_css('https://fonts.googleapis.com/css?family=Libre+Baskerville', array('type' => 'external'));
@@ -49,10 +41,6 @@ function byu_theme_preprocess_html(&$variables) {
   // we need an intro class to initialize the array so the next pushes/additions go through correctly - don't remove!
   $variables['classes_array'][] = 'body';
 
-  $font_package = theme_get_setting('font_package');
-  if (!empty($font_package)) {
-    $variables['classes_array'][] = trim(theme_get_setting('font_package'));
-  }
   $font_one = theme_get_setting('font_one');
   if (!empty($font_one)) {
     $variables['classes_array'][] = "h1-" . theme_get_setting('font_one');

@@ -32,16 +32,6 @@ function byu_theme_form_system_theme_settings_alter(&$form, &$form_state) {
     '#type' => 'fieldset',
     '#title' => t('BYU Fonts & Colors'),
   );
-  $form['zurb_foundation']['fonts']['font_package'] = array(
-    '#type' => 'select',
-    '#title' => t('Which font package do you want to load?'),
-    '#description' => t('If you want Sentinel to show as an option below, select the FULL font package. Save this page and return to set the other settings.'),
-    '#options' => array(
-      'fonts-basic' => t('Basic: Vitesse & Gotham'),
-      'fonts-full' => t('Full: Vitesse, Gotham, Sentinel & a few others'),
-    ),
-    '#default_value' => theme_get_setting('font_package'),
-  );
   $form['zurb_foundation']['fonts']['libreberville_use'] = array(
     '#type'          => 'checkbox',
     '#title'         => t('Load Libre Baskerville font'),
@@ -56,15 +46,10 @@ function byu_theme_form_system_theme_settings_alter(&$form, &$form_state) {
   );
   $libre_en = theme_get_setting('libreberville_use');
   $sourcesans_en = theme_get_setting('sourcesans_use');
-  $sentinel_en = (theme_get_setting('font_package') == 'fonts-full');
 
   $fontOptions = array(
-    "vitesse" => "Vitesse",
-    "gotham" => "Gotham",
+    "ringside" => "Ringside",
   );
-  if ($sentinel_en == TRUE) {
-    $fontOptions['sentinel'] = 'Sentinel';
-  }
   if ($libre_en == TRUE) {
     $fontOptions['libreb'] = 'Libre Baskerville';
   }
@@ -156,7 +141,6 @@ function byu_theme_form_system_theme_settings_alter(&$form, &$form_state) {
 
   $pFontOptions = array(
     'default' => t('Default'),
-    'gotham' => t('Gotham (san-serif)'),
   );
   if ($libre_en == TRUE) {
     $pFontOptions['libreb'] = 'Libre Baskerville';
