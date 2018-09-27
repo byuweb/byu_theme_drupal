@@ -192,11 +192,7 @@ function byu_theme_form_system_theme_settings_alter(&$form, &$form_state) {
   $all_versions = $json_ob->libraries->$components->versions;
 
   foreach ($all_versions as $version) {
-    if (strpos($version->manifest_path, 'byu-theme-components/experimental')) {
-      // Echo $version->name . ", ";.
-      $options[] = 'experimental/' . $version->name;
-    }
-    else {
+    if (!strpos($version->manifest_path, 'byu-theme-components/experimental')) {
       $options[] = $version->name;
     }
   }
