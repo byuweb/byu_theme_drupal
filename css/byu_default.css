@@ -455,8 +455,8 @@ byu-header #site-name a:hover {
 byu-header byu-menu a {
   color: #002E5D; }
 
-.p-gotham #page-container p, .p-gotham #page-container span, .p-gotham #page-container div, .p-gotham #page-container p > a, .p-gotham #page-container div > a {
-  font-family: "Gotham A", "Gotham B", Arial, sans-serif; }
+.p-ringside #page-container p, .p-ringside #page-container span, .p-ringside #page-container div, .p-ringside #page-container p > a, .p-ringside #page-container div > a {
+  font-family: "HCo Ringside Narrow SSm", Arial, sans-serif; }
 
 .p-libreb #page-container {
   font-family: "Libre Baskerville", Georgia, serif; }
@@ -466,7 +466,7 @@ byu-header byu-menu a {
 #site-name span,
 #site-name div,
 #site-name a {
-  font-family: "Vitesse A", "Vitesse B", serif; }
+  font-family: "HCo Ringside Narrow SSm", serif; }
 
 .subtitle.italic {
   font-style: italic; }
@@ -520,26 +520,12 @@ byu-search button#search-button {
   padding: 0 0 0 6px; }
 
 /* ------------ */
-.h1-vitesse h1,
-.h2-vitesse h2,
-.h3-vitesse h3,
-.h4-vitesse h4,
-.h5-vitesse h5 {
-  font-family: "Vitesse A", "Vitesse B", Georgia, serif; }
-
-.h1-gotham h1,
-.h2-gotham h2,
-.h3-gotham h3,
-.h4-gotham h4,
-.h5-gotham h5 {
-  font-family: "Gotham A", "Gotham B", Arial, sans-serif; }
-
-.h1-sentinel h1,
-.h2-sentinel h2,
-.h3-sentinel h3,
-.h4-sentinel h4,
-.h5-sentinel h5 {
-  font-family: "Sentinel A", "Sentinel B", "Vitesse A", "Vitesse B", Helvetica, serif; }
+.h1-ringside h1,
+.h2-ringside h2,
+.h3-ringside h3,
+.h4-ringside h4,
+.h5-ringside h5 {
+  font-family: "HCo Ringside Narrow SSm", Arial, sans-serif; }
 
 .h1-libreb h1,
 .h2-libreb h2,
@@ -591,7 +577,7 @@ byu-menu.transparent {
   margin-left: auto;
   margin-right: auto; }
   .custom-width-hero.custom-width-1400 {
-    width: 1400px; }
+    width: 1400px !important; }
   .custom-width-hero.custom-width-1200 {
     width: 1200px; }
   .custom-width-hero.custom-width-1024 {
@@ -607,7 +593,7 @@ byu-menu.transparent {
 .l-messages.custom-width-1400,
 .l-help.custom-width-1400,
 .l-main.custom-width-1400 {
-  max-width: 1400px; }
+  max-width: 1400px !important; }
 
 .l-featured.custom-width-1200,
 .l-messages.custom-width-1200,
