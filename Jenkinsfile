@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Pull') {
       steps {
-        sh 'git pull --tags'
+        sh 'git pull origin 8.x-1.x --tags'
         sh 'git pull origin 8.x-1.x'
       }
     }
