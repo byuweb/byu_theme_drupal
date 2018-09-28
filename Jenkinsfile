@@ -8,7 +8,7 @@ pipeline {
     }
     stage('Push') {
       steps {
-        sh 'git push git@github.com:blakemorgan/drupal-mirror-test.git HEAD:8.x-1.x --force'
+        sh 'git push git@github.com:blakemorgan/drupal-mirror-test.git HEAD:refs/heads/8.x-1.x'
       }
     }
   }
