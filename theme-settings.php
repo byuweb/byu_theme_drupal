@@ -50,16 +50,6 @@ function byu_theme_form_system_theme_settings_alter(&$form, Drupal\Core\Form\For
   $form['fonts']['google_info'] = [
     '#markup' => '<p> These are the google font alternative for Sentinel, Vitesse, Gotham, and Ringside. They may load faster, and the BYU Paid fonts from Hoeffler may be phased out in the future.</p>',
   ];
-  $form['fonts']['font_package'] = [
-    '#type' => 'select',
-    '#title' => t('Which font package do you want to load?'),
-    '#description' => t('If you want Sentinel to show as an option below, select the FULL font package. Save this page and return to set the other settings.'),
-    '#options' => [
-      'fonts-basic' => t('Basic: Vitesse, Gotham, Ringside'),
-      'fonts-full' => t('Full: Vitesse, Gotham, Sentinel & a few others'),
-    ],
-    '#default_value' => theme_get_setting('font_package'),
-  ];
   $form['fonts']['fontawesome_use'] = [
     '#type' => 'checkbox',
     '#title' => t('Load FontAwesome 4 library'),
@@ -101,7 +91,6 @@ function byu_theme_form_system_theme_settings_alter(&$form, Drupal\Core\Form\For
     '#default_value' => theme_get_setting('roboto_use'),
     '#description' => t('See <a href="https://byu.box.com/s/kk3iv6hzn7xwagaiv1jdiyytbj0n3i99">here</a> for example.'),
   ];
-  $sentinel_en = (theme_get_setting('font_package') == 'fonts-full');
   $libre_en = theme_get_setting('libreberville_use');
   $sourcesans_en = theme_get_setting('sourcesans_use');
   $domine_use = theme_get_setting('domine_use');
@@ -110,13 +99,8 @@ function byu_theme_form_system_theme_settings_alter(&$form, Drupal\Core\Form\For
   $roboto_use = theme_get_setting('roboto_use');
 
   $fontOptions = [
-    "vitesse" => "Vitesse",
-    "gotham" => "Gotham",
     "ringside" => "Ringside",
   ];
-  if ($sentinel_en == TRUE) {
-    $fontOptions['sentinel'] = 'Sentinel';
-  }
   if ($libre_en == TRUE) {
     $fontOptions['libreb'] = 'Libre Baskerville';
   }
@@ -221,7 +205,6 @@ function byu_theme_form_system_theme_settings_alter(&$form, Drupal\Core\Form\For
   $pFontOptions = [
     'default' => t('Default'),
     'ringside' => t('Ringside (sans-serif)'),
-    'gotham' => t('Gotham (san-serif)'),
   ];
   if ($libre_en == TRUE) {
     $pFontOptions['libreb'] = 'Libre Baskerville';

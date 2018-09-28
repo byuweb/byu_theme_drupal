@@ -33,6 +33,9 @@ $lightteal: #e5f7ef;
 $green: #66B200; // doesn't work with accessibility
 $lightgreen: #e0f0cc;
 
+body {
+  font-family: "HCo Ringside Narrow SSm", Arial, sans-serif;
+}
 
 a {
   color: $royal;
@@ -78,10 +81,7 @@ byu-menu a:hover, .nav > li > a:hover, .nav > li > a:focus {
 }
 
 .p-ringside {
-  font-family: "Ringside Narrow A", "Ringside Narrow B", sans-serif;
-}
-.p-gotham {
-  font-family: "Gotham A", "Gotham B", sans-serif;
+  font-family: "HCo Ringside Narrow SSm", sans-serif;
 }
 .p-libreb {
   font-family: "Libre Baskerville", Georgia, serif;
@@ -204,49 +204,17 @@ byu-search {
 }
 
 /* ------------ */
-.h1-vitesse h1,
-.h2-vitesse h2,
-.h3-vitesse h3,
-.h4-vitesse h4,
-.h5-vitesse h5 {
-  font-family: "Vitesse A", "Vitesse B", Georgia, serif;
-  span, a {
-    font-family: "Vitesse A", "Vitesse B", Georgia, serif;
-  }
-}
-
-.h1-gotham h1,
-.h2-gotham h2,
-.h3-gotham h3,
-.h4-gotham h4,
-.h5-gotham h5 {
-  font-family: "Gotham A", "Gotham B", Arial, sans-serif;
-  span, a {
-    font-family: "Gotham A", "Gotham B", Arial, sans-serif;
-  }
-}
-
 .h1-ringside h1,
 .h2-ringside h2,
 .h3-ringside h3,
 .h4-ringside h4,
 .h5-ringside h5 {
-  font-family: "Ringside Narrow A", "Ringside Narrow B", Arial, sans-serif;
+  font-family: "HCo Ringside Narrow SSm", Arial, sans-serif;
   span, a {
-    font-family: "Ringside Narrow A", "Ringside Narrow B", Arial, sans-serif;
+    font-family: "HCo Ringside Narrow SSm", Arial, sans-serif;
   }
 }
 
-  .h1-sentinel h1,
-  .h2-sentinel h2,
-  .h3-sentinel h3,
-  .h4-sentinel h4,
-  .h5-sentinel h5 {
-    font-family: "Sentinel A", "Sentinel B", "Vitesse A", "Vitesse B", Helvetica, serif;
-    span, a {
-      font-family: "Sentinel A", "Sentinel B", "Vitesse A", "Vitesse B", Helvetica, serif;
-    }
-  }
 .h1-sourcesans h1,
 .h2-sourcesans h2,
 .h3-sourcesans h3,
