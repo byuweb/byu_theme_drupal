@@ -3,6 +3,7 @@ pipeline {
   stages {
     stage('Pull') {
       steps {
+        sh 'git fetch git@git.drupal.org:project/byu_theme.git'
         sh 'git pull origin 8.x-1.x'
       }
     }
