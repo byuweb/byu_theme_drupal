@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5a19cd14-a0c8-42d0-89f0-90267e2cd77b" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/Jenkinsfile" beforeDir="false" afterPath="$PROJECT_DIR$/Jenkinsfile" afterDir="false" />
-    </list>
+    <list default="true" id="5a19cd14-a0c8-42d0-89f0-90267e2cd77b" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -222,12 +220,12 @@
       <option name="presentableId" value="Default" />
       <updated>1498685308439</updated>
       <workItem from="1498685309640" duration="100000" />
-      <workItem from="1538148416521" duration="332000" />
+      <workItem from="1538148416521" duration="580000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="519000" />
+    <option name="totallyTimeSpent" value="767000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -240,7 +238,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="297" width="1920" height="1142" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25133404" />
       <window_info id="Structure" order="1" weight="0.25" />
