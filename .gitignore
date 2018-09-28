@@ -5,3 +5,5 @@ robots.txt
 .idea/*
 scss/custom.scss
 js/custom.js
+node_modules/
+vendor/
