@@ -9,10 +9,9 @@ pipeline {
     }
     stage('Push') {
       steps {
-        sh 'git push git@github.com:blakemorgan/drupal-mirror-test.git HEAD:refs/heads/8.x-1.x'
-        sh 'git push git@github.com:blakemorgan/drupal-mirror-test.git --tags'
+        sh 'git push git@github.com:byuweb/byu_theme_drupal.git HEAD:refs/heads/8.x-1.x'
+        sh 'git push git@github.com:byuweb/byu_theme_drupal.git --tags'
       }
     }
   }
 }
-
