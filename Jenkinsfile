@@ -9,8 +9,8 @@ pipeline {
     }
     stage('Push') {
       steps {
-        sh 'git push git@github.com:byuweb/byu_drupal_theme.git HEAD:refs/heads/8.x-3.x'
-        sh 'git push git@github.com:byuweb/byu_drupal_theme.git --tags'
+        sh 'git push git@github.com:byuweb/byu_theme_drupal.git HEAD:refs/heads/8.x-3.x'
+        sh 'git push git@github.com:byuweb/byu_theme_drupal.git --tags'
       }
     }
   }
