@@ -3,12 +3,14 @@ pipeline {
   stages {
     stage('Pull') {
       steps {
+        sh 'git pull origin 8.x-2.x --tags'
         sh 'git pull origin 8.x-2.x'
       }
     }
     stage('Push') {
       steps {
-        sh 'git push git@github.com:blakemorgan/drupal-mirror-test.git HEAD:8.x-2.x'
+        sh 'git push git@github.com:byuweb/byu_theme_drupal.git HEAD:refs/heads/8.x-2.x'
+        sh 'git push git@github.com:byuweb/byu_theme_drupal.git --tags'
       }
     }
   }
