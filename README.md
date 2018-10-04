@@ -1,17 +1,9 @@
-# BYU Drupal 8 Thee
+# BYU Drupal 8 Theme
 > Drupal 8 Theme using Bootstrap &amp; Components
 
-Contact Katria Lesser on slack if you have questions about when this will be 
-fully available. We are working out licensing issues and some bug fixes.
-
 ## INSTALLATION
-1. Git clone (or download) and enable 
-[Drupal Bootstrap](https://drupal.org/project/bootstrap).
-2. Git clone (or download) the byu_theme theme, and enable it. 
-3. There is a strong dependency for the BYU footer: Download the module Block 
-Class https://www.drupal.org/project/block_class
-And enable it.
-4. Go to Appearance > Settings > byu_theme. You will see settings similar to 
+1. Using composer, run `composer require drupal/byu_theme`.
+2. Go to Appearance > Settings > byu_theme. You will see settings similar to 
 the byu2017_d7 theme.
 
 These sections each have several options.
