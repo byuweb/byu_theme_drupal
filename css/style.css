@@ -6429,15 +6429,6 @@ byu-menu a:hover, .nav > li > a:hover, .nav > li > a:focus {
 .p-sourcesans {
   font-family: 'Source Sans Pro', sans-serif; }
 
-.p-domine {
-  font-family: 'Domine', sans-serif; }
-
-.p-montserrat {
-  font-family: 'Montserrat', sans-serif; }
-
-.p-zilla_slab {
-  font-family: 'Zilla Slab', sans-serif; }
-
 .p-roboto {
   font-family: 'Roboto', sans-serif; }
 
@@ -6569,57 +6560,6 @@ byu-search span.input-group-btn {
   .h5-libreb h5 span,
   .h5-libreb h5 a {
     font-family: 'Libre Baskerville', serif; }
-
-.h1-domine h1,
-.h2-domine h2,
-.h3-domine h3,
-.h4-domine h4,
-.h5-domine h5 {
-  font-family: 'Domine', serif; }
-  .h1-domine h1 span, .h1-domine h1 a,
-  .h2-domine h2 span,
-  .h2-domine h2 a,
-  .h3-domine h3 span,
-  .h3-domine h3 a,
-  .h4-domine h4 span,
-  .h4-domine h4 a,
-  .h5-domine h5 span,
-  .h5-domine h5 a {
-    font-family: 'Domine', serif; }
-
-.h1-montserrat h1,
-.h2-montserrat h2,
-.h3-montserrat h3,
-.h4-montserrat h4,
-.h5-montserrat h5 {
-  font-family: 'Montserrat', serif; }
-  .h1-montserrat h1 span, .h1-montserrat h1 a,
-  .h2-montserrat h2 span,
-  .h2-montserrat h2 a,
-  .h3-montserrat h3 span,
-  .h3-montserrat h3 a,
-  .h4-montserrat h4 span,
-  .h4-montserrat h4 a,
-  .h5-montserrat h5 span,
-  .h5-montserrat h5 a {
-    font-family: 'Montserrat', serif; }
-
-.h1-zilla_slab h1,
-.h2-zilla_slab h2,
-.h3-zilla_slab h3,
-.h4-zilla_slab h4,
-.h5-zilla_slab h5 {
-  font-family: 'Zilla Slab', serif; }
-  .h1-zilla_slab h1 span, .h1-zilla_slab h1 a,
-  .h2-zilla_slab h2 span,
-  .h2-zilla_slab h2 a,
-  .h3-zilla_slab h3 span,
-  .h3-zilla_slab h3 a,
-  .h4-zilla_slab h4 span,
-  .h4-zilla_slab h4 a,
-  .h5-zilla_slab h5 span,
-  .h5-zilla_slab h5 a {
-    font-family: 'Zilla Slab', serif; }
 
 .h1-roboto h1,
 .h2-roboto h2,
