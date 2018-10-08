@@ -34,6 +34,7 @@ function byu_theme_form_system_theme_settings_alter(&$form, Drupal\Core\Form\For
     '#options' => [
       '1.x.x' => t('1.x.x - Get new features & bug fixes'),
       '1.2.x' => t('1.2.x - Stay on version 1.2 and only get bug fixes, no features'),
+      '1.3.x' => t('1.3.x - Stay on version 1.3 and only get bug fixes, no features'),
       'latest' => t('Latest - every update, including major version changes.'),
       'master' => t('Master - Latest development, Use for Development & Testing.'),
       'none' => t('Don\'t load components. This is primarily for testing purposes.'),
@@ -48,7 +49,7 @@ function byu_theme_form_system_theme_settings_alter(&$form, Drupal\Core\Form\For
     '#group' => 'design',
   ];
   $form['fonts']['google_info'] = [
-    '#markup' => '<p> These are the google font alternative for Sentinel, Vitesse, Gotham, and Ringside. They may load faster, and the BYU Paid fonts from Hoeffler may be phased out in the future.</p>',
+    '#markup' => '<p> These are the google font alternatives.</p>',
   ];
   $form['fonts']['fontawesome_use'] = [
     '#type' => 'checkbox',
@@ -67,24 +68,6 @@ function byu_theme_form_system_theme_settings_alter(&$form, Drupal\Core\Form\For
     '#default_value' => theme_get_setting('sourcesans_use'),
     '#description' => t('This sans-serif font is a google font alternative, and may load faster. Click Save, and then this font will be available in the options below.'),
   ];
-  $form['fonts']['domine_use'] = [
-    '#type' => 'checkbox',
-    '#title' => t('Use the google alternatives to Sentinel (Domine).'),
-    '#default_value' => theme_get_setting('domine_use'),
-    '#description' => t('See <a href="https://byu.box.com/s/5rjf18yczhzku8cxy4g1kn28812eriow">here</a> for example.'),
-  ];
-  $form['fonts']['montserrat_use'] = [
-    '#type' => 'checkbox',
-    '#title' => t('Use the google alternatives to Gotham (Montserrat).'),
-    '#default_value' => theme_get_setting('montserrat_use'),
-    '#description' => t('See <a href="https://byu.box.com/s/x7by6y123p68dpnfwegqo08llf1o1ulw">here</a> for example.'),
-  ];
-  $form['fonts']['zilla_slab_use'] = [
-    '#type' => 'checkbox',
-    '#title' => t('Use the google alternatives to Vitesse (Zilla Slab).'),
-    '#default_value' => theme_get_setting('zilla_slab_use'),
-    '#description' => t('See <a href="https://byu.box.com/s/jsuskgf2f3ghc2qa8idj3az3dk8r7me0">here</a> for example.'),
-  ];
   $form['fonts']['roboto_use'] = [
     '#type' => 'checkbox',
     '#title' => t('Use the google alternatives to Ringside (Roboto).'),
@@ -93,9 +76,6 @@ function byu_theme_form_system_theme_settings_alter(&$form, Drupal\Core\Form\For
   ];
   $libre_en = theme_get_setting('libreberville_use');
   $sourcesans_en = theme_get_setting('sourcesans_use');
-  $domine_use = theme_get_setting('domine_use');
-  $montserrat_use = theme_get_setting('montserrat_use');
-  $zilla_slab_use = theme_get_setting('zilla_slab_use');
   $roboto_use = theme_get_setting('roboto_use');
 
   $fontOptions = [
@@ -106,15 +86,6 @@ function byu_theme_form_system_theme_settings_alter(&$form, Drupal\Core\Form\For
   }
   if ($sourcesans_en == TRUE) {
     $fontOptions['sourcesans'] = 'Source Sans';
-  }
-  if ($domine_use == TRUE) {
-    $fontOptions['domine'] = 'Domine';
-  }
-  if ($montserrat_use == TRUE) {
-    $fontOptions['montserrat'] = 'Montserrat';
-  }
-  if ($zilla_slab_use == TRUE) {
-    $fontOptions['zilla_slab'] = 'Zilla Slab';
   }
   if ($roboto_use == TRUE) {
     $fontOptions['roboto'] = 'Roboto';
@@ -212,15 +183,6 @@ function byu_theme_form_system_theme_settings_alter(&$form, Drupal\Core\Form\For
   if ($sourcesans_en == TRUE) {
     $pFontOptions['sourcesans'] = 'Source Sans';
   }
-  if ($domine_use == TRUE) {
-    $pFontOptions['domine'] = 'Domine';
-  }
-  if ($montserrat_use == TRUE) {
-    $pFontOptions['montserrat'] = 'Montserrat';
-  }
-  if ($zilla_slab_use == TRUE) {
-    $pFontOptions['zilla_slab'] = 'Zilla Slab';
-  }
   if ($roboto_use == TRUE) {
     $pFontOptions['roboto'] = 'Roboto';
   }
@@ -248,12 +210,6 @@ function byu_theme_form_system_theme_settings_alter(&$form, Drupal\Core\Form\For
     '#default_value' => theme_get_setting('subtitle_use'),
     '#description' => t("Add Sub Title to the site header."),
   ];
-  $form['header_style']['subtitle']['subtitle_above'] = [
-    '#type' => 'checkbox',
-    '#title' => t('Subtitle Above'),
-    '#default_value' => theme_get_setting('subtitle_above'),
-    '#description' => t("Place the subtitle above the Main Title."),
-  ];
   $form['header_style']['subtitle']['subtitle_italic'] = [
     '#type' => 'checkbox',
     '#title' => t('Subtitle Italic'),
@@ -264,7 +220,7 @@ function byu_theme_form_system_theme_settings_alter(&$form, Drupal\Core\Form\For
     '#type' => 'textfield',
     '#title' => t('Site Subtitle'),
     '#default_value' => theme_get_setting('subtitle_text'),
-    '#description' => t("The subtitle appears below (or above) the Main Title."),
+    '#description' => t("The subtitle appears below the Main Title."),
   ];
 
 

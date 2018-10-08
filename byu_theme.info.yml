@@ -1,7 +1,8 @@
-# core: 8.x
+core: 8.x
 type: theme
 base theme: bootstrap
-# version: 2.0.0
+version: '8.x-3.2'
+project: 'byu_theme'
 
 name: 'BYU'
 description: 'BYU brand-compliant theme. Mobile-friendly and accessible.'
@@ -34,9 +35,3 @@ regions:
 libraries:
   - 'byu_theme/global-styling'
   - 'byu_theme/bootstrap-scripts'
-
-# Information added by Drupal.org packaging script on 2018-05-03
-version: '8.x-3.1'
-core: '8.x'
-project: 'byu_theme'
-datestamp: 1525364587
