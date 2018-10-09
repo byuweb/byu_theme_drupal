@@ -1,6 +1,6 @@
 type: theme
 base theme: bootstrap
-
+# this is a comment to be sure git is working
 name: 'BYU'
 description: 'BYU brand-compliant theme. Mobile-friendly and accessible.'
 package: 'BYU'
