@@ -58,7 +58,6 @@ function byu_theme_preprocess_page(&$variables) {
   }
 
   /* --- Load Fonts ------- */
-  $variables['#attached']['library'][] = 'byu_theme/fonts';
   $fontawesome_use = trim(theme_get_setting('fontawesome_use'));
   if($fontawesome_use == TRUE ) {
     $variables['#attached']['library'][] = 'byu_theme/font-awesome';
@@ -112,9 +111,6 @@ function byu_theme_preprocess_page(&$variables) {
   $variables['subtitle_italic'] = theme_get_setting('subtitle_italic'); // t/f
 
   $variables['subtitle_text'] = theme_get_setting('subtitle_text'); // text
-
-  //    $variables['attributes'][] = 'katria-testing-header-class';
-  $variables['actions_bg'] = theme_get_setting('actions_bg');
 
   // sign in
   $variables['login_use'] = theme_get_setting('login_use'); // t/f

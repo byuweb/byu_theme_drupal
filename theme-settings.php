@@ -304,16 +304,6 @@ There should only ever be 2 one-word links or one 2-word link, as this space is 
 the <a href="../admin/structure/block" target="_blank">blocks page</a> and place a block into the Header Actions region.</p><p>Action links
 are placed at the bottom of the menu in mobile views. Please make sure your content fits at various breakpoints.</p>',
   ];
-  $form['header_style']['header_actions']['actions_bg'] = [
-    '#type' => 'select',
-    '#title' => t('Action Link Button Style'),
-    '#description' => t('If enabled, the site name and main menu will appear in a bar along the top of the page. You will want to make sure that the menu background is set to transparent.'),
-    '#options' => [
-      'none' => t("No button style"),
-      'royal' => t('Royal Blue button'),
-    ],
-    '#default_value' => theme_get_setting('actions_bg'),
-  ];
 
   //Menu Settings
   $form['header_style']['menu'] = [
