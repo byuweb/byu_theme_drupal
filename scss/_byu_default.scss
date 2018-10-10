@@ -35,6 +35,12 @@ $lightgreen: #e0f0cc;
 
 body {
   font-family: "HCo Ringside Narrow SSm", Arial, sans-serif;
+  line-height: 23px;
+  font-size: 14px;
+  @media screen and (min-width: 786px) {
+    font-size: 16px;
+    line-height: 28px;
+  }
 }
 
 a {
@@ -269,18 +275,6 @@ byu-search {
   a:hover {
     color: $darkgray;
   }
-}
-
-h1 {
-  font-size: 36px;
-}
-
-h2 {
-  font-size: 29px;
-}
-
-h3 {
-  font-size: 24px;
 }
 
 //byu-menu.transparent {
