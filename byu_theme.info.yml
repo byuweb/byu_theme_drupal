@@ -3,6 +3,7 @@ base theme: bootstrap
 name: 'BYU'
 description: 'BYU brand-compliant theme. Mobile-friendly and accessible.'
 package: 'BYU'
+core: 8.x
 
 regions:
   header: 'Header'
