@@ -16,7 +16,7 @@
   },
   "homepage": "https://github.com/byuweb/byu_theme#readme",
   "devDependencies": {
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.0",
     "gulp-clean-css": "^3.9.0",
     "gulp-concat": "^2.6.1",
     "gulp-inject": "^4.3.0",
