@@ -35,6 +35,9 @@ function byu_theme_preprocess_page(&$variables) {
   $path_args = explode('/', $current_path);
   $variables['arg'] = $path_args[1];
 
+  //setting proper cache context for users
+  $variables['#cache']['contexts'][] = 'user';
+
   $version = trim(theme_get_setting('components_version'));
   if(!empty($version ) ) {
 
