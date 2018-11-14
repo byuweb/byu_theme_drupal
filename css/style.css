@@ -6438,9 +6438,6 @@ byu-menu a:hover, .nav > li > a:hover, .nav > li > a:focus {
 .p-roboto {
   font-family: 'Roboto', sans-serif; }
 
-p {
-  color: #141414; }
-
 [slot="site-title"] p, [slot="site-title"] span, [slot="site-title"] div, [slot="site-title"] a,
 #site-title p,
 #site-title span,
@@ -6450,22 +6447,6 @@ p {
 
 .subtitle.italic {
   font-style: italic; }
-
-byu-header[mobile-view] [slot="actions"] a {
-  color: #002E5D;
-  font-weight: 500; }
-
-byu-header[mobile-view] [slot="actions"] p {
-  padding-bottom: 0;
-  margin: 0; }
-
-[slot="actions"] div,
-[slot="actions"] p {
-  padding-bottom: 0;
-  margin: 0 15px; }
-
-[slot="actions"] a:hover {
-  text-decoration: none; }
 
 [slot="actions"].royal div.block {
   margin: 0 10px;
@@ -6628,20 +6609,19 @@ byu-menu {
   margin-left: auto;
   margin-right: auto; }
 
-@media screen and (min-width: 769px) {
-  .main {
-    padding: 35px 30px 30px;
-    margin-left: auto;
-    margin-right: auto; } }
-
-.main.no-min-height {
-  min-height: 0; }
-
-.main.min-height-300 {
-  min-height: 300px; }
-
-.main.min-height-500 {
-  min-height: 500px; }
+.main {
+  padding: 35px 30px 30px;
+  margin-left: auto;
+  margin-right: auto; }
+  @media screen and (min-width: 1024px) {
+    .main {
+      padding-top: 70px; } }
+  .main.no-min-height {
+    min-height: 0; }
+  .main.min-height-300 {
+    min-height: 300px; }
+  .main.min-height-500 {
+    min-height: 500px; }
 
 .main-top.custom-width-1400 {
   max-width: 1400px; }
@@ -6783,10 +6763,6 @@ h1, h2, h3, h4, h5 {
 
 .breadcrumb > .active {
   color: #141414; }
-
-@media screen and (max-width: 1200px) {
-  .main {
-    margin: 0 16px; } }
 
 /* ------------- Do NOT make custom changes here - if you do they will be overridden when you update the theme.
 1. Create a custom.scss file in this scss directory.
