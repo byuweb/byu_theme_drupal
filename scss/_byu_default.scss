@@ -99,10 +99,6 @@ byu-menu a:hover, .nav > li > a:hover, .nav > li > a:focus {
   font-family: 'Roboto', sans-serif;
 }
 
-p {
-  color: $darkestgray;
-}
-
 [slot="site-title"] p, [slot="site-title"] span, [slot="site-title"] div, [slot="site-title"] a,
 #site-title p,
 #site-title span,
@@ -113,25 +109,6 @@ p {
 
 .subtitle.italic {
   font-style: italic;
-}
-
-byu-header[mobile-view] [slot="actions"] a {
-  color: $navy;
-  font-weight: 500;
-}
-
-byu-header[mobile-view] [slot="actions"] p {
-  padding-bottom: 0;
-  margin: 0;
-}
-
-[slot="actions"] div,
-[slot="actions"] p {
-  padding-bottom: 0;
-  margin: 0 15px;
-}
-[slot="actions"] a:hover {
-  text-decoration: none;
 }
 
 [slot="actions"].royal div.block {
