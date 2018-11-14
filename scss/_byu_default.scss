@@ -289,10 +289,12 @@ byu-menu {
 }
 
 .main {
-  @media screen and (min-width: 769px) {
-    padding: 35px 30px 30px;
-    margin-left: auto;
-    margin-right: auto;
+  padding: 35px 30px 30px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media screen and (min-width: 1024px) {
+    padding-top: 70px;
   }
 
   &.no-min-height {
@@ -485,12 +487,6 @@ h1, h2, h3, h4, h5 {
 
 .breadcrumb > .active {
   color: $darkestgray;
-}
-
-@media screen and (max-width: 1200px) {
-  .main{
-    margin: 0 16px;
-  }
 }
 
 
