@@ -14,13 +14,13 @@ use Drupal\taxonomy\Entity\Term;
  * Implements hook_theme_suggestions_HOOK_alter().
  */
 global $base_url;
-$theme_root = $base_url.'/'.drupal_get_path('theme','byu_theme');
+$theme_root = $base_url.\Drupal::service('extension.list.theme')->getPath('byu_theme');
 
 function byu_theme_preprocess_page(&$variables) {
   global $base_url;
-  $theme_root = $base_url.'/'.drupal_get_path('theme','byu_theme');
+  $theme_root = $base_url.\Drupal::service('extension.list.theme')->getPath('byu_theme');
   $variables['theme_root'] = $theme_root;
-  $byu_theme_root = '/'.drupal_get_path('theme','byu_theme');
+  $byu_theme_root = \Drupal::service('extension.list.theme')->getPath('byu_theme');
   $variables['byu_theme_root'] = $byu_theme_root;
   $user = \Drupal::currentUser()->id();
   $account = \Drupal\user\Entity\User::load($user);
@@ -100,7 +100,7 @@ function byu_theme_preprocess_page(&$variables) {
   $variables['page_title'] = $variables['page']['#title'];
   $variables['clients_top'] = views_embed_view('client', 'block_4');
   $variables['current_url'] = $_SERVER['REQUEST_URI'];
-  $theme_root = $base_url.'/'.drupal_get_path('theme','byu_theme');
+  $theme_root = $base_url.\Drupal::service('extension.list.theme')->getPath('byu_theme');
   $variables['theme_root'] = $theme_root;
   $libraries['#attached']['library'][] = 'herchel/global-styling';
 
@@ -184,7 +184,7 @@ function byu_theme_preprocess_page(&$variables) {
 
 function byu_theme_preprocess_html(&$variables) {
   global $base_url;
-  $theme_root = $base_url.'/'.drupal_get_path('theme','byu_theme');
+  $theme_root = $base_url.\Drupal::service('extension.list.theme')->getPath('byu_theme');
   $variables['theme_root'] = $theme_root;
 
   $current_path = \Drupal::service('path.current')->getPath();
